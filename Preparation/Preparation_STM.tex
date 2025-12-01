@@ -203,6 +203,40 @@ Because the measurement relies on maintaining a constant tunneling probability, 
 This explains why STM images are strongly influenced by the electronic structure of the surface and not solely by its geometric topography.
 
 
+\subsection{What the STM Actually Maps}
+
+The previous subsections showed that the tunneling current depends on the overlap between tip and sample wavefunctions and is therefore extremely sensitive to the local electronic structure above the surface.
+To understand what the STM image represents, it is necessary to look more closely at the quantity that determines this overlap: the local density of states (LDOS).
+
+The LDOS describes how many electronic states are available at a particular energy and spatial position.
+Unlike the total density of states of a solid, which counts all states in the bulk, the LDOS resolves how strongly each state contributes at a specific point in space.
+At the surface this quantity is highly non-uniform, even for materials with perfectly regular atomic arrangements.
+
+Which part of the LDOS contributes to the tunneling current depends on the applied bias voltage.
+For small biases the main contribution comes from states very close to the Fermi level, because only these states lie within the narrow energy window through which electrons can tunnel.
+States far below the Fermi level are fully occupied and do not participate, while states far above it are empty and cannot accept electrons.
+This energy selectivity explains why STM is sensitive to the electronic structure in a narrow region around the Fermi energy rather than to all electrons in the material.
+An overview of the different STM measurement modes derived from the LDOS is shown in Fig.~\ref{fig:stm_ldos_overview}.
+
+\vspace{1em}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.92\textwidth]{../resources/figures/STM_Measurement_Types.png}
+\caption{Different ways in which the STM can probe the local density of states (LDOS).
+The LDOS depends on spatial position $(x,y)$ and energy $E$, forming a three-dimensional dataset (a).
+From this dataset one can extract topographic images (b), LDOS maps at a fixed energy (c), tunneling spectra $dI/dV$ at a single point (d), or linecuts showing how the LDOS varies along a spatial path (e) \cite{hoffmanSTM}.}
+\label{fig:stm_ldos_overview}
+\end{figure}
+
+The connection between tunneling current and LDOS was established by Tersoff and Hamann, who showed that the tunneling current is approximately proportional to the sample LDOS at the tip position and at the relevant energy~\cite{tersoff1985prb}.
+This clarified a crucial point: STM does not directly map atomic nuclei.
+Instead, it images the spatial variation of the LDOS, which may or may not resemble the underlying geometric lattice.
+
+This distinction was essential in early STM studies.
+Several early images exhibited contrast patterns that could not be explained by assuming that the tip traced the nuclear positions of surface atoms.
+Only when the LDOS-based interpretation was adopted did these inconsistencies become understandable.
+For some materials the LDOS follows the atomic lattice closely, while for others the electronic structure differs significantly from the geometric arrangement.
+
 
 
 
@@ -229,6 +263,9 @@ xxx
 \setstretch{1.0}
 \printbibliography[heading=bibintoc]
 
+\section*{Author's Note}
+AI-based writing and programming tools were used in a supporting role to refine the wording of this report and to assist in formatting Python and LaTeX code.
+All scientific analysis, data evaluation, and interpretation were carried out independently by the authors.
 
 
 \end{document}
