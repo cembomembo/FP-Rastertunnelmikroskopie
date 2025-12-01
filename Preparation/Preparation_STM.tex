@@ -97,19 +97,53 @@ Fachbereich Physik
 
 % --- Introduction ---
 \newpage
-\setcounter{page}{1} 
+\setcounter{page}{1}
+
 \section{Introduction}
 
-xxx
+The scanning tunneling microscope (STM) is a surface–analysis technique that enables real–space imaging of conductive materials with sub–nanometer resolution.
+It operates by positioning a sharp metallic tip a few ångströms above the sample surface and detecting the tunneling current that flows when a bias voltage is applied.
+Because this current depends exponentially on the tip–sample separation, the STM is extremely sensitive to atomic–scale height variations and can visualize both the topography and electronic structure of surfaces.
+In this experiment we use a tabletop STM operated under ambient conditions to record and analyze surface images of highly oriented pyrolytic graphite (HOPG).
+The aim is to become familiar with the operating principles of STM and to extract structural information from the acquired images.
 
 
 
 % --- Physical Principles ---
 \section{Physical Principles}
 
-\subsection{xxx}
+\subsection{Quantum Tunneling and the Electronic Structure of Solids}
 
-xxx~\cite{STMAnleitung}.
+To understand how STM works it is useful to recall a few basic ideas from quantum mechanics.
+Electrons in atoms occupy orbitals with specific energies, and their spatial distribution is described by a wavefunction.
+A simple example is the particle-in-a-box model, where only certain standing-wave patterns are allowed.
+At the edges of such a “box” the wavefunction falls off steeply, and in quantum mechanics it decays exponentially when it reaches a region where the particle cannot exist classically.
+This behaviour also appears at the surface of a solid, where the periodic potential of the crystal ends abruptly and the electron encounters empty space.
+
+When many atoms join to form a crystal, their orbitals overlap and broaden into continuous energy bands.
+Electrons fill these bands up to the valence band, while the next empty band is the conduction band.
+The size of the band gap between them determines whether a material is a conductor, semiconductor, or insulator.
+Electrons near the Fermi level are the least strongly bound and play the main role in electrical conduction and in tunneling, because their wavefunctions reach the farthest out of the solid.
+
+Graphite provides a clear example of how the type of bonding influences the electronic structure.
+Each carbon atom uses three sp$^2$ hybrid orbitals to form strong in-plane $\sigma$ bonds, giving the hexagonal layer its mechanical stability.
+The remaining $p_z$ orbital points out of the plane and overlaps with those of neighbouring atoms.
+These $p_z$ orbitals form a delocalized $\pi$ band above and below the layer, and the corresponding electrons are the ones that make graphite conductive (Fig.~\Ref{fig:carbon_bonding}).
+
+At the crystal surface the periodic arrangement stops, and the electronic states must satisfy new boundary conditions.
+Just as in the particle-in-a-box picture, the part of the wavefunction that reaches into the vacuum decays exponentially.
+Only electrons near the Fermi level extend far enough to overlap with a nearby STM tip.
+In graphite these are the $\pi$ electrons, which is why they dominate the tunneling current and strongly influence the contrast observed in STM images \cite{STMAnleitung}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{../resources/figures/CarbonBonding.png}
+\caption{Electronic orbitals in a graphene layer.
+Each carbon atom forms three in-plane $\sigma$ bonds through sp$^2$ hybrid orbitals, while the $p_z$ orbitals extend perpendicular to the sheet and form the delocalized $\pi$ system.
+These out-of-plane $\pi$ electrons dominate the tunneling current in STM \cite{proctor2019aps}.}
+\label{fig:carbon_bonding}
+\end{figure}
+
 
 
 
