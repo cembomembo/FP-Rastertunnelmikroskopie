@@ -169,6 +169,40 @@ Regions where the LDOS is higher have more electron density reaching toward the 
 This is why the STM image reflects the electronic structure of the surface, and why the delocalized $\pi$ electrons of graphite play such a central role in determining the contrast observed in atomic-resolution images.
 
 
+\subsection{Principle of STM Operation}
+
+Once the tip is brought close enough for tunneling to occur, a bias voltage is applied between the tip and the sample.
+This voltage shifts their Fermi levels relative to each other, allowing electrons to tunnel from the filled states of one side into the empty states of the other.
+The tunneling current depends extremely sensitively on the tip–sample separation $z$ and can be written in the approximate form
+\[
+I_t \sim V_t \exp\!\big(-c\,\sqrt{\Phi}\, z\big),
+\]
+where $V_t$ is the applied bias voltage, $\Phi$ is an effective barrier height (in eV), $z$ is the tip–sample distance (in \AA), and $c \approx 1.02\,\text{\AA}^{-1}\,\text{eV}^{-1/2}$ collects the fundamental constants and unit conversions~\cite{STMAnleitung}.
+Because of the exponential dependence on $z$, even sub-ångström changes in distance lead to large variations in the tunneling current.
+
+To record an image, the STM moves the tip laterally while either keeping the height fixed or adjusting it continuously, as illustrated in Fig.~\ref{fig:stm_scan_modes}.
+In constant–height mode the tip position $z$ remains fixed, and contrast arises solely from variations in the tunneling current.
+This mode is fast but only safe on atomically flat surfaces, since the tip may collide with protrusions on the sample.
+
+In constant–current mode, which is used in this experiment, the STM continuously adjusts the tip height so that the tunneling current matches a chosen setpoint.
+A feedback loop monitors the current in real time and moves the tip up or down using a piezoelectric actuator whenever the measured current deviates from this value.
+The vertical motion required to maintain constant current is then recorded at each lateral scan position.
+
+\vspace{1em}
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.0\textwidth]{../resources/figures/STM_Modes.png}
+\caption{Basic working principle of STM imaging.
+(a) Constant–height mode, where the tip follows a fixed distance while the tunneling current varies with the surface, which risks tip crash on rough samples.
+(b) Constant–current mode, where a feedback loop adjusts the tip height to maintain a constant current.
+The recorded height forms the STM image~\cite{huda2016thesis}.}
+\label{fig:stm_scan_modes}
+\end{figure}
+
+Because the measurement relies on maintaining a constant tunneling probability, the STM image essentially represents the height at which the electronic density accessible for tunneling matches the selected setpoint.
+This explains why STM images are strongly influenced by the electronic structure of the surface and not solely by its geometric topography.
+
+
 
 
 
