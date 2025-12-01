@@ -232,11 +232,40 @@ The connection between tunneling current and LDOS was established by Tersoff and
 This clarified a crucial point: STM does not directly map atomic nuclei.
 Instead, it images the spatial variation of the LDOS, which may or may not resemble the underlying geometric lattice.
 
-This distinction was essential in early STM studies.
-Several early images exhibited contrast patterns that could not be explained by assuming that the tip traced the nuclear positions of surface atoms.
+Several early STM images exhibited contrast patterns that could not be explained by assuming that the tip traced the nuclear positions of surface atoms.
 Only when the LDOS-based interpretation was adopted did these inconsistencies become understandable.
 For some materials the LDOS follows the atomic lattice closely, while for others the electronic structure differs significantly from the geometric arrangement.
 
+
+\subsection{Atomic Contrast and Stacking in Graphite}
+
+STM images the spatial variation of the local density of states near the Fermi level rather than the atomic nuclei.
+In graphite this means that, although the lattice is perfectly hexagonal, the surface atoms do not contribute equally to the LDOS above the layer.
+
+Graphite consists of graphene layers arranged in AB (Bernal) stacking.  
+In this structure half of the atoms in the top layer lie directly above atoms in the layer below, while the other half sit above hollow sites.  
+These two types of sites, commonly labeled $\alpha$ and $\beta$, are electronically inequivalent.  
+Atoms of type $\alpha$ hybridize more strongly with the layer underneath, which pulls part of their $\pi$ electron density downward and reduces the amplitude of their wavefunction at the surface.  
+Atoms of type $\beta$ do not sit above a neighbour and therefore retain a larger out-of-plane $\pi$ amplitude.
+This geometric arrangement is illustrated in Fig.~\ref{fig:graphite_stacking}.
+
+\vspace{1em}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.63\textwidth]{../resources/figures/Graphite_Stacking.png}
+\caption{AA and AB stacking in graphite.
+In AB stacking, half of the surface atoms lie above atoms in the layer below ($\alpha$ sites) while the others lie above hollow sites ($\beta$ sites), leading to different LDOS contributions in STM~\cite{birowska2011graphite}.}
+\label{fig:graphite_stacking}
+\end{figure}
+
+Because the tunneling current is proportional to the LDOS at the tip position, the STM is more sensitive to the $\beta$ sites than to the $\alpha$ sites.  
+As a result, only every second atom appears bright in typical STM images of graphite.  
+This effect was initially puzzling in early STM studies~\cite{park1986apl, selloni1985prb}, as the recorded images did not match the expected honeycomb structure.  
+Only after the LDOS-based interpretation became established did it become clear that the observed contrast directly reflects the sublattice asymmetry imposed by AB stacking and interlayer coupling.
+
+The visibility of $\alpha$ and $\beta$ sites also depends on the applied bias voltage, because different energies probe slightly different parts of the $\pi$ band.  
+For some bias conditions the contrast between the two sublattices becomes weaker or can even invert, further demonstrating that STM measures electronic structure rather than geometric height.  
+Understanding this behaviour is essential for analyzing the atomic-resolution images obtained in this experiment.
 
 
 
