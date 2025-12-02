@@ -272,19 +272,51 @@ Understanding this behaviour is essential for analyzing the atomic-resolution im
 % --- Experimental Setup ---
 \section{Experimental Setup}
 
-\subsection{xxx}
+\subsection{Technical setup of the STM}
+The STM used in this experiment is a non-commercial custom design for atmospheric conditions, developed by AG Franke at the Freie Universität Berlin.
+The rest of the required instruments include a DAC and an ADC converter, to control the piezoelectric actuators and to read the tunneling current, respectively; a GUI for control and imaging; and a computer, to control the microscope and process the data via the freeware software WSxM~\cite{horcas2007}, mounted in a vibration-damping table.
 
-xxx
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\textwidth]{../resources/figures/STM_block_schematic.png}
+    \caption{Block diagram of the STM setup.\cite{Schmid_CCBYSA2}}
+    \label{fig:STM_block_schematic}
+\end{figure}
 
+The probe head is approached to the sample surface by hand using a micrometer screw, while observing the approach with an optic microscope until the given tunneling current is reached.
+
+\subsection{Data collection with WSxM}
+Real-time imaging and post-processing are facilitated by the WSxM software. Prior to scanning, acquisition parameters (size, speed, bias, set point, and gains) are configured in the \texttt{DA} menu according to Table~\ref{tab:wsxm_parameters}.
+
+The manual approach is conducted with the \textit{Approach} window active. Once a tunneling current is detected, the proportional gain is set to 1.5, the protection cover is installed, and the window is closed. The measurement is started by pressing \textit{Secure}, whereby the tip is automatically approached to the set point and scanning is initiated. Parameters can be optimized during the scan.
+
+To terminate, \textit{Secure} is pressed to retract the tip and disable the high voltage; data are then saved for analysis via the \textit{Representation} menu.
+
+\begin{table}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{../resources/figures/Table_wsxm.png}
+    \caption{Table of arameters of WSxM control software. \cite{STMAnleitung}}
+    \label{tab:wsxm_parameters}
+\end{table}
 
 
 % --- Procedure ---
 \section{Procedure}
 
-\subsection{xxx}
+\subsection{Measurements on Highly Oriented Pyrolytic Graphite (HOPG)}
+For safety reasons, prior to any tip or sample exchange, the tip must be completely retracted, and the X, Y, and Z offsets set to zero. This procedure is strictly required to protect the integrity of the probe head and prevent electrical arcing.
 
-xxx
+\begin{enumerate}[label=\alph*]
+    \item \textbf{Parameter Optimization:} The measurement is initiated using the graphite sample and the default parameters listed in Table~\ref{tab:wsxm_parameters}. Familiarity with the ``Integral gain'' and ``Proportional gain'' is established. These parameters are adjusted to accommodate changes in scan rates or scanning areas.
 
+    \item \textbf{Topography and Step Heights:} The size and offsets of the scanning area are modified to locate regions containing step edges or grooves. Images are acquired, and the heights of more than 20 distinct steps are determined using the \textit{local plane correction} filter. The observed heights are sorted by value and plotted against the measurement number. The results are compared with the theoretical interlayer distance of graphite ($3.35\,\text{\AA}$), considering potential sources of uncertainty. The calibration of the Z-piezo ($1\,\text{nm/V}$) is verified and corrected if necessary.
+
+    \item \textbf{Atomic Resolution:} A completely flat region on the surface is located, and the atomic structure of the graphite is scanned.
+
+    \item \textbf{Structural Analysis:} The observed atomic structures are interpreted using the \textit{Representation} menu. The heights of atomic elevations and the distances between neighboring elevations are measured and identified with specific distances in the graphite lattice (planar distance of $1.42\,\text{\AA}$). Symmetries and angles between atomic directions are determined to assess distortions and verify the accuracy of the X-Y piezo calibration. The direction of greatest distortion is identified, and the height of the elevations is explained.
+
+    \item \textbf{Fourier Analysis:} A two-dimensional Fourier transform is performed on the image, and the resulting diffraction pattern is interpreted to extract structural information.
+\end{enumerate}
 
 
 % --- References ---
