@@ -272,18 +272,74 @@ Understanding this behaviour is essential for analyzing the atomic-resolution im
 % --- Experimental Setup ---
 \section{Experimental Setup}
 
-\subsection{xxx}
+The STM used in this experiment is a custom-built instrument designed for operation under ambient conditions.
+Its core component is a piezoelectric tube scanner that provides precise positioning of the tip in all three spatial directions.
+A micrometer screw enables coarse manual approach, monitored with a USB microscope, and once the tip is close enough, a computer-controlled fine approach brings it into tunneling range.
+After detecting a tunneling current, the feedback loop maintains the chosen setpoint during scanning (see Fig.~\ref{fig:stm_blockdiagram}).
 
-xxx
+The microscope is mounted on a vibration-damping table to minimize mechanical noise, and all control signals, data acquisition, and imaging are handled through the Nanotec electronics together with the WSxM software package.
+
+\vspace{1em}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.75\textwidth]{../resources/figures/STM_BlockDiagram.png}
+\caption{Block diagram of the STM setup, showing the feedback loop, piezo scanner, and current amplification \cite{STMAnleitung}.}
+\label{fig:stm_blockdiagram}
+\end{figure}
 
 
 
 % --- Procedure ---
 \section{Procedure}
 
-\subsection{xxx}
+This section describes the measurement procedure as carried out according to the tasks (a)–(f) in the STM manual~\cite{STMAnleitung}.
+All steps are written in the order in which they are performed during the experiment.
 
-xxx
+\subsection{(a) Tip Approach and Initial Parameters}
+
+The graphite sample and the metallic tip are mounted in the STM head following the laboratory instructions.  
+The tip is brought close to the surface using the coarse mechanical approach under visual control with the USB microscope.  
+The automated fine approach is then started in WSxM until a tunneling current is detected.  
+Once the tunneling current stabilizes, the feedback loop is activated and imaging mode begins.  
+The initial scan parameters (scan size, speed, setpoint current, bias voltage, and feedback gains) are set to the default values recommended in the manual.
+
+\subsection{(b) Feedback Optimization: Proportional and Integral Gain}
+
+A small and slow scan is used to study the behaviour of the feedback loop.  
+The proportional gain $P$ is varied to observe how strongly the system responds to height deviations.  
+The integral gain $I$ is adjusted to correct slow drift while avoiding oscillations.  
+Different combinations of $P$ and $I$ are tested at various scan speeds to determine stable operating values.  
+The goal is to identify parameter ranges that maintain a stable tunneling current without overshoot or noise.
+
+\subsection{(c) Locating and Measuring Step Heights}
+
+Larger-area scans are performed to locate terraces, steps, and grooves on the graphite surface.  
+Suitable step edges are repeatedly scanned with moderate scan sizes to collect a series of step profiles.  
+At least twenty step heights are measured using WSxM’s line profile tool and plane-correction filters.  
+The measured step heights are plotted and compared with the graphite interlayer spacing of approximately \SI{3.35}{\angstrom}.  
+From this comparison the effective $z$-piezo calibration (nominally \SI{10}{nm/V}) is estimated, including its uncertainty.
+
+\subsection{(d) Achieving Atomic Resolution}
+
+Regions that appear atomically flat in large scans are gradually zoomed in by reducing scan size and scan speed.  
+The tunneling parameters are fine-tuned until atomic contrast becomes visible.  
+Multiple atomic-resolution images are recorded with slightly different bias voltages and setpoint currents to ensure reproducibility.
+
+\subsection{(e) Quantitative Analysis of Atomic Images}
+
+Atomic-resolution images are analyzed using WSxM’s line profile and measurement tools.  
+The apparent corrugation height between bright and dark lattice sites is extracted.  
+The lateral distance between neighboring maxima is measured along several high-symmetry directions.  
+These values are compared to the known graphite lattice constant of approximately \SI{1.42}{\angstrom}.  
+The $x$/$y$ calibration factors of the piezo scanner are checked and, if necessary, adjusted.  
+Angular relations between lattice directions are evaluated to identify possible distortions due to drift or scanner nonlinearity.
+
+\subsection{(f) Fourier Analysis}
+
+A two-dimensional Fast Fourier Transform (FFT) is applied to selected atomic-resolution images in WSxM.  
+The resulting reciprocal‐space pattern is used to determine lattice periodicities and symmetry.  
+FFT peak positions are compared with the real-space measurements to verify the consistency of the $x$/$y$ calibration.  
+The FFT analysis also helps identify distortions such as shear, compression, or drift, which may affect the recorded images.
 
 
 
@@ -319,8 +375,8 @@ xxx
 Additional files:
 
 \begin{itemize}
-  \item \texttt{"Python\_STM.zip"}
-  \item \texttt{"LabReport\_STM.pdf"}
+  \item \texttt{"STM\_Python.zip"}
+  \item \texttt{"STM\_LabReport.pdf"}
 \end{itemize}
 
 
@@ -338,7 +394,8 @@ All scientific analysis, data evaluation, and interpretation were carried out in
 % --- Lab Report ---
 
 \newpage
-%\includepdf[pages=-, scale=0.9, pagecommand={\thispagestyle{empty}}]{../resources/LabReport_STM.pdf}
+\includepdf[pages=-, scale=0.9, pagecommand={\thispagestyle{empty}}]{../resources/STM_LabReport.pdf}
+
 
 
 \end{document}

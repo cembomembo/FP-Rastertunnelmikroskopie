@@ -1,0 +1,164 @@
+WSxM file copyright Nanotec Electronica
+SxM Image file
+Image header size: 2683
+
+[Control]
+
+    Angle: 0
+    Set Point: 1 nA
+    Signal Gain: 1
+    Topography Bias: 1000 mV
+    X Amplitude: 5 nm
+    X Offset: -346.316 nm
+    X-Frequency: 0.986 Hz
+    XY Gain: 0.0588235
+    Y Amplitude: 5 nm
+    Y Offset: -147.962 nm
+    Z Gain: 1
+    Z Offset: 486.499 nm
+
+[Feedback settings]
+
+    Input channel: current_ext_ch5
+    Integral: 0.074946
+    Proportional: 0.15
+    Tilt X: 0 nm/nm
+    Tilt Y: 0 nm/nm
+
+[General Info]
+
+    Acquisition channel: Topography
+    Acquisition primary channel: Topography
+    Acquisition time: 03/12/2025, 15:32:45.656
+    Conversion Factor 00: 10 nm
+    Conversion Factor 01: 10000 pm
+    Conversion Factor 02: 1 V
+    Conversion Offset 00: 0 nm
+    Conversion Offset 01: 0 pm
+    Conversion Offset 02: 0 V
+    Head type: STM
+    Image Data Type: short
+    Number of columns: 128
+    Number of rows: 128
+    Round percent: 1
+    X Delay: 10
+    X scanning direction: Backward
+    X scanning mode: Forward and backward
+    Y Delay: 100
+    Y scan: Yes
+    Y scanning direction: Down
+    Y scanning mode: Up and down
+    Z Amplitude: 83.1024 nm
+
+[Head Settings]
+
+    Head Name: stm_lab2
+    Preamp Gain: 1000 mV/nA
+    X Calibration: 47.2 Å/V
+    X Calibration formula ({nm/V}): 4.72 + 0(1/V)*XScan(V)
+    Y Calibration: 47.2 Å/V
+    Y Calibration formula ({nm/V}): 4.72 + 0(1/V)*YScan(V)
+    Z Calibration: 100 Å/V
+
+[Miscellaneous]
+
+    Acquired with version: 5.0 Develop 7.0
+    Acquisition mode: Advanced
+    CH 12: 0.000000 V
+    CH 13: 0.000000 V
+    CH 14: 0.000000 V
+    Comments: 
+    DSP voltage range: 20 V
+    Dulcinea serial number: 55
+    Laser On: No
+    Maximum: 26583
+    Minimum: -648
+    Sampling frequency: 16666.7 Hz
+    Saved with version: 5.0 Develop 7.0
+    Version: 1.0 (April 2000)
+    Z Scale Factor: 1
+    Z Scale Offset: 0
+
+[Non linear correction]
+
+    Active: No
+
+[Piezo Settings]
+
+    Angle: 0
+    Auxiliar Z Scanner Analog Gain: 1
+    Auxiliar Z Scanner Calibration: 10
+    Auxiliar Z Scanner Cut Off: 100
+    Auxiliar Z Scanner Max Voltage: 10
+    Auxiliar Z Scanner Min Voltage: -10
+    Auxiliar Z Scanner Output Channel: CH 12
+    Custom Scan Max. Voltage: 150
+    Custom Scan Min. Voltage: -150
+    Custom Z Max. Voltage: 150
+    Custom Z Min. Voltage: -150
+    Deadening Factor: 0.2
+    Enable Resonance Correction: No
+    Fast/Slow scan ratio: 100
+    Name: STM
+    Resonance Frequency: 1000
+    Scan polarity: XYZ+/-
+    XY Offset Speed: 200
+    Z Offset Speed: 300
+    Z Scanner mode: Main scanner
+
+[Header end]
+[þZþYþlþ~þSþNþþâýºýÆýÀýÇýÄýÂýÇýÂýÀý»ýºý¿ý»ý½ý¿ý°ý°ý°ý±ý¯ý­ý«ý§ý¶ýäýéýþ5þþþþýþ#þþþ)þ&þ+þ"þþþúýþþþþþÿýþüýòýìýþñýæýöýûýöýøýêýçýíýíýÛýÙýâýñýáýÝýÓýÎýÌýçýÛýÛýÖýÜýÞýÜýØýÍýÊýÊýÕýÚýÂý»ýÄýÂý±ý¬ýµýÎý¶ýÉýÀý¾ýÆý¹ý±ý¶ý¥ýœý«ý´ý®ý­ýŸý~ýxý™ý…ý‡ýý¤ý•ý§ý¨ý€ý×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g¹¾¸¯¯µ©¥¦®•t:ÓØêéããØÚÞßàãåÛÞÓÑÉÁÄÙÉÌ¼ËÈË´¶´ºÌ¿¬²¬ª´±¸Øöú&N[sl\][b_gieQEQQMPZ%%%%%%%%%%%%%%%%%%%%%%%%%%ÐËÍÖÑÏËÃÈ™¥‡åëèæëèåæäçãâãäçëòÓÓÚÙÑØÐÏÍÇËÈÉÉÆÃÀ½¿Á¾ÀÍÅ 7{„vryw€wmouqjlglaiu%%%%%%%%%%%%%%%%%%%%%%%%%22222222222223333333333333óìæêàßÞÀ´iJìòûúøöòôõóîóëïïýÜÜèæØÙÔÏÕÕÔÐÌÎÎÍÆÊÆÅÆóc¯†“„tvrx‚xyxs|zh^ttt3333333333333222222222222GGGGGGGGGGGGGGGGGGGGGGGGGG ïÙ»q+		ýý"#þÿ õøõò÷óõæêììäÞâãØáîö4l‡‘“‘—•Ž†…„–‘Ž‹›‰‘„€yGGGGGGGGGGGGGGGGGGGGGGGGGDDDDDDDDDDDDDDDDDDDDDDDDDDÇ°ÊÑËÂ³3	
+ü	üóñìñøïòîëåèêåæãäæôûft‚š“Š™¦§¥—¢«¤ŸžŸ¢˜–“–DDDDDDDDDDDDDDDDDDDDDDDDDIIIIIIIIIIIIIJJJJJJJJJJJJJõÐÄ¿“	ûýô÷ú÷öôñïñìèæëççÞßæÛÜÚâè'It¤¤½Á­®§«¡¡³»¹±¯­›œ›Ÿ˜™Ÿ¤¦”JJJJJJJJJJJJJIIIIIIIIIIII@@@@@@@@@@@@@@@@@@@@@@@@@@ÚÕÆ«–	 ÿ÷÷óñëæêæåçéçãæâëôD/ B›¬°¤š”‹oŸ™©– Ÿž£‘’”‚zx}w@@@@@@@@@@@@@@@@@@@@@@@@@DDDDDDDDDDDDDDDDDDDDDDDDDD¸}
+ÿ ûóðõðñôííêèëæñâÜÜáï==W„‚³®Ž“’Ž”˜•š¬¬« ›¢š‡›Ÿ˜“¦œ¨œ–DDDDDDDDDDDDDDDDDDDDDDDDDHHHHHHHHHHHHHHHHHHHHHHHHHHs=	ÿ üúûøù÷õóïîäçãën^€¬’ª£°¦©¢¡ž¤›¡œ¢¢ ¡¢œ–‘”œ™–”‘HHHHHHHHHHHHHHHHHHHHHHHHHTTTTTTTTTTTTTTTTTTTTTTTTTT/!
+ÿüþøûûöôïíæåçêðuUªÌËÍÃÄèª»ÃÆ½···¾¶­ «¶«¢§§§°¢œž¦—TTTTTTTTTTTTTTTTTTTTTTTTTdddddddddddddddddddddddddd!# #"" G 	  ÷õøöú3UIˆ·¥®»ÎÊÕÜÌÉÒÑÆÇºÃÌÓÂÂ¸½ÁÐ·º¹¼œ²·Á¨¾¿dddddddddddddddddddddddddaaaaaaaaaaaaaaaaaaaaaaaaaa'+)''!%$&!!(
+
+	
+ ÿüøþýúýøÿg¥µ‚§ÂÄÑ¶Á»¿½»½¶¹¥®Ã³ª³¤¢¸·¸²¸³¹º¼²¦¬¨³aaaaaaaaaaaaaaaaaaaaaaaaa\\\\\\\\\\\\\[[[[[[[[[[[[[*)0./((*2# 5
+
+
+	  ÿöúüöÂ¿Ø¹ËÊµ«¾¨¤¥·º©§¦›•¬¡¢¥®–Šv€—›™¢’˜Žš——[[[[[[[[[[[[[\\\\\\\\\\\\jjjjjjjjjjjjjjjjjjjjjjjjjj6875507:68?0####" "
+	N{ÎÚ¯Ã»¼ÃÀ²¯¯©¶©¨®°µ´²›«±®´¬¨ªª¤¨®§¥¡ ™žjjjjjjjjjjjjjjjjjjjjjjjjjmmmmmmmmmmmmmmmmmmmmmmmmmm5>8623324+&))$!! 
+#‰ªÉË×ÃÉËÈÈÁ¾µ··¼½½¸»»¾› ´³¨¨®¤±¬©§§®©¢œœžmmmmmmmmmmmmmmmmmmmmmmmmm††††††††††††††††††††††††††=<A;8>:,%$)')+(&*$!!#!+}—éåìççèßÓ××äëêêëðâÞëÎÏÎÔØÈÊÏÐÑÑÆËÉÂÃÎÅÈÅÄÇ†††††††††††††††††††††††††‡‡‡‡‡‡‡‡‡‡‡‡‡ˆˆˆˆˆˆˆˆˆˆˆˆˆCE>><AB21/-+(+#$"%""!DB¡¼îØ×ØßÎîéçâÚÚÞäÅÄÁ¾ÃêíëÏËÃÂÍÑÕàÓÐÎÙÖÆÉÞÉÀÄˆˆˆˆˆˆˆˆˆˆˆˆˆ‡‡‡‡‡‡‡‡‡‡‡‡E=BL==8141*+!5)%'$  /:6(RvÍîÏÝÊËÊ»ÀÄ¾Â¿ÔÂÉ³³·À½¿º²¼¹ÂÀÅÂÂÁ·±³³®´´³³®¬‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰DMPK=89;53/1/--,+-"+6ho‡©ÞáëÞÞÒÐÒÕÖÌÄÇÐØÏÙÈÌÉ²ÂÑ¾¹Ñ×ÊÉËÅ»ÌÁ½¶½¶Â±»­˜‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜5349,6-'/+&"$$ '%-YgP…°á öñêìþö÷øìñø÷èéêòùëÖâÒØÖÞÍÕÎÞÖ×îÕáÓÕËÀ½¿´³½Ç»˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜ŠŠŠŠŠŠŠŠŠŠŠŠŠŠŠŠŠŠŠŠŠŠŠŠŠŠ/00-,((*&# #" !"/S?nwmÐãÛÄÝÖÄÅÚèÒÙÖÎ¼ÃÍÎÙÊÇÃËàÏ¿¹³ÆÇÀÌ¿ÂÇ½ÅÁÃÁ¹·µÂ¸¬¬ŠŠŠŠŠŠŠŠŠŠŠŠŠŠŠŠŠŠŠŠŠŠŠŠŠŠŠŠŠŠŠŠŠŠŠŠŠŠŠŠŠŠŠŠŠŠŠŠŠŠŠ)%&+).$%$( / # 82‘kÚáßÜâÒáÖÉÏÓÄÃÄÌÌÍÑ¾ÐËÇÑ·½¼­®­¼´»½¾Å¾ÇÇÂÅÃ°··¬Á¶µŠŠŠŠŠŠŠŠŠŠŠŠŠŠŠŠŠŠŠŠŠŠŠŠŠ‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰#$$#  
+'?:=R“¯¿ÏÿÝÕØÚÐÄÏÍßÖ°•ÍÝÂÆÅÒÁÃÅ¹›³²¬»êêµ²¿³µ»Â”§´Ð¿£¬§¯«‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹#"E.<eY„¢Üæâ×¾½ÃÐÚÏÎÍÞÔÏÜ×ÊÇÛ´³¼ÂÆ¶¿¸Ç£§³¤¢¬¡¥¤¬£§¼´µœ ÈÂ £œ‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹‹tttttttttttttttttttttttttt20
+
+<5G€Nrgœ‰•¢“™¯°µ«¨¯¼³·ª†¤­°°—‘­»§¤¦¨«¼¯®©££ª¨£ªŒutwaehtzfefttttttttttttttttttttttttt„„„„„„„„„„„„„………………………………… c{u~K­¦ÈË¶ÈÄ§­¿ÄÅ¼¸¸¼½¹´¶®´¬ª¡¬Ÿ­¨®¶¬µ®»³¢µ­ ¢£¥Ÿ ƒŠžª “—…………………………………„„„„„„„„„„„„uuuuuuuuuuuuuuuuuuuuuuuuuu
+I#IzxNª·§ª©¢¯¡ª·§¯§ª³­«©¤µ©‹‘‰‘‘’ss„…—š–”’™ˆ‰…ƒ“™ƒŽfet‰xƒuuuuuuuuuuuuuuuuuuuuuuuuu{{{{{{{{{{{{{{{{{{{{{{{{{{
+]cK³]pƒ£¸¦ ©“—žŸ“‘™žŸ¨™¤§²œ–•ž§šœ¢ œ¦“«š–›ˆ““‡~‰Žƒ}Š{t†…{{{{{{{{{{{{{{{{{{{{{{{{{ˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆ	';xP˜„„¥´Ç²¯®Ë¶º½ªššŸ©¡¬¯ µº¹¼³Ÿž ¬¡¨ª¹¶¦´¸À©°²­¦’““›§”–“‰”Ž€ƒ…€ˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆˆ‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰&)&"&"lRzˆ„m¥ßÕÚš’ƒ}yƒ Š˜«¢¡·¨µÅ´­¼®®¤¢¥¤³Ÿ  š”š¨™¡“°£–™¥›š¡¨¤Ÿ ¦¤ ‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰‰’’’’’’’’’’’’’’’’’’’’’’’’’’Aa˜žn˜®ÞìÖÇ¹×Ì¼É­Ãª¤«¬»Áœ£¢°²¦ÁÉ¸¿ÀÅÀ¡©³£ƒƒ•¢—‘¶­³®ªª¡}v|‰š’Ÿ ž’’’’’’’’’’’’’’’’’’’’’’’’’§§§§§§§§§§§§§¨¨¨¨¨¨¨¨¨¨¨¨¨$'"" "+¼–¯šÌÌØÄÍÀ¼³ÓÚØÓ¿¯Ÿ©È¿ºÄ¿Â«ž¢¡£ÁÚÚÌåêÖçÒÐÝÕÃ»­Œ³«°ºÊµ¥¦¿¾¿Ã±®®§©Ÿ¢¨¨¨¨¨¨¨¨¨¨¨¨¨§§§§§§§§§§§§‘‘‘‘‘‘‘‘‘‘‘‘‘ !!'+=y¦¤«ÞÌÑÄÇ»´¸ËÌÓÖÍÐ×­§³´¶µ­®›œ¤˜œ¤¥¬¸· kromru‚ˆƒš¯‡…‰™•„}zƒ~„Œ‘Ÿ¡‘‘‘‘‘‘‘‘‘‘‘‘‘˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜%#" 0490”‰Ç¾¶ÇÃ¤Ë»ÈÈ®œ™›³¹¸µ¼µ©²¤¥¦¨½Ä¶»¶Á¼Á£“¤‰|”—ˆ¬›®‘˜™‘‹ªŸ‘”¥®°³¿µ£˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜˜¦¦¦¦¦¦¦¦¦¦¦¦¦§§§§§§§§§§§§§;sˆ ³ËßâÒº¸À´¸ªœ°ÆÅÆÎ±¦£——š¬ÃÊË½º±»±ÖÄ«¢¥ÑÂÅ·ËÝÛÂÉ·À½±¶½Ä¨˜šŠŽtž¨º½–„§§§§§§§§§§§§§¦¦¦¦¦¦¦¦¦¦¦¦°°°°°°°°°°°°°±±±±±±±±±±±±±$:Bw—ž¤âí×Æ°Ë×ÝôæÞÜÞãÓ×ßæÙ×ÔÞØÏÊ´¨—‘¡£¤¨££¯°®¨ÈÆ·Å×¶ÅÌº¼«¸½·¹¼²µÆŽz‡ˆŠ ´ ±±±±±±±±±±±±±°°°°°°°°°°°°µµµµµµµµµµµµµµµµµµµµµµµµµµ?b£©Ôð÷àËÝÉß×ÑÆÍØÚÙÚÊîáÀ™²½º¼½ÔÏÍÅÀÃÂÂ¯ÃÄÃÀ¾Ç®ÐáÐ¿Ë¾µ¶·»›…~€‡–ª°°³´¸¬§¬¥«µµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµµ¶¶¶¶¶¶¶¶¶¶¶¶¶)$yž‰Ÿ¹×Èé¶®›«äñå÷èìÎ·ÐØÈÌÒÌÄÂÜÛ×ÚÌË×ÙÖÆÉ¸£—’„’› ·†›Ÿ‰…yqe‚•¹Æ¹®¢ÊÆ¿ÀÂÃÀÙÒ¿¿â¶¶¶¶¶¶¶¶¶¶¶¶¶µµµµµµµµµµµµ»»»»»»»»»»»»»ººººººººººººº*6“­¸ìúõæéóÏÌ¿­¯áÊ¸ÄÎÍÐÕÔÙØÓÖæÂÂÊ¾·°©ãÖÀÄàìâÊÈ¹­¬·¾¹¾¨¯¬¥¬´žŠ”¤¬¤—´­¤—„“ ®žººººººººººººº»»»»»»»»»»»»»»»»»»»»»»»»»¼¼¼¼¼¼¼¼¼¼¼¼¼•˜üöþñåéúÞ×ééÝÜÔá¿·¾ÂÝôéäòñúåçØÐ×Òå×Î¹É»ßïÖÏ¿ºªÅ±³¾»±xaWglotabd~¨²©£’Œsz……š¼¼¼¼¼¼¼¼¼¼¼¼¼»»»»»»»»»»»»ßßßßßßßßßßßßßßßßßßßßßßßßßß–ÃùÕÿìõôùùÿâêêôìþðããæÞõÖãßõéÝá×óçéäÙäÝÓÛÑáÛÈÂÓäÞÕÌÓæÚÛÕÎÖãÙÔ³ÁÀÅÃÉÃ»¹·ßßßßßßßßßßßßßßßßßßßßßßßßßŠþ¸þæþ
+ÿ#ÿ*ÿ)ÿ(ÿ+ÿ'ÿ4ÿ1ÿ)ÿÿ&ÿ,ÿ$ÿ)ÿ"ÿÿ,ÿ<ÿ-ÿ/ÿ+ÿ,ÿÿÿÿ(ÿÿÿÿÿ ÿÿ
+ÿÿÿÿÿÿÿÿÿÿ ÿÿþÿþôþöþòþïþÿðþêþõþÿ÷þìþÝþäþôþóþóþôþøþìþäþèþÝþÞþêþÎþêþðþ×þÂþÚþÙþÍþÑþÑþÓþÎþÜþØþÓþÛþÜþäþßþÉþÕþÄþÃþÇþÌþÄþËþÈþ¼þÁþ¿þ»þ¬þÅþÆþÉþ±þ¹þ¾þºþ·þ«þ§þªþ§þ±þªþ°þ¡þ£þ–þ þ„þ›þ–þ£þÑþÙþþþÿßþ!ÿCÿNÿ>ÿDÿEÿ/ÿ,ÿ5ÿ;ÿ+ÿ)ÿÿ	ÿÿÿÿÿ&ÿ=ÿ	ÿÿ÷þãþèþ	ÿÿÿÿÿÿíþÝþÐþÈþÂþÈþØþáþâþìþéþáþÜþÝþÏþÕþÔþÙþ×þÒþÎþ»þ²þÇþØþÜþÐþÆþÒþÖþÏþ¸þ¾þ¼þ¿þÓþßþÐþÌþÈþÔþÞþÐþ»þ¼þÔþÔþËþÏþæþèþ½þËþñþ¸þÇþÊþ±þþŸþ¯þ¥þ§þ¦þžþ£þ³þÃþµþ¬þµþ®þ¥þ¯þ±þœþ’þ’þ‰þ™þˆþ‹þþþ}þxþ~þ‚þ†þ€þ‡þ¡þ¿þ§þÄþËþëþÿ%ÿÿÿÿÿ'ÿ$ÿ(ÿ*ÿ,ÿÿ÷þÿúþÝþîþÿþÿÿ"ÿÿ$ÿ(ÿ/ÿ4ÿ-ÿ.ÿÿèþÜþÒþãþéþØþÙþ×þÎþÔþËþúþ÷þÙþÏþãþÑþÜþÿôþìþÿôþ¾þÂþÅþ×þÜþæþÚþÔþÑþÈþ»þ¦þ¨þÄþ¼þÆþÐþÈþ¶þ¹þ¸þÂþËþÉþ¼þºþ¹þ´þÓþÓþãþìþïþíþòþåþÇþÙþÙþÎþ»þ±þÂþ±þ°þ²þ®þ¡þþ•þ”þ²þàþåþÙþÈþ©þ¥þ¦þ€þ“þ~þxþ‰þ‘þzþþþ‰þfþçþ¶þ¯þÁþæþÿ&ÿ&ÿ7ÿÿÿÿþþÿ#ÿ7ÿ<ÿ8ÿ ÿÿÿ+ÿÿÿÿÿ	ÿÿÿÿÿøþëþôþñþ÷þðþÓþÎþçþäþÙþÔþÉþÉþËþÞþ÷þðþøþÿìþËþÓþÄþËþÓþÙþÙþÉþÚþØþÿ²þËþäþäþãþÎþÓþàþÆþ×þºþÅþÂþÇþÈþ¼þµþ¬þ²þ½þºþ¼þ þ þ§þ°þ—þ…þrþcþhþcþwþ„þ•þ¢þžþ˜þ…þ~þþþþmþoþˆþmþ<þRþcþXþTþMþWþVþQþPþMþTþVþLþOþCþXþgþàþàþàþàþàþàþàþàþàþàþàþàþàþÿÿÿÿÿÿÿÿÿÿ	ÿþþÿøþîþðþûþ ÿýþøþïþíþèþõþñþîþñþúþúþöþðþðþüþüþøþïþñþùþÿëþÿ
+ÿÿ	ÿÿþ÷þÿþöþíþÔþÔþðþæþÓþÏþÏþÑþÍþÝþÞþÙþÊþÌþáþÜþÎþ¹þ¨þ¯þºþÎþÂþ¹þºþÊþÐþ¼þÌþßþÓþÔþÒþÊþÏþÍþÄþ¹þÄþ¿þ¶þ±þ¤þ°þ·þ¹þ«þ°þ¬þÄþ¨þ®þ²þ«þàþàþàþàþàþàþàþàþàþàþàþàþãþãþãþãþãþãþãþãþãþãþãþãþãþ_ÿXÿ6ÿÿ6ÿGÿ5ÿ>ÿIÿAÿ-ÿÿÿ
+ÿÿÿÿÿÿÿÿÿÿÿÿÿÿèþìþïþòþÿïþÿÿþþ ÿúþäþäþùþ	ÿÿÿÿÿÿëþóþôþÝþüþÚþÖþ ÿöþýþäþçþðþÖþÖþÕþèþãþÕþºþ‘þ~þ‰þ¬þÌþ¿þÂþÔþÑþØþÕþµþhþtþ…þŠþ™þ²þ¿þ¼þÚþÍþÕþÊþ•þˆþþŽþ‡þ”þ“þŽþŽþ‡þ|þžþãþãþãþãþãþãþãþãþãþãþãþãþÐþÐþÐþÐþÐþÐþÐþÐþÐþÐþÐþÐþÐþùþÿþÿÿÿÿ	ÿ÷þÝþãþ÷þúþñþåþçþ÷þñþòþðþüþ
+ÿÿÿÿèþîþ ÿîþìþðþãþáþÿ ÿëþéþçþùþçþ
+ÿ÷þäþÜþïþÙþÖþ·þÚþÙþÁþ²þ¤þ¥þ§þ³þÉþ×þÒþØþÆþÚþÛþÅþ¨þªþÁþÐþ¾þ¿þÀþºþ¹þ²þ®þªþºþ²þµþ¸þ«þ þŸþ¦þ¿þ²þ±þŸþÁþÆþ¥þžþ¡þ‹þ¯þ¸þqþ…þƒþ—þ”þŒþ…þŽþÐþÐþÐþÐþÐþÐþÐþÐþÐþÐþÐþÐþáþáþáþáþáþáþáþáþáþáþáþáþáþÿíþØþÜþæþçþðþöþïþïþÛþÌþøþøþáþýþûþüþÿúþþþýþêþíþüþöþÿ ÿèþíþïþûþëþîþêþÿùþõþåþâþ÷þûþòþÿñþúþÿ§þ±þÑþþþÿýþûþýþÿÿêþäþêþùþýþîþÁþÃþÍþôþÂþÂþÉþÛþÃþ¸þ³þ²þ­þÈþ¼þµþºþ¿þ¿þÔþÚþÚþÛþÚþØþÚþÏþÑþÄþÉþÐþÍþÄþÎþ¾þÁþÀþ¾þÅþ²þáþáþáþáþáþáþáþáþáþáþáþáþíþíþíþíþíþíþíþíþíþíþíþíþíþ,ÿ$ÿ0ÿ4ÿ>ÿCÿDÿ?ÿ,ÿ(ÿ3ÿ?ÿ&ÿ1ÿ5ÿ/ÿ8ÿRÿ4ÿ"ÿ$ÿÿÿÿñþÙþÄþÿðþìþÿÿ!ÿúþÿÿÿÿÿÿðþÿìþùþðþèþÞþùþôþÊþµþ»þÅþ»þ¹þÁþÅþÆþÏþïþïþäþïþñþæþÎþÝþöþèþêþêþÜþÚþÙþÙþÌþÝþßþ×þ×þØþÚþßþÐþ»þ­þ²þ¼þÆþÇþÄþ¹þ¶þ¥þ—þ´þ«þ”þ•þ“þþ’þžþíþíþíþíþíþíþíþíþíþíþíþíþâþâþâþâþâþâþâþâþâþâþâþâþâþìþÿÿÿÿÿáþÐþÏþÖþØþòþÿÿÿêþèþûþÿøþÿþîþÿ	ÿÿÿþþ
+ÿýþëþëþÿÿøþóþÿÿýþúþôþÿÿîþÿúþøþûþèþèþöþáþöþïþäþèþíþåþìþãþÝþáþÔþÕþØþØþÙþàþÝþÙþÌþ¸þ×þÝþßþÙþÒþÊþÈþ¹þ°þ²þ­þ½þÄþÍþÏþÇþ»þ¿þÆþÍþ´þÂþ¼þËþ¿þ¸þ¸þ­þ§þ²þ£þŽþâþâþâþâþâþâþâþâþâþâþâþâþôþôþôþôþôþôþôþôþôþôþôþôþôþ5ÿ4ÿ/ÿ3ÿ?ÿ@ÿ<ÿÿÿÿÿÿÿüþÿ ÿ ÿÿÿúþÿÿÿøþÿÿ	ÿÿÿýþïþøþÿýþòþçþâþãþÿÿÿÿøþøþõþðþçþôþúþþþúþõþñþóþòþóþøþðþîþàþäþÚþÎþÆþËþÐþØþÖþÐþÒþÑþÊþÃþ¾þºþÞþïþõþíþóþòþèþáþÓþÒþ×þÛþÙþáþìþîþøþòþðþèþÙþâþÙþÓþ×þÓþÔþÔþôþôþôþôþôþôþôþôþôþôþôþôþ
+ÿ
+ÿ
+ÿ
+ÿ
+ÿ
+ÿ
+ÿ
+ÿ
+ÿ
+ÿ
+ÿ
+ÿ
+ÿ?ÿ9ÿ<ÿ?ÿ9ÿ>ÿIÿDÿDÿIÿCÿCÿ7ÿ2ÿ:ÿDÿ:ÿ.ÿ4ÿ<ÿ8ÿ7ÿ&ÿ.ÿÿÿÿÿ!ÿ#ÿÿÿÿÿÿÿÿÿ7ÿ?ÿ)ÿ#ÿÿ#ÿ(ÿÿÿÿÿ	ÿÿÿÿÿùþíþéþèþìþçþåþêþîþÿÿÿÿÿ	ÿÿþþóþûþÿÿÿ÷þñþÿþôþîþíþæþÞþãþÛþ×þÈþÁþÁþÃþÉþËþÉþÌþÂþ¼þÁþÁþËþÔþàþáþ
+ÿ
+ÿ
+ÿ
+ÿ
+ÿ
+ÿ
+ÿ
+ÿ
+ÿ
+ÿ
+ÿ
+ÿÿÿÿÿÿÿÿÿÿÿÿÿÿ^ÿTÿQÿSÿLÿFÿCÿ>ÿ:ÿBÿJÿ7ÿ;ÿ>ÿ3ÿ/ÿ)ÿ!ÿÿÿÿÿÿÿ&ÿ)ÿ3ÿ-ÿ)ÿÿ%ÿÿ ÿ4ÿÿûþÿ
+ÿÿÿÿÿÿÿÿÿ%ÿÿÿÿÿ	ÿúþúþúþÿÿÿ ÿÿ	ÿÿÿÿÿýþÿüþèþäþãþÛþÖþàþåþïþéþîþóþõþûþöþòþñþïþëþäþ÷þùþÿüþÙþÒþ×þäþêþæþèþâþÜþéþñþøþÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ2ÿ8ÿ?ÿ2ÿ5ÿ:ÿBÿ+ÿ*ÿ:ÿFÿ"ÿ ÿÿÿ&ÿ1ÿ;ÿ7ÿ=ÿ?ÿBÿBÿÿ#ÿ9ÿ>ÿ5ÿ6ÿ2ÿ6ÿBÿNÿHÿIÿ?ÿ1ÿ.ÿ=ÿ;ÿLÿ1ÿÿïþçþèþçþ÷þñþ÷þûþÿûþöþÜþáþìþçþÞþäþçþåþáþÚþÝþìþëþýþýþîþöþðþíþôþôþùþôþìþåþÉþÏþÒþÛþãþæþãþÙþÇþÂþÀþ¾þÒþÏþÌþ¿þ¾þÆþ¼þÉþÓþÎþÑþÞþÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿSÿWÿ^ÿ\ÿ_ÿeÿZÿBÿJÿQÿ.ÿÿ&ÿ/ÿ<ÿRÿVÿQÿMÿbÿ_ÿcÿeÿDÿ1ÿ&ÿ;ÿ?ÿ'ÿ"ÿ-ÿ?ÿ9ÿ6ÿ4ÿ)ÿ&ÿ'ÿ ÿÿÿÿÿÿÿÿÿÿÿÿÿ
+ÿ÷þõþôþÿ	ÿÿþþþÿöþÿ÷þÿÿúþöþÿþ÷þéþîþíþîþëþéþñþßþ×þÙþÔþëþÿÿéþáþãþèþáþäþâþÚþéþêþßþÜþìþæþàþÖþÝþÍþ¼þ²þÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿRÿTÿPÿEÿ0ÿÿÿÿ(ÿCÿ0ÿ#ÿ7ÿ0ÿ$ÿ%ÿ$ÿ!ÿÿ'ÿÿÿÿÿÿÿ ÿçþõþÿþùþÿÿÿÿ*ÿ5ÿ,ÿÿÿÿÿÿÿ ÿÿ
+ÿÿÿøþðþÿÿÿÿÿÿÿÿøþûþÿÿÿÿÿÿþþïþïþüþÿÿÿÿ	ÿ
+ÿÿÿòþóþÿþÿûþñþÿþöþâþòþüþíþÖþæþçþáþãþâþçþúþÿÿ÷þôþÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿKÿOÿLÿJÿbÿ]ÿWÿ@ÿ;ÿ5ÿ0ÿ)ÿ5ÿ-ÿ7ÿ/ÿ-ÿ&ÿ&ÿWÿRÿAÿMÿ=ÿ<ÿ3ÿAÿ<ÿBÿÿÿÿÿÿÿÿÿÿÿÿÿÿôþÿþÿÿÿÿüþ÷þíþóþôþ ÿÿõþøþ	ÿÿ,ÿ6ÿ'ÿÿ2ÿ;ÿ>ÿCÿ*ÿÿÿÿÿÿÿÿ-ÿ3ÿ'ÿÿ%ÿ$ÿÿÿüþÿÿÿÿÿÿþÿöþÿÿÿãþßþéþùþÿÿ ÿÿÿÿÿÿÿÿÿÿÿÿÿÿ/ÿ/ÿ/ÿ/ÿ/ÿ/ÿ/ÿ/ÿ/ÿ/ÿ/ÿ/ÿ/ÿfÿ€ÿ‰ÿƒÿvÿoÿnÿeÿZÿKÿMÿ[ÿ^ÿeÿXÿYÿfÿaÿVÿGÿCÿ7ÿ7ÿEÿJÿBÿBÿGÿIÿSÿ[ÿUÿCÿ6ÿEÿ>ÿ/ÿÿ7ÿJÿOÿIÿ@ÿ1ÿ5ÿ9ÿ=ÿÿÿÿÿ&ÿ&ÿ+ÿ8ÿ/ÿÿ ÿÿ!ÿ,ÿ1ÿ4ÿÿÿÿ2ÿ3ÿ1ÿ,ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ	ÿöþÿ	ÿÿýþÿÿÿÿÿàþ»þÄþÌþÌþ/ÿ/ÿ/ÿ/ÿ/ÿ/ÿ/ÿ/ÿ/ÿ/ÿ/ÿ/ÿ:ÿ:ÿ:ÿ:ÿ:ÿ:ÿ:ÿ:ÿ:ÿ:ÿ:ÿ:ÿ:ÿ\ÿZÿ_ÿ[ÿ]ÿ\ÿQÿVÿXÿ]ÿ_ÿ`ÿcÿSÿEÿQÿQÿMÿQÿ[ÿQÿSÿUÿWÿ^ÿcÿeÿ[ÿ`ÿTÿUÿVÿWÿRÿVÿKÿHÿ@ÿ:ÿTÿFÿFÿLÿ>ÿ6ÿ2ÿ7ÿ6ÿBÿIÿ<ÿ5ÿ4ÿ.ÿ4ÿ@ÿ=ÿ;ÿ;ÿ>ÿMÿKÿEÿCÿFÿLÿ@ÿ7ÿ@ÿ?ÿ6ÿ;ÿ8ÿ4ÿ;ÿ.ÿ1ÿ0ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿøþðþýþðþêþìþîþýþÿúþüþ:ÿ:ÿ:ÿ:ÿ:ÿ:ÿ:ÿ:ÿ:ÿ:ÿ:ÿ:ÿ:ÿ:ÿ:ÿ:ÿ:ÿ:ÿ:ÿ:ÿ:ÿ:ÿ:ÿ:ÿ:ÿjÿhÿmÿ{ÿrÿkÿtÿmÿsÿqÿfÿnÿfÿSÿ\ÿiÿeÿiÿjÿeÿ_ÿhÿcÿYÿ`ÿhÿsÿZÿVÿVÿPÿAÿAÿMÿSÿGÿ<ÿ<ÿ:ÿ7ÿ4ÿ<ÿIÿ;ÿ+ÿ+ÿ;ÿ=ÿ<ÿ<ÿBÿ<ÿ:ÿ3ÿ0ÿ)ÿ1ÿ:ÿ3ÿDÿ6ÿ=ÿ6ÿÿ ÿ)ÿ%ÿ1ÿ/ÿ)ÿ%ÿ)ÿ(ÿ+ÿ&ÿ)ÿ*ÿÿÿÿÿÿÿ-ÿ7ÿ3ÿÿÿÿùþüþÿ	ÿ
+ÿÿÿÿÿþÿþþûþäþâþ:ÿ:ÿ:ÿ:ÿ:ÿ:ÿ:ÿ:ÿ:ÿ:ÿ:ÿ:ÿýþýþýþýþýþýþýþýþýþýþýþýþýþÿÿÿ!ÿÿÿ$ÿGÿ@ÿ-ÿÿÿÿÿÿ$ÿ+ÿ ÿÿÿþþþþÿÿÿ ÿ$ÿÿÿÿÿÿÿÿÿÿÿÿÿ-ÿ*ÿ'ÿÿÿÿÿÿÿÿþÿ	ÿÿüþïþîþðþßþÙþÞþæþçþæþïþúþóþòþìþìþûþÿÿÿÿöþüþ ÿýþôþòþÐþäþéþÚþäþðþèþÒþÑþØþ×þÐþ¾þºþ¯þ«þ±þ²þ½þËþÄþ¿þÅþÉþýþýþýþýþýþýþýþýþýþýþýþýþ,ÿ,ÿ,ÿ,ÿ,ÿ,ÿ,ÿ,ÿ,ÿ,ÿ,ÿ,ÿ,ÿSÿyÿ„ÿcÿ[ÿQÿHÿ^ÿQÿOÿCÿHÿ9ÿ#ÿÿLÿeÿRÿ?ÿDÿYÿbÿ_ÿ[ÿWÿUÿRÿJÿbÿfÿ\ÿWÿSÿ`ÿQÿ4ÿ1ÿ8ÿ5ÿ0ÿQÿ:ÿ>ÿ5ÿ:ÿ9ÿ-ÿ$ÿ%ÿ!ÿÿ$ÿ]ÿbÿ\ÿWÿKÿ3ÿ*ÿ+ÿ2ÿ)ÿ ÿ	ÿ#ÿ4ÿ6ÿ:ÿ&ÿÿÿÿøþÿÿ!ÿÿÿÿ4ÿ+ÿÿÿ÷þôþ÷þîþîþÿÿÿÿÿÿÿïþ²þ˜þ›þÇþÚþÈþÂþ,ÿ,ÿ,ÿ,ÿ,ÿ,ÿ,ÿ,ÿ,ÿ,ÿ,ÿ,ÿ;ÿ;ÿ;ÿ;ÿ;ÿ;ÿ;ÿ;ÿ;ÿ;ÿ;ÿ;ÿ;ÿ…ÿ}ÿÿyÿpÿmÿzÿzÿfÿQÿDÿOÿ\ÿ[ÿPÿJÿ<ÿ:ÿIÿjÿbÿoÿuÿqÿpÿwÿ|ÿsÿuÿ{ÿyÿ|ÿdÿRÿIÿLÿ5ÿ)ÿ#ÿÿÿ!ÿ.ÿ&ÿÿÿ	ÿ!ÿ4ÿ=ÿ@ÿZÿXÿRÿJÿWÿJÿFÿDÿHÿAÿ4ÿ-ÿ7ÿBÿEÿ8ÿ0ÿ-ÿ2ÿ2ÿ6ÿ1ÿ%ÿ/ÿÿÿÿÿÿ%ÿ$ÿ ÿ,ÿ$ÿÿ	ÿ"ÿÿÿÿÿÿøþíþóþûþêþìþçþõþôþãþ;ÿ;ÿ;ÿ;ÿ;ÿ;ÿ;ÿ;ÿ;ÿ;ÿ;ÿ;ÿHÿHÿHÿHÿHÿHÿHÿHÿHÿHÿHÿHÿHÿSÿNÿLÿZÿ`ÿ^ÿQÿSÿQÿ]ÿ`ÿRÿJÿSÿXÿfÿaÿMÿFÿTÿZÿaÿqÿdÿdÿXÿUÿfÿiÿtÿsÿhÿkÿWÿIÿ`ÿ]ÿYÿaÿTÿ[ÿmÿ`ÿZÿXÿTÿQÿZÿ\ÿ_ÿ_ÿKÿSÿ`ÿbÿWÿ>ÿ?ÿIÿMÿJÿGÿBÿOÿOÿJÿBÿNÿSÿYÿQÿEÿFÿIÿGÿ7ÿ9ÿ>ÿ?ÿ<ÿ6ÿ1ÿ-ÿ$ÿÿ ÿ$ÿ%ÿ ÿÿ#ÿ	ÿõþøþÿÿÿþÿþÿÿÿÿÿHÿHÿHÿHÿHÿHÿHÿHÿHÿHÿHÿHÿ/ÿ/ÿ/ÿ/ÿ/ÿ/ÿ/ÿ/ÿ/ÿ/ÿ/ÿ/ÿ/ÿxÿeÿ`ÿCÿCÿNÿIÿ]ÿeÿoÿuÿ@ÿ<ÿGÿ@ÿ@ÿ>ÿ6ÿ&ÿ1ÿ1ÿ4ÿ+ÿ_ÿ`ÿ^ÿfÿ^ÿXÿ@ÿ.ÿÿÿ1ÿ'ÿÿÿÿ&ÿ5ÿ'ÿ"ÿ&ÿÿ$ÿ(ÿÿÿÿÿ3ÿEÿFÿPÿ>ÿ!ÿÿÿ!ÿ!ÿÿ#ÿ-ÿ8ÿ1ÿ1ÿ'ÿ!ÿ%ÿ-ÿ3ÿEÿMÿRÿOÿDÿ1ÿ0ÿ0ÿ%ÿ$ÿ5ÿ@ÿ&ÿÿÿ
+ÿ ÿÿþ ÿùþÿÿ ÿ	ÿîþëþÿøþûþÿþÿûþ/ÿ/ÿ/ÿ/ÿ/ÿ/ÿ/ÿ/ÿ/ÿ/ÿ/ÿ/ÿ8ÿ8ÿ8ÿ8ÿ8ÿ8ÿ8ÿ8ÿ8ÿ8ÿ8ÿ8ÿ8ÿ?ÿGÿTÿjÿcÿaÿdÿQÿOÿMÿIÿZÿTÿRÿVÿNÿCÿHÿWÿOÿLÿFÿLÿJÿNÿPÿJÿFÿ<ÿ8ÿ,ÿDÿ@ÿ>ÿ;ÿ0ÿ5ÿ4ÿ-ÿ0ÿ9ÿ6ÿ0ÿ4ÿ?ÿ)ÿÿ1ÿ<ÿ5ÿ7ÿFÿJÿ?ÿ@ÿBÿGÿOÿXÿLÿUÿOÿEÿQÿYÿ[ÿVÿJÿAÿVÿBÿÿýþÿÿ/ÿ,ÿÿ#ÿ/ÿ4ÿÿÿÿÿ0ÿ:ÿÿ<ÿ3ÿ+ÿÿÿ÷þìþÿÿýþÿúþÿöþòþ8ÿ8ÿ8ÿ8ÿ8ÿ8ÿ8ÿ8ÿ8ÿ8ÿ8ÿ8ÿIÿIÿIÿIÿIÿIÿIÿIÿIÿIÿIÿIÿIÿIÿIÿIÿIÿIÿIÿIÿIÿIÿIÿIÿIÿIÿ¥ÿÿ•ÿ™ÿÿÿˆÿ•ÿ¦ÿ›ÿeÿGÿTÿeÿbÿZÿNÿTÿPÿTÿUÿVÿbÿtÿhÿaÿFÿ>ÿBÿ5ÿJÿ^ÿaÿ}ÿRÿOÿAÿ;ÿEÿGÿLÿ5ÿOÿJÿEÿ?ÿ9ÿHÿLÿZÿSÿDÿ2ÿ?ÿÿÿ÷þóþÿÿÿ#ÿ"ÿ#ÿÿÿÿÿÿÿ)ÿ%ÿ-ÿÿÿÿÿIÿIÿIÿIÿIÿIÿIÿIÿIÿIÿIÿIÿIÿIÿIÿIÿIÿIÿIÿIÿIÿIÿIÿIÿIÿ;ÿ;ÿ;ÿ;ÿ;ÿ;ÿ;ÿ;ÿ;ÿ;ÿ;ÿ;ÿ;ÿ;ÿ;ÿ;ÿ;ÿ;ÿ;ÿ;ÿ;ÿ;ÿ;ÿ;ÿ;ÿ;ÿbÿUÿDÿ@ÿCÿQÿGÿBÿAÿ;ÿGÿHÿEÿ;ÿ/ÿAÿFÿ9ÿ8ÿBÿCÿ<ÿ:ÿ;ÿBÿ6ÿ$ÿ2ÿ<ÿHÿAÿNÿXÿGÿIÿ@ÿFÿAÿ5ÿ.ÿ0ÿ;ÿ8ÿ6ÿ3ÿ,ÿ5ÿ9ÿEÿKÿhÿWÿBÿ+ÿ-ÿ&ÿ;ÿ<ÿ<ÿ@ÿ/ÿ-ÿ-ÿ.ÿ,ÿ/ÿ1ÿ+ÿ,ÿ.ÿ%ÿ'ÿ!ÿ'ÿ'ÿ'ÿ)ÿ;ÿ;ÿ;ÿ;ÿ;ÿ;ÿ;ÿ;ÿ;ÿ;ÿ;ÿ;ÿ;ÿ;ÿ;ÿ;ÿ;ÿ;ÿ;ÿ;ÿ;ÿ;ÿ;ÿ;ÿ;ÿOÿOÿOÿOÿOÿOÿOÿOÿOÿOÿOÿOÿOÿOÿOÿOÿOÿOÿOÿOÿOÿOÿOÿOÿOÿOÿSÿ^ÿ_ÿVÿYÿ\ÿYÿPÿJÿJÿgÿhÿ{ÿ{ÿ[ÿOÿTÿcÿQÿUÿTÿSÿTÿKÿGÿLÿ]ÿ_ÿhÿ€ÿ‰ÿsÿjÿ\ÿtÿ€ÿ’ÿ’ÿiÿgÿZÿ<ÿ9ÿAÿAÿ?ÿCÿIÿ8ÿ8ÿ>ÿ@ÿBÿ;ÿ;ÿ9ÿ:ÿ9ÿ3ÿ0ÿ/ÿ6ÿ8ÿ7ÿ7ÿ2ÿ1ÿ)ÿ'ÿ,ÿ3ÿ*ÿ5ÿ5ÿ=ÿ>ÿ8ÿOÿOÿOÿOÿOÿOÿOÿOÿOÿOÿOÿOÿOÿOÿOÿOÿOÿOÿOÿOÿOÿOÿOÿOÿOÿWÿWÿWÿWÿWÿWÿWÿWÿWÿWÿWÿWÿWÿWÿWÿWÿWÿWÿWÿWÿWÿWÿWÿWÿWÿWÿqÿvÿ}ÿÿ{ÿyÿ|ÿaÿTÿNÿhÿiÿaÿXÿZÿ]ÿTÿVÿdÿyÿxÿfÿoÿ_ÿaÿoÿsÿiÿkÿaÿnÿpÿSÿNÿZÿUÿ8ÿJÿ\ÿ^ÿcÿUÿJÿUÿHÿKÿNÿ>ÿ`ÿhÿ^ÿPÿGÿGÿEÿVÿVÿRÿUÿPÿZÿSÿ7ÿ?ÿPÿTÿNÿIÿLÿKÿ*ÿÿÿÿ ÿ"ÿ/ÿWÿWÿWÿWÿWÿWÿWÿWÿWÿWÿWÿWÿWÿWÿWÿWÿWÿWÿWÿWÿWÿWÿWÿWÿWÿ_ÿ_ÿ_ÿ_ÿ_ÿ_ÿ_ÿ_ÿ_ÿ_ÿ_ÿ_ÿ_ÿ^ÿ^ÿ^ÿ^ÿ^ÿ^ÿ^ÿ^ÿ^ÿ^ÿ^ÿ^ÿ^ÿÿqÿZÿoÿ}ÿoÿ}ÿ†ÿˆÿ‘ÿ­ÿ®ÿŒÿÿŠÿ˜ÿ“ÿnÿlÿnÿaÿ\ÿGÿPÿHÿFÿkÿfÿYÿ[ÿ`ÿPÿHÿJÿ@ÿBÿ`ÿ\ÿhÿfÿ`ÿhÿ‡ÿwÿ|ÿmÿ_ÿ\ÿWÿKÿUÿPÿNÿ\ÿTÿOÿOÿMÿ>ÿEÿNÿQÿMÿAÿEÿ7ÿ)ÿ0ÿ=ÿ?ÿHÿ>ÿHÿ@ÿ2ÿCÿNÿ^ÿ^ÿ^ÿ^ÿ^ÿ^ÿ^ÿ^ÿ^ÿ^ÿ^ÿ^ÿ^ÿ_ÿ_ÿ_ÿ_ÿ_ÿ_ÿ_ÿ_ÿ_ÿ_ÿ_ÿ_ÿUÿUÿUÿUÿUÿUÿUÿUÿUÿUÿUÿUÿUÿUÿUÿUÿUÿUÿUÿUÿUÿUÿUÿUÿUÿUÿfÿhÿiÿgÿpÿbÿdÿeÿcÿiÿsÿlÿiÿsÿeÿ`ÿfÿrÿ_ÿ]ÿ[ÿaÿUÿ[ÿZÿOÿ[ÿZÿYÿ^ÿpÿsÿgÿ^ÿeÿrÿkÿbÿNÿWÿZÿUÿSÿ[ÿRÿ]ÿUÿTÿSÿ_ÿaÿWÿGÿQÿBÿEÿFÿ@ÿRÿCÿ:ÿ3ÿ;ÿAÿ3ÿ*ÿAÿ0ÿ9ÿ2ÿ;ÿ0ÿÿ,ÿ=ÿ3ÿ#ÿUÿUÿUÿUÿUÿUÿUÿUÿUÿUÿUÿUÿUÿUÿUÿUÿUÿUÿUÿUÿUÿUÿUÿUÿUÿNÿNÿNÿNÿNÿNÿNÿNÿNÿNÿNÿNÿNÿNÿNÿNÿNÿNÿNÿNÿNÿNÿNÿNÿNÿNÿYÿ^ÿ\ÿTÿXÿVÿKÿUÿ[ÿdÿlÿhÿeÿaÿ^ÿ_ÿLÿhÿnÿuÿgÿiÿbÿZÿbÿaÿWÿSÿMÿ`ÿPÿMÿTÿbÿWÿLÿOÿRÿKÿ?ÿEÿ@ÿ<ÿ;ÿFÿJÿ;ÿ3ÿ8ÿ<ÿHÿSÿ\ÿJÿQÿIÿDÿIÿCÿ9ÿ>ÿ=ÿ9ÿ;ÿ8ÿ<ÿJÿ?ÿ5ÿ)ÿ)ÿ&ÿ7ÿCÿ5ÿ+ÿ1ÿNÿNÿNÿNÿNÿNÿNÿNÿNÿNÿNÿNÿNÿNÿNÿNÿNÿNÿNÿNÿNÿNÿNÿNÿNÿbÿbÿbÿbÿbÿbÿbÿbÿbÿbÿbÿbÿbÿbÿbÿbÿbÿbÿbÿbÿbÿbÿbÿbÿbÿbÿvÿ|ÿƒÿ€ÿtÿxÿnÿÿ€ÿ€ÿuÿsÿÿŒÿ}ÿzÿ‚ÿuÿkÿxÿyÿxÿhÿcÿoÿxÿiÿdÿ`ÿ`ÿjÿgÿ\ÿlÿiÿiÿaÿZÿjÿtÿyÿVÿJÿ^ÿqÿlÿFÿ=ÿKÿ^ÿmÿnÿjÿgÿMÿ_ÿ\ÿYÿXÿXÿHÿQÿVÿ`ÿZÿPÿZÿ(ÿ5ÿ4ÿ1ÿ9ÿ=ÿ@ÿ2ÿ=ÿ5ÿbÿbÿbÿbÿbÿbÿbÿbÿbÿbÿbÿbÿbÿbÿbÿbÿbÿbÿbÿbÿbÿbÿbÿbÿbÿrÿrÿrÿrÿrÿrÿrÿrÿrÿrÿrÿrÿrÿqÿqÿqÿqÿqÿqÿqÿqÿqÿqÿqÿqÿqÿ”ÿ„ÿ’ÿ‘ÿÿÿ›ÿÿjÿWÿWÿsÿ}ÿ|ÿÿÿ~ÿ‚ÿÿ–ÿÿ–ÿ‡ÿ}ÿyÿoÿcÿWÿ\ÿfÿ_ÿeÿoÿkÿqÿpÿ^ÿRÿbÿfÿgÿqÿ|ÿzÿÿ’ÿiÿpÿŠÿÿ‰ÿ~ÿhÿJÿMÿ^ÿaÿdÿQÿdÿpÿoÿWÿZÿ\ÿZÿ^ÿbÿcÿjÿsÿ]ÿnÿfÿhÿfÿZÿqÿqÿqÿqÿqÿqÿqÿqÿqÿqÿqÿqÿqÿrÿrÿrÿrÿrÿrÿrÿrÿrÿrÿrÿrÿZÿZÿZÿZÿZÿZÿZÿZÿZÿZÿZÿZÿZÿZÿZÿZÿZÿZÿZÿZÿZÿZÿZÿZÿZÿZÿeÿ]ÿcÿbÿWÿqÿqÿmÿjÿkÿcÿrÿƒÿwÿoÿnÿdÿXÿhÿmÿlÿcÿpÿvÿ‰ÿ—ÿ{ÿkÿhÿbÿfÿ^ÿXÿSÿPÿSÿNÿVÿSÿ]ÿRÿIÿKÿHÿIÿXÿRÿVÿSÿNÿTÿNÿMÿEÿGÿAÿ?ÿ:ÿCÿDÿDÿCÿKÿKÿIÿGÿNÿHÿGÿJÿOÿDÿ:ÿGÿTÿLÿAÿZÿZÿZÿZÿZÿZÿZÿZÿZÿZÿZÿZÿZÿZÿZÿZÿZÿZÿZÿZÿZÿZÿZÿZÿZÿ×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g×g
