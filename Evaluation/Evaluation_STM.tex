@@ -25,6 +25,7 @@
 \usepackage{bm}                  % bold math symbols
 \usepackage{cancel}              % strikeout in math
 \usepackage{siunitx}             % proper units
+\DeclareSIUnit\angstrom{\text{Å}}
 \renewcommand{\arraystretch}{0.7}
 
 % --- Graphics and floats ---
@@ -103,7 +104,7 @@ Fachbereich Physik
 
 The scanning tunneling microscope (STM) is a surface–analysis technique that enables real–space imaging of conductive materials with sub–nanometer resolution.
 It operates by positioning a sharp metallic tip a few ångströms above the sample surface and detecting the tunneling current that flows when a bias voltage is applied.
-Because this current depends exponentially on the tip–sample separation, the STM is extremely sensitive to atomic–scale height variations and can visualize both the topography and electronic structure of surfaces.
+Because this current is extremely sensitive to the tip–sample distance, the STM can resolve atomic–scale height variations and visualize the topography and electronic structure of surfaces.
 In this experiment we use a tabletop STM operated under ambient conditions to record and analyze surface images of highly oriented pyrolytic graphite (HOPG).
 The aim is to become familiar with the operating principles of STM and to extract structural information from the acquired images.
 
@@ -114,70 +115,74 @@ The aim is to become familiar with the operating principles of STM and to extrac
 
 \subsection{Quantum Tunneling}
 
-To understand how STM works it is useful to recall a few basic ideas from quantum mechanics.
-Electrons in atoms occupy orbitals with specific energies, and their spatial distribution is described by a wavefunction.
-A simple example is the particle-in-a-box model, where only certain standing-wave patterns are allowed.
-At the edges of such a “box” the wavefunction decreases sharply, and in quantum mechanics it decays exponentially when it reaches a region where the electron cannot exist classically.
-This behaviour also appears at the surface of a solid, where the periodic potential ends and the electron faces empty space.
+To understand the origin of the tunneling current, it is helpful to recall a few basic ideas from quantum mechanics.
+Electrons in atoms occupy discrete orbitals whose spatial shape is described by a wavefunction.
+A familiar model is the particle in a box, where only certain standing wave patterns are allowed.
+At the edge of the box, where the potential suddenly increases, the wavefunction does not vanish abruptly but decays exponentially into the region where the electron cannot exist classically.
+A similar exponential decay $\psi = \psi_0 \exp(-\chi z)$ occurs at the surface of a solid, where the periodic crystal potential ends and the electron encounters empty space.
+The decay constant $\chi$ depends on how strongly the electron is bound and therefore determines how far different states extend into the vacuum.
 
 Tunneling becomes relevant only when another conductive object is brought extremely close to the surface.
 If the separation between the surface and the STM tip is only a few ångströms, the exponentially decaying wavefunctions of the two sides overlap (Fig.~\ref{fig:stm_wavefunction_overlap}).
 In this situation an electron has a finite probability to appear on the other side of the gap, even though it cannot cross classically.
-Because the probability depends exponentially on the separation, even tiny changes in distance cause large changes in the tunneling current \cite{STMAnleitung}.
+Because the probability depends exponentially on the separation, even tiny changes in distance cause large changes in the tunneling current~\cite{STMAnleitung}.
 
 \vspace{1em}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.8\textwidth]{../resources/figures/STM_Tunneling_Schematic.png}
+\includegraphics[width=0.73\textwidth]{../resources/figures/STM_Tunneling_Schematic.png}
 \caption{Schematic illustration of how tunneling becomes possible when the wavefunctions of the surface electrons $\psi_s$ and those of the STM tip $\psi_t$ overlap across the narrow gap~\cite{UW_AFM_STM_Workshop}.}
 \label{fig:stm_wavefunction_overlap}
 \end{figure}
 
 
-\subsection{Electronic Structure of Solids and Graphite}
+\subsection{Fermi Levels, Work Functions, and Bias Voltage}
 
-To understand which electrons contribute to tunneling we need to consider how electrons behave in solids.
-When many atoms join to form a crystal, their atomic orbitals overlap and broaden into energy bands.
-The highest fully occupied states form the valence band, while higher-energy states form the conduction band.
-In conductors these bands either overlap slightly or touch at the Fermi level, so there are always electronic states available for motion.
-The Fermi level is simply the energy that separates filled from unfilled states at low temperature.
-Electrons close to this energy are only weakly bound and can respond easily to external influences.
+To understand what drives electrons across the tunneling gap, it is useful to look at how the energy levels of the tip and the sample are arranged.
+Every conductor has a Fermi energy $E_F$, which marks the energy up to which electronic states are filled at zero temperature.
+At room temperature this step becomes slightly smeared by the Fermi–Dirac distribution, but the smearing is very small compared to typical electronic energies, so the Fermi level still acts as a practical boundary between “mostly filled’’ and “mostly empty’’ states.
 
-Graphite is an example of such a conductor.
-Each carbon atom uses three sp$^2$ hybrid orbitals to form strong in-plane $\sigma$ bonds, giving the hexagonal layer its mechanical stability.
-The remaining $p_z$ orbital on each atom points perpendicular to the plane and overlaps with those of neighbouring atoms.
-These $p_z$ orbitals form a delocalized $\pi$ band that sits at the Fermi level and is responsible for the electrical conductivity of graphite (Fig.~\Ref{fig:carbon_bonding}).
-Because the $\pi$ electrons are the highest-energy occupied electrons, their wavefunctions reach the farthest out of the surface and dominate the tunneling process.
+Each material also has a work function $\Phi$, which is the energy required to remove an electron from the Fermi level into the vacuum.
+Because the tip and the sample are made of different materials, their work functions may not be equal.
+If the two conductors are electrically connected without any applied voltage, electrons can flow freely between them until they reach equilibrium.
+In this equilibrium state their electrochemical potentials, and therefore their Fermi levels, must align, as sketched in Fig.~\ref{fig:energy_band_diagrams}b.
+The vacuum levels, however, remain offset by the difference in work function.
+
+When a bias voltage $V$ is applied between tip and sample, this equilibrium is disturbed.
+The applied voltage shifts the electronic energies of one side relative to the other by an amount $eV$, because voltage is energy per charge.
+Figures~\ref{fig:energy_band_diagrams}c and~\ref{fig:energy_band_diagrams}d show how this shift opens an energy window that allows electrons to tunnel.
+If the sample is held at a positive voltage, its electronic states are shifted downward by $eV$, so that electrons from the tip can tunnel into empty states of the sample.
+If the sample is held at a negative voltage, the situation reverses and electrons tunnel from the sample into the tip.
+In this sense the STM “probes’’ the part of the electronic structure that becomes available within the energy window created by the applied voltage. 
 
 \vspace{1em}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.8\textwidth]{../resources/figures/Carbon_Bonding.png}
-\caption{Electronic orbitals in a graphene layer.
-Each carbon atom forms three in-plane $\sigma$ bonds through sp$^2$ hybrid orbitals, while the $p_z$ orbitals extend perpendicular to the sheet and form the delocalized $\pi$ system.
-These out-of-plane $\pi$ electrons dominate the tunneling current in STM \cite{proctor2019aps}.}
-\label{fig:carbon_bonding}
+\includegraphics[width=0.63\textwidth]{../resources/figures/energy_band_diagrams.jpeg}
+\caption{
+Energy level diagrams for tip and sample under different conditions.
+(a) Independent tip and sample with their respective work functions $\Phi_T$ and $\Phi_S$.
+(b) After electrical contact the Fermi levels align in equilibrium.
+(c) A positive sample bias lowers the sample’s energy levels by $eV$, enabling tunneling from the tip into unoccupied sample states.
+(d) A negative sample bias raises the sample’s states, so electrons tunnel from the sample into the tip.
+Adapted from~\cite{morgenstern_stm_rub}.
+}
+\label{fig:energy_band_diagrams}
 \end{figure}
-
-At the surface the $\pi$ electron cloud does not end abruptly but decreases gradually into the empty space.
-The amount of electron density above a given atomic site depends on how the $p_z$ orbitals overlap, so the electronic structure above the surface is not uniform.
-The quantity that describes these variations is the local density of states (LDOS).
-It represents how many electronic states are available at a certain position and energy.
-
-The STM is sensitive to this LDOS rather than to the atomic nuclei themselves.
-Regions where the LDOS is higher have more electron density reaching toward the tip and therefore allow a stronger tunneling current.
-This is why the STM image reflects the electronic structure of the surface, and why the delocalized $\pi$ electrons of graphite play such a central role in determining the contrast observed in atomic-resolution images.
 
 
 \subsection{Principle of STM Operation}
 
 Once the tip is brought close enough for tunneling to occur, a bias voltage is applied between the tip and the sample.
-This voltage shifts their Fermi levels relative to each other, allowing electrons to tunnel from the filled states of one side into the empty states of the other.
-The tunneling current depends extremely sensitively on the tip–sample separation $z$ and can be written in the approximate form
-\[
-I_t \sim V_t \exp\!\big(-c\,\sqrt{\Phi}\, z\big),
-\]
-where $V_t$ is the applied bias voltage, $\Phi$ is an effective barrier height (in eV), $z$ is the tip–sample distance (in \AA), and $c \approx 1.02\,\text{\AA}^{-1}\,\text{eV}^{-1/2}$ collects the fundamental constants and unit conversions~\cite{STMAnleitung}.
+This voltage creates the energy window through which electrons can tunnel, as described in the previous subsection.
+The resulting tunneling current depends extremely sensitively on the tip–sample separation $z$ and can be written in the approximate form
+\begin{equation}
+I_t \sim V_t \exp\!\big(-c\,\sqrt{\Phi}\, z\big)
+\label{eq:simple_current}
+\end{equation}
+
+where $V_t$ is the applied bias voltage, $\Phi$ is an effective barrier height, and $c$ is a constant containing the relevant physical constants~\cite{STMAnleitung}.
+This exponential form arises from solving the Schrödinger equation for an electron tunneling through a vacuum barrier.
 Because of the exponential dependence on $z$, even sub-ångström changes in distance lead to large variations in the tunneling current.
 
 To record an image, the STM moves the tip laterally while either keeping the height fixed or adjusting it continuously, as illustrated in Fig.~\ref{fig:stm_scan_modes}.
@@ -186,7 +191,7 @@ This mode is fast but only safe on atomically flat surfaces, since the tip may c
 
 In constant–current mode, which is used in this experiment, the STM continuously adjusts the tip height so that the tunneling current matches a chosen setpoint.
 A feedback loop monitors the current in real time and moves the tip up or down using a piezoelectric actuator whenever the measured current deviates from this value.
-The vertical motion required to maintain constant current is then recorded at each lateral scan position.
+The vertical motion required to maintain the chosen setpoint current is recorded and interpreted as the apparent surface topography.
 
 \vspace{1em}
 \begin{figure}[H]
@@ -201,71 +206,167 @@ The recorded height forms the STM image~\cite{huda2016thesis}.}
 
 Because the measurement relies on maintaining a constant tunneling probability, the STM image essentially represents the height at which the electronic density accessible for tunneling matches the selected setpoint.
 This explains why STM images are strongly influenced by the electronic structure of the surface and not solely by its geometric topography.
+This connection becomes clearer when we look more closely at the expression for the tunneling current.
 
 
-\subsection{What the STM Actually Maps}
+\subsection{The Tunneling Current}
 
-The previous subsections showed that the tunneling current depends on the overlap between tip and sample wavefunctions and is therefore extremely sensitive to the local electronic structure above the surface.
-To understand what the STM image represents, it is necessary to look more closely at the quantity that determines this overlap: the local density of states (LDOS).
+A more complete description of the tunneling current must account for three ingredients:
+(1) how many electronic states exist at each energy on both sides of the junction,\\
+(2) how strongly these states are occupied, and\\
+(3) how likely it is for an electron of a given energy to cross the vacuum barrier.\\
+These are described respectively by the densities of states, the Fermi--Dirac occupations, and the tunneling probability.
 
-The LDOS describes how many electronic states are available at a particular energy and spatial position.
-Unlike the total density of states of a solid, which counts all states in the bulk, the LDOS resolves how strongly each state contributes at a specific point in space.
-At the surface this quantity is highly non-uniform, even for materials with perfectly regular atomic arrangements.
+The density of states $\rho(E)$ specifies how many electronic states are available per energy interval at energy $E$.
+In STM one often uses the local density of states (LDOS), which gives the number of states at a given energy and at the position where the tip samples the surface.
 
-Which part of the LDOS contributes to the tunneling current depends on the applied bias voltage.
-For small biases the main contribution comes from states very close to the Fermi level, because only these states lie within the narrow energy window through which electrons can tunnel.
-States far below the Fermi level are fully occupied and do not participate, while states far above it are empty and cannot accept electrons.
-This energy selectivity explains why STM is sensitive to the electronic structure in a narrow region around the Fermi energy rather than to all electrons in the material.
-An overview of the different STM measurement modes derived from the LDOS is shown in Fig.~\ref{fig:stm_ldos_overview}.
+The occupation of states at finite temperature is given by the Fermi--Dirac distribution,
+
+\[
+f(E) = \frac{1}{1 + \exp\!\big((E - E_F)/k_\mathrm{B}T\big)} \, ,
+\]
+
+where $E_F$ is the Fermi energy and $k_\mathrm{B}$ is Boltzmann’s constant.
+Electrons---like all fermions with half-integer spin, such as protons and neutrons---obey this distribution because they are subject to the Pauli exclusion principle, which permits at most one occupied state per spin at each energy.
+Bosons (such as photons) do not obey this rule and can occupy the same state in unlimited numbers.
+
+Pauli exclusion forces electrons to fill all available low-energy states first and creates the sharp boundary at $E_F$ that separates predominantly filled from predominantly empty states.
+At $T=0$ the function is a perfect step: $f(E)=1$ for $E<E_F$ (filled states) and $f(E)=0$ for $E>E_F$ (empty states).
+At room temperature the step becomes slightly smeared but still remains very sharp on the scale of typical electronic energies.
 
 \vspace{1em}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.92\textwidth]{../resources/figures/STM_Measurement_Types.png}
-\caption{Different ways in which the STM can probe the local density of states (LDOS).
-The LDOS depends on spatial position $(x,y)$ and energy $E$, forming a three-dimensional dataset (a).
-From this dataset one can extract topographic images (b), LDOS maps at a fixed energy (c), tunneling spectra $dI/dV$ at a single point (d), or linecuts showing how the LDOS varies along a spatial path (e) \cite{hoffmanSTM}.}
-\label{fig:stm_ldos_overview}
+\includegraphics[width=1.0\textwidth]{../resources/figures/fermi_dirac.png}
+\caption{
+Fermi--Dirac distribution at several temperatures, showing the sharp transition between filled states ($E<E_F$) and empty states ($E>E_F$).
+Adapted from~\cite{doitpoms_fermi}.
+}
+\label{fig:fermi_dirac}
 \end{figure}
 
-The connection between tunneling current and LDOS was established by Tersoff and Hamann, who showed that the tunneling current is approximately proportional to the sample LDOS at the tip position and at the relevant energy~\cite{tersoff1985prb}.
-This clarified a crucial point: STM does not directly map atomic nuclei.
-Instead, it images the spatial variation of the LDOS, which may or may not resemble the underlying geometric lattice.
+The third ingredient is the tunneling probability $T(E,V)$, which describes how likely it is for an electron with energy $E$ to traverse the barrier separating tip and sample.
+Solving the Schrödinger equation for a simple one-dimensional potential barrier shows that $T(E,V)$ decreases exponentially with both the width of the barrier and with $\sqrt{\Phi - E}$, where $\Phi$ is the relevant barrier height.
+This exponential sensitivity is the origin of the strong distance dependence that appears in the simplified tunneling-current expression Eq.~\eqref{eq:simple_current}.
 
-Several early STM images exhibited contrast patterns that could not be explained by assuming that the tip traced the nuclear positions of surface atoms.
-Only when the LDOS-based interpretation was adopted did these inconsistencies become understandable.
-For some materials the LDOS follows the atomic lattice closely, while for others the electronic structure differs significantly from the geometric arrangement.
+Once these ingredients are known, the tunneling current can be written schematically as
+
+\[
+I(V) \propto
+\int \rho_s(E)\,\rho_t(E-eV)\,
+[f_s(E) - f_t(E-eV)]\,T(E,V)\,dE \, ,
+\]
+
+where $\rho_s$ and $\rho_t$ are the densities of states of sample and tip, and $f_s$ and $f_t$ are their respective Fermi--Dirac occupations.
+The factor $f_s(E) - f_t(E-eV)$ ensures that electrons tunnel only from filled states into empty ones.
+The densities of states determine how many such states are available at each energy, and the tunneling probability rapidly suppresses contributions for larger tip--sample distances.
+
+At low temperatures the Fermi functions are nearly step-like, so the integrand is nonzero only within a narrow energy window of width $eV$.
+In this limit one may approximate
+
+\[
+I(V) \propto \int_{E_F}^{E_F + eV}
+\rho_s(E)\,\rho_t(E-eV)\,T(E,V)\,dE \, .
+\]
+
+This form makes it clear that, for a positive sample bias, only electronic states between $E_F$ and $E_F+eV$ contribute to the current.
+Because the LDOS of the surface directly influences the number of available states in this energy window, STM images reflect both the geometric and the electronic structure of the sample near the Fermi level.
+
+Much of the qualitative understanding of these relationships was also conveyed during the laboratory discussion with our tutor, who explained the underlying concepts using the STM theory slides provided in the course~\cite{rai_stm_slides}.
 
 
-\subsection{Atomic Contrast and Stacking in Graphite}
+\subsection{Electronic Structure of Solids and Graphite}
 
-STM images the spatial variation of the local density of states near the Fermi level rather than the atomic nuclei.
-In graphite this means that, although the lattice is perfectly hexagonal, the surface atoms do not contribute equally to the LDOS above the layer.
+To understand which electrons contribute to the tunneling current, we need to consider how electrons behave in solids.
+When many atoms join to form a crystal, their atomic orbitals overlap and broaden into energy bands.
+The highest fully occupied band is the valence band, while higher–energy states form the conduction band.
+In conductors these bands touch or overlap at the Fermi level, so electronic states are available for transport even without thermal excitation.
 
-Graphite consists of graphene layers arranged in AB (Bernal) stacking.  
-In this structure half of the atoms in the top layer lie directly above atoms in the layer below, while the other half sit above hollow sites.  
-These two types of sites, commonly labeled $\alpha$ and $\beta$, are electronically inequivalent.  
-Atoms of type $\alpha$ hybridize more strongly with the layer underneath, which pulls part of their $\pi$ electron density downward and reduces the amplitude of their wavefunction at the surface.  
-Atoms of type $\beta$ do not sit above a neighbour and therefore retain a larger out-of-plane $\pi$ amplitude.
-This geometric arrangement is illustrated in Fig.~\ref{fig:graphite_stacking}.
+Graphite is an example of such a conductor.
+Each carbon atom contributes four valence electrons in the configuration $1s^2\,2s^2\,2p^2$.
+In the planar geometry of a graphene sheet, three of these electrons hybridize into sp$^2$ orbitals that form strong in–plane $\sigma$ bonds.
+The remaining electron occupies a $p_z$ orbital that points perpendicular to the plane.
+Neighbouring $p_z$ orbitals overlap to form a delocalized $\pi$ band that crosses the Fermi level and provides the electrical conductivity of graphite (Fig.~\ref{fig:carbon_bonding}).
+
+Because the $\pi$ electrons are the least tightly bound and extend farthest into the vacuum, they dominate the tunneling process.
+The STM is therefore primarily sensitive to the spatial distribution of these $\pi$ states rather than to the atomic nuclei themselves.
+
+\vspace{1em}
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.0\textwidth]{../resources/figures/Carbon_Bonding.png}
+\caption{Electronic orbitals in a graphene layer.
+Each carbon atom forms three in-plane $\sigma$ bonds through sp$^2$ hybrid orbitals, while the $p_z$ orbitals extend perpendicular to the sheet and form the delocalized $\pi$ system.
+These out-of-plane $\pi$ electrons dominate the tunneling current in STM~\cite{proctor2019aps}.}
+\label{fig:carbon_bonding}
+\end{figure}
+
+At the surface the $\pi$ electron density does not end abruptly but decays gradually into the vacuum.
+The amount of electron density above each atomic site depends on how the $p_z$ orbitals overlap with those of neighbouring atoms and with deeper layers.
+This variation is described by the local density of states (LDOS), which determines how much tunneling current can flow at a given position.
+Regions of higher LDOS allow a stronger tunneling current, so the STM image reflects the electronic structure of the surface, leading to the characteristic atomic–resolution contrast observed in graphite.
+
+
+\subsection{Atomic Contrast, Lattice Geometry, and Stacking in Graphite}
+
+STM images the spatial variation of the local density of states near the Fermi level rather than the atomic nuclei themselves.
+In graphite this has an important consequence: although the atomic lattice is perfectly hexagonal, the two carbon atoms in the graphene basis are not electronically equivalent at the surface.
+
+A single graphene sheet can be described as a hexagonal Bravais lattice generated by two primitive translation vectors $\mathbf{a}_1$ and $\mathbf{a}_2$, together with a basis of two carbon atoms.
+These two basis atoms form the well–known honeycomb pattern.
+If both atoms contributed equally to the LDOS above the surface, an STM image would show the full honeycomb lattice.
+
+Graphite, however, consists of many graphene layers arranged in AB (Bernal) stacking.
+In this structure half of the atoms in the top layer (the $\alpha$ sites) lie directly above atoms in the layer below, while the other half (the $\beta$ sites) sit above hollow positions, as illustrated in Fig.~\ref{fig:graphite_stacking}.
+The $\alpha$ atoms hybridize more strongly with the underlying layer.
+This pulls part of their $\pi$ electron density downward and reduces the amplitude of their wavefunction at the surface.
+The $\beta$ atoms, in contrast, retain a larger out–of–plane $\pi$ amplitude because no atom lies directly beneath them.
 
 \vspace{1em}
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.63\textwidth]{../resources/figures/Graphite_Stacking.png}
-\caption{AA and AB stacking in graphite.
-In AB stacking, half of the surface atoms lie above atoms in the layer below ($\alpha$ sites) while the others lie above hollow sites ($\beta$ sites), leading to different LDOS contributions in STM~\cite{birowska2011graphite}.}
+\caption{
+AA and AB stacking in graphite.
+In AB stacking, half of the surface atoms lie above atoms in the layer below ($\alpha$ sites) while the others lie above hollow sites ($\beta$ sites), leading to different LDOS contributions in STM~\cite{birowska2011graphite}.
+}
 \label{fig:graphite_stacking}
 \end{figure}
 
-Because the tunneling current is proportional to the LDOS at the tip position, the STM is more sensitive to the $\beta$ sites than to the $\alpha$ sites.  
-As a result, only every second atom appears bright in typical STM images of graphite.  
-This effect was initially puzzling in early STM studies, as the recorded images did not match the expected honeycomb structure~\cite{atamny1999pccp}.
+Because the tunneling current is proportional to the LDOS at the position of the tip, the STM is more sensitive to the $\beta$ sites than to the $\alpha$ sites.
+As a result, only every second atom appears bright in typical STM images of graphite.
+This triangular pattern was initially puzzling in early STM studies, as the recorded images did not match the expected honeycomb structure~\cite{atamny1999pccp}.
 Only after the LDOS-based interpretation became established did it become clear that the observed contrast directly reflects the sublattice asymmetry imposed by AB stacking and interlayer coupling.
 
-The visibility of $\alpha$ and $\beta$ sites also depends on the applied bias voltage, because different energies probe slightly different parts of the $\pi$ band.  
-For some bias conditions the contrast between the two sublattices becomes weaker or can even invert, further demonstrating that STM measures electronic structure rather than geometric height.  
-Understanding this behaviour is essential for analyzing the atomic-resolution images obtained in this experiment.
+This asymmetry also provides a natural introduction to how the Fourier transform of an STM image should be interpreted.
+The two-dimensional Fourier transform detects the periodicities of the underlying Bravais lattice, not the brightness pattern of a particular sublattice.
+Even though the real-space STM image shows only the triangular lattice of $\beta$ sites, the actual Bravais lattice of graphite is hexagonal.
+Consequently, the FFT displays six Bragg peaks arranged with perfect six-fold symmetry.
+The positions of these peaks are determined solely by the reciprocal lattice vectors $\mathbf{b}_1$ and $\mathbf{b}_2$, which are related to the real-space vectors by the usual crystallographic relations.
+
+What changes in the FFT is not the \emph{location} of the peaks but their \emph{relative intensities}.
+Suppressing the $\alpha$ sites in real space removes part of the basis, which alters the structure factor.
+This changes the brightness of some reciprocal-lattice peaks while leaving the hexagonal pattern intact.
+In this sense the FFT provides a clearer view of the underlying crystal symmetry than the real-space image alone.
+It also allows for accurate determination of the lattice constant, which we will use later in the Results section.
+
+The visibility of $\alpha$ and $\beta$ sites also depends on the applied bias voltage, because different energies probe slightly different parts of the $\pi$ band.
+For some bias conditions the contrast can become weaker or even invert, further demonstrating that STM measures electronic structure rather than geometric height.
+Understanding these effects is essential for interpreting the atomic-resolution images and their Fourier transforms obtained in this experiment.
+
+
+\subsection{Piezoelectric Positioning and Feedback Control}
+
+The STM achieves precise control of the tip position using a piezoelectric tube scanner.
+The tube has four outer electrodes arranged in quadrants and a single inner electrode.
+A voltage applied to the inner electrode causes the tube to expand or contract uniformly, producing vertical $z$ motion.
+Applying voltages to opposite outer quadrants bends the tube sideways, producing motion in the $x$ or $y$ direction.
+By combining these voltages, the tip can be moved smoothly across the surface.
+
+During imaging the tunneling current is continuously monitored and compared to a chosen setpoint.
+Any deviation produces a correction signal that adjusts the $z$ voltage.
+This feedback loop ensures that the tip follows a contour of constant tunneling probability.
+Together with the exponential distance sensitivity of tunneling, this allows the STM to detect height changes of less than one ångström and to create highly detailed images of surface electronic structure.
 
 
 
@@ -283,7 +384,7 @@ The microscope is mounted on a vibration-damping table to minimize mechanical no
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.75\textwidth]{../resources/figures/STM_BlockDiagram.png}
-\caption{Block diagram of the STM setup, showing the feedback loop, piezo scanner, and current amplification \cite{STMAnleitung}.}
+\caption{Block diagram of the STM setup, showing the feedback loop, piezo scanner, and current amplification~\cite{STMAnleitung}.}
 \label{fig:stm_blockdiagram}
 \end{figure}
 
@@ -305,7 +406,7 @@ The initial scan parameters (scan size, speed, setpoint current, bias voltage, a
 
 \subsection{(b) Feedback Optimization: Proportional and Integral Gain}
 
-A small and slow scan is used to study the behaviour of the feedback loop.  
+A small and slow scan is used to study the behavior of the feedback loop.  
 The proportional gain $P$ is varied to observe how strongly the system responds to height deviations.  
 The integral gain $I$ is adjusted to correct slow drift while avoiding oscillations.  
 Different combinations of $P$ and $I$ are tested at various scan speeds to determine stable operating values.  
