@@ -54,33 +54,44 @@
 \usepackage{lmodern}            % Computer Modern look across TeX distros
 
 
+\begin{document}
+
 
 % --- Title page ---
-\title{\textbf{Scanning Tunneling Microscope}}
-\author{
-  \\Evaluation Report \\\\\\\\\\\\
-  \textbf{Cem Boyaci} \\
-  cemb93@zedat.fu-berlin.de \\\\\\
-  \textbf{Javier Bellido Roldán}\\
-  bellidoroj98@zedat.fu-berlin.de \\\\\\
-  \textbf{Leon Goldammer} \\
-  lg4278fu@zedat.fu-berlin.de \\\\
-}
-\date{}
-
-\begin{document}
-\maketitle
+\begin{titlepage}
 \thispagestyle{empty}
-
-\section*{}
 \begin{center}
-\vspace{3cm}
-Tutor: Vibhuti Rai \\[1cm]
+
+% Title
+\vspace*{1cm}
+{\LARGE \textbf{Scanning Tunneling Microscope}}\\[1.2cm]
+
+% Subtitle
+{\large Evaluation Report}\\[2cm]
+
+% Authors
+\large
+\textbf{Cem Boyaci}\\[-1mm]
+{cemb93@zedat.fu-berlin.de}\\[1cm]
+
+\textbf{Javier Bellido Roldán}\\[-1mm]
+{bellidoroj98@zedat.fu-berlin.de}\\[1cm]
+
+\textbf{Leon Goldammer}\\[-1mm]
+{lg4278fu@zedat.fu-berlin.de}\\[6cm]
+
+% Tutor
+\normalsize
+{Tutor: Vibhuti Rai}\\[1.2cm]
+
+% Footer block
 \textbf{Fortgeschrittenenpraktikum, WS 2025/2026}\\
 Berlin, 03.12.2025\\
 Freie Universität Berlin\\
 Fachbereich Physik
+
 \end{center}
+\end{titlepage}
 
 
 
@@ -117,8 +128,8 @@ The aim is to become familiar with the operating principles of STM and to extrac
 
 To understand the origin of the tunneling current, it is helpful to recall a few basic ideas from quantum mechanics.
 Electrons in atoms occupy discrete orbitals whose spatial shape is described by a wavefunction.
-A familiar model is the particle in a box, where only certain standing wave patterns are allowed.
-At the edge of the box, where the potential suddenly increases, the wavefunction does not vanish abruptly but decays exponentially into the region where the electron cannot exist classically.
+A familiar introductory model is an electron encountering a finite potential barrier, where the wavefunction remains oscillatory inside the material but does not vanish abruptly at the boundary.
+Instead, it decays exponentially into the classically forbidden region.
 A similar exponential decay $\psi = \psi_0 \exp(-\chi z)$ occurs at the surface of a solid, where the periodic crystal potential ends and the electron encounters empty space.
 The decay constant $\chi$ depends on how strongly the electron is bound and therefore determines how far different states extend into the vacuum.
 
@@ -141,7 +152,7 @@ Because the probability depends exponentially on the separation, even tiny chang
 To understand what drives electrons across the tunneling gap, it is useful to look at how the energy levels of the tip and the sample are arranged.
 Every conductor has a Fermi energy $E_F$, which marks the energy up to which electronic states are filled at zero temperature.
 Each material also has a work function $\Phi$, which is the energy required to remove an electron from the Fermi level into the vacuum.
-Because the tip and the sample are made of different materials, their work functions may not be equal.
+Because the tip and the sample are made of different materials, their work functions may not be equal (see Fig.~\ref{fig:energy_band_diagrams}a).
 
 If the two conductors are electrically connected without any applied voltage, electrons can flow freely between them until they reach equilibrium.
 In this equilibrium state their electrochemical potentials, and therefore their Fermi levels, must align, as sketched in Fig.~\ref{fig:energy_band_diagrams}b.
@@ -183,14 +194,13 @@ Adapted from~\cite{morgenstern_stm_rub}.
 
 Once the tip is brought close enough for tunneling to occur, a bias voltage is applied between the tip and the sample.
 This voltage creates the energy window through which electrons can tunnel, as described in the previous subsection.
-The resulting tunneling current depends extremely sensitively on the tip–sample separation $z$ and can be written in the approximate form
+The resulting tunneling current depends extremely sensitively on the tip–sample separation $z$ and can be approximated as
 \begin{equation}
 I_t \sim V_t \exp\!\big(-c\,\sqrt{\Phi}\, z\big)
 \label{eq:simple_current}
 \end{equation}
-
 where $V_t$ is the applied bias voltage, $\Phi$ is an effective barrier height, and $c$ is a constant containing the relevant physical constants~\cite{STMAnleitung}.
-This exponential form arises from solving the Schrödinger equation for an electron tunneling through a vacuum barrier.
+This exponential form arises from solving the Schrödinger equation for an electron tunneling through a finite vacuum barrier, exactly the same model introduced earlier for the exponential decay of the wavefunction.
 Because of the exponential dependence on $z$, even sub-ångström changes in distance lead to large variations in the tunneling current.
 
 To record an image, the STM moves the tip laterally while either keeping the height fixed or adjusting it continuously, as illustrated in Fig.~\ref{fig:stm_scan_modes}.
@@ -199,7 +209,7 @@ This mode is fast but only safe on atomically flat surfaces, since the tip may c
 
 In constant–current mode, which is used in this experiment, the STM continuously adjusts the tip height so that the tunneling current matches a chosen setpoint.
 A feedback loop monitors the current in real time and moves the tip up or down using a piezoelectric actuator whenever the measured current deviates from this value.
-The vertical motion required to maintain the chosen setpoint current is recorded and interpreted as the apparent surface topography.
+The vertical motion required to maintain the setpoint current is recorded and interpreted as the apparent surface topography.
 
 \vspace{1em}
 \begin{figure}[H]
@@ -212,7 +222,7 @@ The recorded height forms the STM image~\cite{huda2016thesis}.}
 \label{fig:stm_scan_modes}
 \end{figure}
 
-Because the measurement relies on maintaining a constant tunneling probability, the STM image essentially represents the height at which the electronic density accessible for tunneling matches the selected setpoint.
+Because the measurement in constant–current mode relies on maintaining a constant tunneling probability, the STM image essentially represents the height at which the electronic density accessible for tunneling matches the selected setpoint.
 This explains why STM images are strongly influenced by the electronic structure of the surface and not solely by its geometric topography.
 This connection becomes clearer when we look more closely at the expression for the tunneling current.
 
@@ -220,7 +230,7 @@ This connection becomes clearer when we look more closely at the expression for 
 \subsection{The Tunneling Current}
 
 A more complete description of the tunneling current must account for three ingredients:
-(1) how many electronic states exist at each energy on both sides of the junction,\\
+(1) how many electronic states exist at each energy on both sides of the gap,\\
 (2) how strongly these states are occupied, and\\
 (3) how likely it is for an electron of a given energy to cross the vacuum barrier.\\
 These are described respectively by the densities of states, the Fermi--Dirac occupations, and the tunneling probability.
@@ -254,27 +264,27 @@ Adapted from~\cite{doitpoms_fermi}.
 \end{figure}
 
 The third ingredient is the tunneling probability $T(E,V)$, which describes how likely it is for an electron with energy $E$ to traverse the barrier separating tip and sample.
-Solving the Schrödinger equation for a simple one-dimensional potential barrier shows that $T(E,V)$ decreases exponentially with both the width of the barrier and with $\sqrt{\Phi - E}$, where $\Phi$ is the relevant barrier height.
+Solving the Schrödinger equation for a simple one-dimensional potential barrier shows that $T(E,V)$ decreases exponentially with both the width of the barrier and with $\sqrt{\Phi}$, where $\Phi$ is the relevant barrier height.
 This exponential sensitivity is the origin of the strong distance dependence that appears in the simplified tunneling-current expression Eq.~\eqref{eq:simple_current}.
 
 Once these ingredients are known, the tunneling current can be written schematically as
 
 \[
 I(V) \propto
-\int \rho_s(E)\,\rho_t(E-eV)\,
-[f_s(E) - f_t(E-eV)]\,T(E,V)\,dE \, ,
+\int \rho_s(E) \; \rho_t(E-eV) \;
+[f_s(E) - f_t(E-eV)] \; T(E,V) \; dE \, ,
 \]
 
 where $\rho_s$ and $\rho_t$ are the densities of states of sample and tip, and $f_s$ and $f_t$ are their respective Fermi--Dirac occupations.
 The factor $f_s(E) - f_t(E-eV)$ ensures that electrons tunnel only from filled states into empty ones.
-The densities of states determine how many such states are available at each energy, and the tunneling probability rapidly suppresses contributions for larger tip--sample distances.
+The densities of states determine how many such states are available at each energy, and the tunneling probability drops so rapidly with distance that only electrons from very close tip positions contribute.
 
 At low temperatures the Fermi functions are nearly step-like, so the integrand is nonzero only within a narrow energy window of width $eV$.
 In this limit one may approximate
 
 \[
 I(V) \propto \int_{E_F}^{E_F + eV}
-\rho_s(E)\,\rho_t(E-eV)\,T(E,V)\,dE \, .
+\rho_s(E) \; \rho_t(E-eV) \; T(E,V) \; dE \, .
 \]
 
 This form makes it clear that, for a positive sample bias, only electronic states between $E_F$ and $E_F+eV$ contribute to the current.
@@ -291,11 +301,12 @@ The highest fully occupied band is the valence band, while higher–energy state
 In conductors these bands touch or overlap at the Fermi level, so electronic states are available for transport even without thermal excitation.
 
 Graphite is an example of such a conductor.
-Each carbon atom contributes four valence electrons in the configuration $1s^2\,2s^2\,2p^2$.
+Each carbon atom contributes four valence electrons, which in the isolated atom occupy the configuration $1s^2\,2s^2\,2p^2$, but in the solid adopt a different bonding arrangement.
 In the planar geometry of a graphene sheet, three of these electrons hybridize into sp$^2$ orbitals that form strong in–plane $\sigma$ bonds.
 The remaining electron occupies a $p_z$ orbital that points perpendicular to the plane.
-Neighbouring $p_z$ orbitals overlap to form a delocalized $\pi$ band that crosses the Fermi level and provides the electrical conductivity of graphite (Fig.~\ref{fig:carbon_bonding}).
+Together this corresponds to an $(\mathrm{sp}^2)^3 p_z$ configuration for carbon in graphite.
 
+Neighbouring $p_z$ orbitals overlap to form a delocalized $\pi$ band that crosses the Fermi level and provides the electrical conductivity of graphite (Fig.~\ref{fig:carbon_bonding}).
 Because the $\pi$ electrons are the least tightly bound and extend farthest into the vacuum, they dominate the tunneling process.
 The STM is therefore primarily sensitive to the spatial distribution of these $\pi$ states rather than to the atomic nuclei themselves.
 
@@ -332,7 +343,7 @@ To understand the contrast on graphite, it is therefore natural to begin with th
     \includegraphics[width=0.98\textwidth]{../resources/figures/graphene_lattice.png}
     \caption{
         Real–space geometry of graphene using a coordinate system with the origin at a hexagon centre.
-        The primitive vectors $\vec a_1$ and $\vec a_2$ connect neighbouring hexagon centres and span the triangular Bravais lattice.
+        The primitive vectors $\vec a_1$ and $\vec a_2$ connect neighbouring hexagon centres and span the triangular (or hexagonal) Bravais lattice.
         The primitive cell contains two carbon atoms, $A$ and $B$, separated by one carbon–carbon bond length $a_{\mathrm{CC}}$.
         Replication of this cell generates the honeycomb structure.
         Figure created by the author.
@@ -353,7 +364,7 @@ Their length,
 \[
 |\vec a_1| = |\vec a_2| = \sqrt{3}\,a_{\mathrm{CC}} \approx 2.46~\text{\AA},
 \]
-is the lattice constant of the triangular Bravais lattice, expressed in terms of the nearest–neighbour carbon–carbon distance $a_{\mathrm{CC}} = 1.42~\text{\AA}$.
+is the lattice constant of the triangular Bravais lattice, expressed in terms of the nearest–neighbour carbon–carbon distance $a_{\mathrm{CC}} = 1.42~\text{\AA}$~\cite{STMAnleitung}.
 
 Within each primitive cell spanned by $\vec a_1$ and $\vec a_2$ lie two carbon atoms, labelled $A$ and $B$ in the figure.  
 In this coordinate system their positions are especially simple:
@@ -382,40 +393,60 @@ In AB stacking, half of the surface atoms lie above atoms in the layer below ($\
 \label{fig:graphite_stacking}
 \end{figure}
 
-\subsubsection{Reciprocal Lattice, Fourier Transforms, and Interpretation of STM Data}
+\subsubsection{Reciprocal-Space Structure and the Fourier Transform of STM Images}
 
-The periodicity of the graphene lattice also manifests itself in \emph{reciprocal space}.
-Any two–dimensional periodic pattern can be decomposed into plane waves, and the wavevectors that appear correspond to the reciprocal lattice vectors of the underlying Bravais lattice.
-The Fourier transform (FFT) of an STM topograph therefore contains sharp peaks at the reciprocal lattice vectors of the triangular lattice spanned by $\vec a_1$ and $\vec a_2$.
+Atomic-resolution STM images of graphite contain not only real-space contrast but also clear periodic signatures in reciprocal space.
+Taking the two-dimensional Fourier transform (FFT) of such an image produces a pattern of six bright peaks arranged in a hexagon.
+These peaks arise because any periodic lattice has a corresponding reciprocal lattice that encodes its spatial frequencies.
 
-The reciprocal lattice vectors are defined by
+\vspace{1em}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{../resources/figures/graphene_reciprocal.png}
+    \caption{
+        Real and reciprocal lattice of graphene.
+        The real lattice is generated by the primitive vectors $\vec a_1$ and $\vec a_2$.
+        The reciprocal lattice consists of points (green circles) obtained from the reciprocal vectors $\vec b_1$ and $\vec b_2$.
+        The six nearest reciprocal lattice points form the central hexagon, exactly the pattern that appears in the FFT of an STM topograph.
+        Adapted from~\cite{raj2019phonon}.
+    }
+    \label{fig:graphene_reciprocal}
+\end{figure}
+
+Throughout this report we use the real-space primitive vectors
 \[
-\vec a_i \cdot \vec b_j = 2\pi\,\delta_{ij},
-\]
-which yields for graphene
-\[
-|\vec b_1| = |\vec b_2| = \frac{4\pi}{3\,a_{\mathrm{CC}}}.
-\]
-Their directions are rotated by $60^\circ$ relative to one another, forming a hexagonal reciprocal lattice.
-The six first–order reciprocal lattice points appear as six bright spots arranged in a regular hexagon in the FFT of an atomic–resolution STM image.
-
-This is an important conceptual point:
-although only every second atom appears bright in real space because of AB stacking, the \emph{periodicity} is still that of the triangular Bravais lattice.
-The missing sublattice modifies the \emph{intensities} of the Fourier peaks but not their \emph{positions}.
-Thus the FFT still shows a perfect hexagon whose radius is determined solely by the lattice constant.
-
-Because the magnitude of the reciprocal lattice vector is known analytically, the FFT allows a convenient determination of the carbon–carbon bond length.
-If the first–order peak in the FFT appears at a wavevector magnitude $|\vec b|$, the corresponding bond length follows from
-\[
-a_{\mathrm{CC}} = \frac{4\pi}{3|\vec b|},
+\vec a_1 = \left( \tfrac{3}{2}a_{\mathrm{CC}},\;\tfrac{\sqrt{3}}{2}a_{\mathrm{CC}} \right),
 \qquad
-a = \sqrt{3}\,a_{\mathrm{CC}}
+\vec a_2 = \left( \tfrac{3}{2}a_{\mathrm{CC}},\;-\tfrac{\sqrt{3}}{2}a_{\mathrm{CC}} \right),
 \]
-for the graphene lattice constant $a = |\vec a_1| = |\vec a_2|$.
-In this way the reciprocal–space analysis complements the real–space imaging and provides a quantitative tool for characterizing the graphite surface.
+which span the triangular Bravais lattice underlying graphene.
+The corresponding reciprocal vectors follow directly from inserting these expressions into the standard two-dimensional formulas
+\[
+\vec b_1 = 2\pi\,\frac{\hat z \times \vec a_2}{\vec a_1 \times \vec a_2},
+\qquad
+\vec b_2 = 2\pi\,\frac{\vec a_1 \times \hat z}{\vec a_1 \times \vec a_2}.
+\]
+For graphene these reciprocal vectors have equal magnitude,
+\[
+|\vec b_1| = |\vec b_2| = \frac{4\pi}{\sqrt{3}\,a_{\mathrm{CC}}},
+\]
+and form a hexagonal lattice rotated relative to the real-space one.
+Each reciprocal lattice point corresponds to a spatial frequency of the honeycomb lattice.
 
-In summary, the honeycomb lattice of graphene and the sublattice asymmetry of AB–stacked graphite determine the appearance of the STM images, while the triangular Bravais lattice determines the structure of their Fourier transforms.
-Together these perspectives explain both the real–space contrast and the reciprocal–space features that will be analysed in the evaluation section.
+When performing an FFT of an STM image, the bright peaks that appear correspond directly to these reciprocal lattice vectors.
+In particular, the six peaks forming a hexagon in the FFT occur at the magnitude
+\[
+|\vec b_1| = |\vec b_2|.
+\]
+Thus, the radius of the hexagon in the FFT is exactly the magnitude of the reciprocal lattice vector.
+Solving the above relation for the carbon–carbon bond length yields
+\[
+a_{\mathrm{CC}} = \frac{4\pi}{\sqrt{3}\,|\vec b_1|}.
+\]
+
+This expression provides a convenient way to extract the lattice spacing of graphite from experimental STM data.
+By measuring the radius of the hexagon in the FFT image — that is, the distance from the center to any of the six bright peaks — one directly obtains the real-space carbon–carbon distance.
+In the analysis section we apply this method to our recorded images and compare the resulting value with the known literature value of $a_{\mathrm{CC}} = 1.42~\text{\AA}$.
 
 
 \subsection{Piezoelectric Positioning and Feedback Control}
