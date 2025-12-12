@@ -485,7 +485,7 @@ For example, applying a positive voltage to one side of the tube and a negative 
 By combining voltages on different electrode pairs, controlled motion in both lateral directions is achieved, allowing the tip to raster-scan the sample surface.
 
 An important consequence of this bending mechanism is that lateral motion does not occur along a perfectly straight line.
-Instead, the tip follows a curved trajectory corresponding to an arc of a circle, as the tube bends rather than translates rigidly.
+Instead, the tip follows a curved trajectory corresponding to an arc of a circle, as the tube bends rather than translating rigidly.
 For small scan ranges this curvature is negligible, but for larger lateral displacements it becomes significant.
 This geometric effect ultimately limits the maximum usable scan area of the STM and contributes to distortions at large scan sizes.
 
@@ -500,19 +500,32 @@ Both effects lead to small distortions of the scan geometry, especially at large
 \section{Experimental Setup}
 
 The STM used in this experiment is a custom-built instrument designed for operation under ambient conditions.
-Its core component is a piezoelectric tube scanner that provides precise positioning of the tip in all three spatial directions.
-A micrometer screw enables coarse manual approach, monitored with a USB microscope, and once the tip is close enough, a computer-controlled fine approach brings it into tunneling range.
-After detecting a tunneling current, the feedback loop maintains the chosen setpoint during scanning (see Fig.~\ref{fig:stm_blockdiagram}).
+Its central component is a piezoelectric tube scanner, which enables precise positioning of the metallic tip relative to the sample in all three spatial directions.
+A micrometer screw provides coarse manual approach, monitored using a USB microscope.
+After this manual approach, a small stepper motor is attached to the micrometer screw, allowing a computer-controlled fine approach that brings the tip into the tunneling regime.
 
-The microscope is mounted on a vibration-damping table to minimize mechanical noise, and all control signals, data acquisition, and imaging are handled through the Nanotec electronics together with the WSxM software package.
+A schematic overview of the electronic setup and feedback loop is shown in Fig.~\ref{fig:stm_blockdiagram}.
+A DC bias voltage is applied between the tip and the sample, defining the tunneling direction and the accessible energy range.
+The resulting tunneling current, typically in the picoampere to nanoampere range, is far too small to be processed directly.
+It is therefore fed into a converter stage, where the current is transformed into a proportional voltage signal in the millivolt range.
+Because the tunneling current depends exponentially on the tip--sample distance, this signal is further processed by a logarithmic amplifier, which linearizes the current–distance relationship.
+
+The amplified signal is digitized and processed by the controller, which continuously compares the measured current to a user-defined setpoint.
+Any deviation generates a control signal that adjusts the voltage applied to the $z$ electrode of the piezoelectric tube, thereby regulating the tip–sample distance.
+Since piezoelectric actuators require large driving voltages, the controller output is amplified to voltages of up to $\pm200~\mathrm{V}$ before being applied to the scanner.
+
+Lateral scanning is achieved independently of the feedback loop.
+A scan generator produces time-dependent voltages for the $x$ and $y$ electrodes of the piezo tube, which are likewise amplified to $\pm200~\mathrm{V}$.
 
 \vspace{1em}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.75\textwidth]{../resources/figures/STM_BlockDiagram.png}
+\includegraphics[width=0.9\textwidth]{../resources/figures/STM_BlockDiagram.png}
 \caption{Block diagram of the STM setup, showing the feedback loop, piezo scanner, and current amplification~\cite{STMAnleitung}.}
 \label{fig:stm_blockdiagram}
 \end{figure}
+
+Data acquisition, control, and image processing are handled using the Nanotec electronics in combination with the WSxM software package.
 
 
 
