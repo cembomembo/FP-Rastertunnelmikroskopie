@@ -326,6 +326,18 @@ This variation is described by the local density of states (LDOS), which determi
 Regions of higher LDOS allow a stronger tunneling current, so the STM image reflects the electronic structure of the surface, leading to the characteristic atomic–resolution contrast observed in graphite.
 
 
+\subsection{Highly Oriented Pyrolytic Graphite (HOPG)}
+
+The sample material used in this experiment is \emph{highly oriented pyrolytic graphite} (HOPG).
+HOPG is a synthetic form of graphite composed of many graphene layers that are very well aligned with each other.
+This strong alignment leads to large, flat surface regions with a well-defined hexagonal lattice.
+
+A major practical advantage of HOPG is that it can be easily cleaved using adhesive tape.
+Cleaving exposes a fresh surface with atomically flat graphene terraces that are electrically conductive and stable under ambient conditions.
+This makes it ideally suited for STM measurements without the need for a vacuum.
+Because its lattice structure and electronic properties are well known, HOPG serves as a standard reference sample in STM~\cite{spmtips_hopg}.
+
+
 \subsection{Atomic Contrast and Lattice Geometry in Graphite}
 
 Atomic–resolution STM images of graphite famously show a triangular pattern in which only every second atom appears bright.
@@ -375,17 +387,17 @@ In this coordinate system their positions are especially simple:
 \]
 so that the two atoms in the basis are separated by exactly one nearest–neighbour bond length.  
 Replicating this primitive cell across the plane generates the familiar honeycomb arrangement of carbon atoms, shown by the purple bonds in the figure.  
-The geometry also makes clear that the distance between the centres of adjacent hexagons is $\sqrt{3}\,a_{\mathrm{CC}}$, while opposite vertices of a hexagon are separated by $2a_{\mathrm{CC}}$.
 
 This real–space lattice structure directly influences STM contrast.  
-Because the STM measures the local density of electronic states rather than the positions of the atomic nuclei, only atoms whose out–of–plane $\pi$ orbitals extend strongly into the vacuum contribute a large tunneling current.  
+Because the STM measures the local density of electronic states rather than the positions of the atomic nuclei, only atoms whose out–of–plane $\pi$ orbitals extend strongly into the vacuum contribute a large tunneling current.
+
 In graphite, which consists of graphene layers in AB (Bernal) stacking, this leads to a sublattice asymmetry: one of the two atoms in the basis sits above a carbon atom in the layer below and hybridizes more strongly, while the other sits above a hollow site and retains a larger $\pi$ amplitude at the surface.  
 Consequently, only every second atom appears bright in typical STM images of graphite, even though the underlying atomic lattice is perfectly hexagonal. This can be seen in Fig.~\ref{fig:graphite_stacking}.
 
 \vspace{1em}
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.6\textwidth]{../resources/figures/Graphite_Stacking.png}
+\includegraphics[width=0.7\textwidth]{../resources/figures/Graphite_Stacking.png}
 \caption{
 AA and AB stacking in graphite.
 In AB stacking, half of the surface atoms lie above atoms in the layer below ($\alpha$ sites) while the others lie above hollow sites ($\beta$ sites), leading to different LDOS contributions in STM~\cite{birowska2011graphite}.
@@ -399,7 +411,7 @@ Atomic-resolution STM images of graphite contain not only real-space contrast bu
 Taking the two-dimensional Fourier transform (FFT) of such an image produces a pattern of six bright peaks arranged in a hexagon.
 These peaks arise because any periodic lattice has a corresponding reciprocal lattice that encodes its spatial frequencies.
 
-\vspace{1em}
+\vspace{5em}
 \begin{figure}[H]
     \centering
     \includegraphics[width=1.0\textwidth]{../resources/figures/graphene_reciprocal.png}
@@ -467,8 +479,7 @@ In the tabletop STM used for this experiment, this is realized using a cylindric
         (b) Equal voltage applied to all outer electrodes produces an extension along $z$.
         (c) Reversing the voltage causes contraction along $z$.
         (d) Applying opposite voltages to opposing outer electrodes bends the tube, resulting in lateral tip motion.
-        The lateral motion follows an arc, which limits the usable scan range.
-        Adapted from~\cite{ganguli2016thesis}.
+        The lateral motion follows an arc, which limits the usable scan range~\cite{ganguli2016thesis}.
     }
     \label{fig:piezo_tube}
 \end{figure}
@@ -494,6 +505,40 @@ When the applied voltage is changed, the resulting displacement depends slightly
 In addition, after a sudden voltage change the piezo continues to deform slowly over time, an effect referred to as \emph{creep}.
 Both effects lead to small distortions of the scan geometry, especially at larger scan sizes or during rapid changes in direction.
 
+\subsubsection{Proportional and Integral Gain in the Feedback Loop}
+
+In constant--current mode, the STM relies on a feedback loop to keep the tunneling current at a fixed setpoint by continuously adjusting the tip height.
+The response of this feedback loop is controlled primarily by the proportional (P) and integral (I) gain parameters.
+
+The proportional gain determines how strongly the controller reacts to an instantaneous deviation of the tunneling current from the setpoint.
+If the measured current differs from the target value, the proportional term generates a correction voltage for the piezo in the $z$ direction that is directly proportional to this error.
+A low proportional gain leads to a slow response, causing the tip to lag behind changes in surface height.
+Conversely, a very high proportional gain can make the system overreact, resulting in oscillations or unstable tracking of the surface.
+
+The integral gain accounts for the accumulated error over time.
+If the current remains slightly above or below the setpoint for an extended period, the integral term gradually increases the correction until the steady-state error is eliminated.
+This helps ensure accurate long-term tracking of the surface but can also slow down the response if chosen too large.
+
+\vspace{1em}
+\begin{figure}[H]
+\centering
+\includegraphics[width=1.0\textwidth]{../resources/figures/feedback_gain.png}
+\caption{
+Schematic illustration of the effect of feedback gain on STM imaging.
+Low proportional gain leads to delayed tip response and loss of detail, while excessively high gain causes oscillations.
+An intermediate gain allows stable tracking of surface features. Adapted from~\cite{wikimedia_pid_varying_p}.
+}
+\label{fig:feedback_gain}
+\end{figure}
+
+The effect of different proportional gain settings is illustrated schematically in Fig.~\ref{fig:feedback_gain}.
+With too low gain, the tip fails to follow rapid height variations and smooths out surface features.
+With excessively high gain, the feedback loop becomes unstable and introduces noise or oscillations into the image.
+An intermediate gain provides stable tracking while still resolving atomic-scale features.
+
+In this experiment the integral gain is kept fixed, while the proportional gain is adjusted to optimize image quality.
+The influence of the proportional gain on image stability and resolution is discussed further in the results section.
+
 
 
 % --- Experimental Setup ---
@@ -503,11 +548,12 @@ The STM used in this experiment is a custom-built instrument designed for operat
 Its central component is a piezoelectric tube scanner, which enables precise positioning of the metallic tip relative to the sample in all three spatial directions.
 A micrometer screw provides coarse manual approach, monitored using a USB microscope.
 After this manual approach, a small stepper motor is attached to the micrometer screw, allowing a computer-controlled fine approach that brings the tip into the tunneling regime.
-
 A schematic overview of the electronic setup and feedback loop is shown in Fig.~\ref{fig:stm_blockdiagram}.
+
 A DC bias voltage is applied between the tip and the sample, defining the tunneling direction and the accessible energy range.
-The resulting tunneling current, typically in the picoampere to nanoampere range, is far too small to be processed directly.
-It is therefore fed into a converter stage, where the current is transformed into a proportional voltage signal in the millivolt range.
+The resulting tunneling current, typically in the pA to nA range, is far too small to be processed directly.
+It is therefore fed into a converter stage, where the current is transformed into a proportional voltage signal in the mV range.
+
 Because the tunneling current depends exponentially on the tip--sample distance, this signal is further processed by a logarithmic amplifier, which linearizes the current–distance relationship.
 
 The amplified signal is digitized and processed by the controller, which continuously compares the measured current to a user-defined setpoint.
