@@ -53,47 +53,43 @@
 % --- Fonts ---
 \usepackage{lmodern}            % Computer Modern look across TeX distros
 
-
 \begin{document}
-
 
 % --- Title page ---
 \begin{titlepage}
-\thispagestyle{empty}
-\begin{center}
+  \thispagestyle{empty}
+  \begin{center}
 
-% Title
-\vspace*{1cm}
-{\LARGE \textbf{Scanning Tunneling Microscope}}\\[1.2cm]
+    % Title
+    \vspace*{1cm}
+    {\LARGE \textbf{Scanning Tunneling Microscope}}\\[1.2cm]
 
-% Subtitle
-{\large Evaluation Report}\\[2cm]
+    % Subtitle
+    {\large Evaluation Report}\\[2cm]
 
-% Authors
-\large
-\textbf{Cem Boyaci}\\[-1mm]
-{cemb93@zedat.fu-berlin.de}\\[1cm]
+    % Authors
+    \large
+    \textbf{Cem Boyaci}\\[-1mm]
+    {cemb93@zedat.fu-berlin.de}\\[1cm]
 
-\textbf{Javier Bellido Roldán}\\[-1mm]
-{bellidoroj98@zedat.fu-berlin.de}\\[1cm]
+    \textbf{Javier Bellido Roldán}\\[-1mm]
+    {bellidoroj98@zedat.fu-berlin.de}\\[1cm]
 
-\textbf{Leon Goldammer}\\[-1mm]
-{lg4278fu@zedat.fu-berlin.de}\\[6cm]
+    \textbf{Leon Goldammer}\\[-1mm]
+    {lg4278fu@zedat.fu-berlin.de}\\[6cm]
 
-% Tutor
-\normalsize
-{Tutor: Vibhuti Rai}\\[1.2cm]
+    % Tutor
+    \normalsize
+    {Tutor: Vibhuti Rai}\\[1.2cm]
 
-% Footer block
-\textbf{Fortgeschrittenenpraktikum, WS 2025/2026}\\
-Berlin, 03.12.2025\\
-Freie Universität Berlin\\
-Fachbereich Physik
+    % Footer block
+    \textbf{Fortgeschrittenenpraktikum, WS 2025/2026}\\
+    Berlin, 03.12.2025\\
+    Freie Universität Berlin\\
+    Fachbereich Physik
 
-\end{center}
+  \end{center}
 \end{titlepage}
-
-
 
 % --- Table of contents ---
 \clearpage
@@ -105,11 +101,9 @@ Fachbereich Physik
 }
 \pagenumbering{arabic}
 
-
-
 % --- Introduction ---
 \newpage
-\setcounter{page}{1} 
+\setcounter{page}{1}
 
 \section{Introduction}
 
@@ -118,8 +112,6 @@ It operates by positioning a sharp metallic tip a few ångströms above the samp
 Because this current is extremely sensitive to the tip–sample distance, the STM can resolve atomic–scale height variations and visualize the topography and electronic structure of surfaces.
 In this experiment we use a tabletop STM operated under ambient conditions to record and analyze surface images of highly oriented pyrolytic graphite (HOPG).
 The aim is to become familiar with the operating principles of STM and to extract structural information from the acquired images.
-
-
 
 % --- Physical Principles ---
 \section{Physical Principles}
@@ -140,12 +132,10 @@ Because the probability depends exponentially on the separation, even tiny chang
 
 \vspace{1em}
 \begin{figure}[H]
-\centering
-\includegraphics[width=0.73\textwidth]{../resources/figures/STM_Tunneling_Schematic.png}
-\caption{Schematic illustration of how tunneling becomes possible when the wavefunctions of the surface electrons $\psi_s$ and those of the STM tip $\psi_t$ overlap across the narrow gap~\cite{UW_AFM_STM_Workshop}.}
-\label{fig:stm_wavefunction_overlap}
+  \centering
+  \includegraphics[width=0.73\textwidth]{../resources/figures/STM_Tunneling_Schematic.png}
+  \caption{Schematic illustration of how tunneling becomes possible when the wavefunctions of the surface electrons $\psi_s$ and those of the STM tip $\psi_t$ overlap across the narrow gap~\cite{UW_AFM_STM_Workshop}.}\label{fig:stm_wavefunction_overlap}
 \end{figure}
-
 
 \subsection{Fermi Levels, Work Functions, and Bias Voltage}
 
@@ -160,14 +150,13 @@ The vacuum levels, however, remain offset by the difference in work function.
 
 \vspace{1em}
 \begin{figure}[H]
-\centering
-\includegraphics[width=0.72\textwidth]{../resources/figures/energy_band_diagrams_1.png}
-\caption{
-Energy level diagrams under different conditions.
-(a) Independent tip and sample with their respective work functions $\Phi_T$ and $\Phi_S$.
-(b) After contact the Fermi levels align in equilibrium.
-}
-\label{fig:energy_band_diagrams_1}
+  \centering
+  \includegraphics[width=0.72\textwidth]{../resources/figures/energy_band_diagrams_1.png}
+  \caption{
+    Energy level diagrams under different conditions.
+    (a) Independent tip and sample with their respective work functions $\Phi_T$ and $\Phi_S$.
+    (b) After contact the Fermi levels align in equilibrium.
+  }\label{fig:energy_band_diagrams_1}
 \end{figure}
 
 When a bias voltage $V$ is applied between tip and sample, this equilibrium is disturbed.
@@ -175,20 +164,18 @@ The applied voltage shifts the electronic energies of one side relative to the o
 Figures~\ref{fig:energy_band_diagrams}c and~\ref{fig:energy_band_diagrams}d show how this shift opens an energy window that allows electrons to tunnel.
 If the sample is held at a positive voltage, its electronic states are shifted downward by $eV$, so that electrons from the tip can tunnel into empty states of the sample.
 If the sample is held at a negative voltage, the situation reverses and electrons tunnel from the sample into the tip.
-In this sense the STM “probes’’ the part of the electronic structure that becomes available within the energy window created by the applied voltage. 
+In this sense the STM “probes’’ the part of the electronic structure that becomes available within the energy window created by the applied voltage.
 
 \vspace{1em}
 \begin{figure}[H]
-\centering
-\includegraphics[width=0.72\textwidth]{../resources/figures/energy_band_diagrams_2.png}
-\caption{
-(c) A positive sample bias lowers the sample’s energy levels by $eV$, enabling tunneling from the tip into unoccupied sample states.
-(d) A negative sample bias raises the sample’s states, so electrons tunnel from the sample into the tip.
-Adapted from~\cite{morgenstern_stm_rub}.
-}
-\label{fig:energy_band_diagrams}
+  \centering
+  \includegraphics[width=0.72\textwidth]{../resources/figures/energy_band_diagrams_2.png}
+  \caption{
+    (c) A positive sample bias lowers the sample’s energy levels by $eV$, enabling tunneling from the tip into unoccupied sample states.
+    (d) A negative sample bias raises the sample’s states, so electrons tunnel from the sample into the tip.
+    Adapted from~\cite{morgenstern_stm_rub}.
+  }\label{fig:energy_band_diagrams}
 \end{figure}
-
 
 \subsection{Principle of STM Operation}
 
@@ -196,8 +183,8 @@ Once the tip is brought close enough for tunneling to occur, a bias voltage is a
 This voltage creates the energy window through which electrons can tunnel, as described in the previous subsection.
 The resulting tunneling current depends extremely sensitively on the tip–sample separation $z$ and can be approximated as
 \begin{equation}
-I_t \sim V_t \exp\!\big(-c\,\sqrt{\Phi}\, z\big)
-\label{eq:simple_current}
+  I_t \sim V_t \exp\!\big(-c\,\sqrt{\Phi}\, z\big)
+  \label{eq:simple_current}
 \end{equation}
 where $V_t$ is the applied bias voltage, $\Phi$ is an effective barrier height, and $c$ is a constant containing the relevant physical constants~\cite{STMAnleitung}.
 This exponential form arises from solving the Schrödinger equation for an electron tunneling through a finite vacuum barrier, exactly the same model introduced earlier for the exponential decay of the wavefunction.
@@ -213,19 +200,17 @@ The vertical motion required to maintain the setpoint current is recorded and in
 
 \vspace{1em}
 \begin{figure}[H]
-\centering
-\includegraphics[width=1.0\textwidth]{../resources/figures/STM_Modes.png}
-\caption{Basic working principle of STM imaging.
-(a) Constant–height mode, where the tip follows a fixed distance while the tunneling current varies with the surface, which risks tip crash on rough samples.
-(b) Constant–current mode, where a feedback loop adjusts the tip height to maintain a constant current.
-The recorded height forms the STM image~\cite{huda2016thesis}.}
-\label{fig:stm_scan_modes}
+  \centering
+  \includegraphics[width=1.0\textwidth]{../resources/figures/STM_Modes.png}
+  \caption{Basic working principle of STM imaging.
+    (a) Constant–height mode, where the tip follows a fixed distance while the tunneling current varies with the surface, which risks tip crash on rough samples.
+    (b) Constant–current mode, where a feedback loop adjusts the tip height to maintain a constant current.
+  The recorded height forms the STM image~\cite{huda2016thesis}.}\label{fig:stm_scan_modes}
 \end{figure}
 
 Because the measurement in constant–current mode relies on maintaining a constant tunneling probability, the STM image essentially represents the height at which the electronic density accessible for tunneling matches the selected setpoint.
 This explains why STM images are strongly influenced by the electronic structure of the surface and not solely by its geometric topography.
 This connection becomes clearer when we look more closely at the expression for the tunneling current.
-
 
 \subsection{The Tunneling Current}
 
@@ -233,15 +218,15 @@ A more complete description of the tunneling current must account for three ingr
 (1) how many electronic states exist at each energy on both sides of the gap,\\
 (2) how strongly these states are occupied, and\\
 (3) how likely it is for an electron of a given energy to cross the vacuum barrier.\\
-These are described respectively by the densities of states, the Fermi--Dirac occupations, and the tunneling probability.
+These are described respectively by the densities of states, the Fermi-Dirac occupations, and the tunneling probability.
 
 The density of states $\rho(E)$ specifies how many electronic states are available per energy interval at energy $E$.
 In STM one often uses the local density of states (LDOS), which gives the number of states at a given energy and at the position where the tip samples the surface.
 
-The occupation of states at finite temperature is given by the Fermi--Dirac distribution,
+The occupation of states at finite temperature is given by the Fermi-Dirac distribution,
 
 \[
-f(E) = \frac{1}{1 + \exp\!\big((E - E_F)/k_\mathrm{B}T\big)} \, ,
+  f(E) = \frac{1}{1 + \exp\!\big((E - E_F)/k_\mathrm{B}T\big)} \, ,
 \]
 
 where $E_F$ is the Fermi energy and $k_\mathrm{B}$ is Boltzmann’s constant.
@@ -254,13 +239,12 @@ At room temperature the step becomes slightly smeared but still remains very sha
 
 \vspace{1em}
 \begin{figure}[H]
-\centering
-\includegraphics[width=1.0\textwidth]{../resources/figures/fermi_dirac.png}
-\caption{
-Fermi--Dirac distribution at several temperatures, showing the sharp transition between filled states ($E<E_F$) and empty states ($E>E_F$).
-Adapted from~\cite{doitpoms_fermi}.
-}
-\label{fig:fermi_dirac}
+  \centering
+  \includegraphics[width=1.0\textwidth]{../resources/figures/fermi_dirac.png}
+  \caption{
+    Fermi-Dirac distribution at several temperatures, showing the sharp transition between filled states ($E<E_F$) and empty states ($E>E_F$).
+    Adapted from~\cite{doitpoms_fermi}.
+  }\label{fig:fermi_dirac}
 \end{figure}
 
 The third ingredient is the tunneling probability $T(E,V)$, which describes how likely it is for an electron with energy $E$ to traverse the barrier separating tip and sample.
@@ -270,12 +254,12 @@ This exponential sensitivity is the origin of the strong distance dependence tha
 Once these ingredients are known, the tunneling current can be written schematically as
 
 \[
-I(V) \propto
-\int \rho_s(E) \; \rho_t(E-eV) \;
-[f_s(E) - f_t(E-eV)] \; T(E,V) \; dE \, ,
+  I(V) \propto
+  \int \rho_s(E) \; \rho_t(E-eV) \;
+  [f_s(E) - f_t(E-eV)] \; T(E,V) \; dE \, ,
 \]
 
-where $\rho_s$ and $\rho_t$ are the densities of states of sample and tip, and $f_s$ and $f_t$ are their respective Fermi--Dirac occupations.
+where $\rho_s$ and $\rho_t$ are the densities of states of sample and tip, and $f_s$ and $f_t$ are their respective Fermi-Dirac occupations.
 The factor $f_s(E) - f_t(E-eV)$ ensures that electrons tunnel only from filled states into empty ones.
 The densities of states determine how many such states are available at each energy, and the tunneling probability drops so rapidly with distance that only electrons from very close tip positions contribute.
 
@@ -283,15 +267,14 @@ At low temperatures the Fermi functions are nearly step-like, so the integrand i
 In this limit one may approximate
 
 \[
-I(V) \propto \int_{E_F}^{E_F + eV}
-\rho_s(E) \; \rho_t(E-eV) \; T(E,V) \; dE \, .
+  I(V) \propto \int_{E_F}^{E_F + eV}
+  \rho_s(E) \; \rho_t(E-eV) \; T(E,V) \; dE \, .
 \]
 
 This form makes it clear that, for a positive sample bias, only electronic states between $E_F$ and $E_F+eV$ contribute to the current.
 Because the LDOS of the surface directly influences the number of available states in this energy window, STM images reflect both the geometric and the electronic structure of the sample near the Fermi level.
 
 Much of the qualitative understanding of these relationships was also conveyed during the laboratory discussion with our tutor, who explained the underlying concepts using the STM theory slides provided in the course~\cite{rai_stm_slides}.
-
 
 \subsection{Electronic Structure of Solids and Graphite}
 
@@ -304,7 +287,7 @@ Graphite is an example of such a conductor.
 Each carbon atom contributes four valence electrons, which in the isolated atom occupy the configuration $1s^2\,2s^2\,2p^2$, but in the solid adopt a different bonding arrangement.
 In the planar geometry of a graphene sheet, three of these electrons hybridize into sp$^2$ orbitals that form strong in–plane $\sigma$ bonds.
 The remaining electron occupies a $p_z$ orbital that points perpendicular to the plane.
-Together this corresponds to an $(\mathrm{sp}^2)^3 p_z$ configuration for carbon in graphite.
+Together this corresponds to an ${\mathrm{sp}^2}^3 p_z$ configuration for carbon in graphite.
 
 Neighbouring $p_z$ orbitals overlap to form a delocalized $\pi$ band that crosses the Fermi level and provides the electrical conductivity of graphite (Fig.~\ref{fig:carbon_bonding}).
 Because the $\pi$ electrons are the least tightly bound and extend farthest into the vacuum, they dominate the tunneling process.
@@ -312,19 +295,17 @@ The STM is therefore primarily sensitive to the spatial distribution of these $\
 
 \vspace{1em}
 \begin{figure}[H]
-\centering
-\includegraphics[width=1.0\textwidth]{../resources/figures/Carbon_Bonding.png}
-\caption{Electronic orbitals in a graphene layer.
-Each carbon atom forms three in-plane $\sigma$ bonds through sp$^2$ hybrid orbitals, while the $p_z$ orbitals extend perpendicular to the sheet and form the delocalized $\pi$ system.
-These out-of-plane $\pi$ electrons dominate the tunneling current in STM~\cite{proctor2019aps}.}
-\label{fig:carbon_bonding}
+  \centering
+  \includegraphics[width=1.0\textwidth]{../resources/figures/Carbon_Bonding.png}
+  \caption{Electronic orbitals in a graphene layer.
+    Each carbon atom forms three in-plane $\sigma$ bonds through sp$^2$ hybrid orbitals, while the $p_z$ orbitals extend perpendicular to the sheet and form the delocalized $\pi$ system.
+  These out-of-plane $\pi$ electrons dominate the tunneling current in STM~\cite{proctor2019aps}.}\label{fig:carbon_bonding}
 \end{figure}
 
 At the surface the $\pi$ electron density does not end abruptly but decays gradually into the vacuum.
 The amount of electron density above each atomic site depends on how the $p_z$ orbitals overlap with those of neighbouring atoms and with deeper layers.
 This variation is described by the local density of states (LDOS), which determines how much tunneling current can flow at a given position.
 Regions of higher LDOS allow a stronger tunneling current, so the STM image reflects the electronic structure of the surface, leading to the characteristic atomic–resolution contrast observed in graphite.
-
 
 \subsection{Highly Oriented Pyrolytic Graphite (HOPG)}
 
@@ -337,12 +318,11 @@ Cleaving exposes a fresh surface with atomically flat graphene terraces that are
 This makes it ideally suited for STM measurements without the need for a vacuum.
 Because its lattice structure and electronic properties are well known, HOPG serves as a standard reference sample in STM~\cite{spmtips_hopg}.
 
+\subsection{Atomic Contrast and Lattice Geometry in Graphite}\label{sec:atomic_constrast}
 
-\subsection{Atomic Contrast and Lattice Geometry in Graphite}
-
-Atomic–resolution STM images of graphite famously show a triangular pattern in which only every second atom appears bright.
+Atomic-resolution STM images of graphite famously show a triangular pattern in which only every second atom appears bright.
 In the early days of STM this was puzzling, because the carbon atoms in graphene form a perfectly symmetric honeycomb lattice, and the measured contrast did not match this expected geometry~\cite{atamny1999pccp}.
-The explanation lies in how the real–space lattice of graphene combines with the periodicity of its electronic states, which becomes especially clear when viewed in reciprocal space through the Fourier transform of STM images.
+The explanation lies in how the real-space lattice of graphene combines with the periodicity of its electronic states, which becomes especially clear when viewed in reciprocal space through the Fourier transform of STM images.
 
 \subsubsection{Real–Space Structure and Sublattice Contrast}
 
@@ -351,58 +331,57 @@ To understand the contrast on graphite, it is therefore natural to begin with th
 
 \vspace{1em}
 \begin{figure}[H]
-    \centering
-    \includegraphics[width=0.98\textwidth]{../resources/figures/graphene_lattice.png}
-    \caption{
-        Real–space geometry of graphene using a coordinate system with the origin at a hexagon centre.
-        The primitive vectors $\vec a_1$ and $\vec a_2$ connect neighbouring hexagon centres and span the triangular (or hexagonal) Bravais lattice.
-        The primitive cell contains two carbon atoms, $A$ and $B$, separated by one carbon–carbon bond length $a_{\mathrm{CC}}$.
-        Replication of this cell generates the honeycomb structure.
-        Figure created by the author.
-    }
-    \label{fig:graphene_lattice}
+  \centering
+  \includegraphics[width=0.98\textwidth]{../resources/figures/graphene_lattice.png}
+  \caption{
+    Real–space geometry of graphene using a coordinate system with the origin at a hexagon centre.
+    The primitive vectors $\vec a_1$ and $\vec a_2$ connect neighbouring hexagon centres and span the triangular (or hexagonal) Bravais lattice.
+    The primitive cell contains two carbon atoms, $A$ and $B$, separated by one carbon–carbon bond length $a_{\mathrm{CC}}$.
+    Replication of this cell generates the honeycomb structure.
+    Figure created by the author.
+  }\label{fig:graphene_lattice}
 \end{figure}
 
 Graphene is not a Bravais lattice by itself but a \emph{triangular} (also called \emph{hexagonal}) Bravais lattice with a two–atom basis~\cite{wikipedia_hexagonal_lattice}.
-A convenient choice of coordinate system, as used in Fig.~\ref{fig:graphene_lattice}, places the origin at the centre of a hexagon, where no atom is located.  
+A convenient choice of coordinate system, as used in Fig.~\ref{fig:graphene_lattice}, places the origin at the centre of a hexagon, where no atom is located.
 From this point the primitive lattice vectors
 \[
-\vec a_1 = \left( \tfrac{3}{2}a_{\mathrm{CC}},\;\tfrac{\sqrt{3}}{2}a_{\mathrm{CC}} \right),
-\qquad
-\vec a_2 = \left( \tfrac{3}{2}a_{\mathrm{CC}},\; -\tfrac{\sqrt{3}}{2}a_{\mathrm{CC}} \right)
+  \vec a_1 = \left( \tfrac{3}{2}a_{\mathrm{CC}},\;\tfrac{\sqrt{3}}{2}a_{\mathrm{CC}} \right),
+  \qquad
+  \vec a_2 = \left( \tfrac{3}{2}a_{\mathrm{CC}},\; -\tfrac{\sqrt{3}}{2}a_{\mathrm{CC}} \right)
 \]
-connect the centres of neighbouring hexagons.  
+connect the centres of neighbouring hexagons.
 Their length,
-\[
-|\vec a_1| = |\vec a_2| = \sqrt{3}\,a_{\mathrm{CC}} \approx 2.46~\text{\AA},
-\]
+\begin{equation}
+  |\vec a_1| = |\vec a_2| = \sqrt{3}\,a_{\mathrm{CC}} \approx 2.46~\text{\AA}
+  \label{eq:lattice_constant}
+\end{equation}
 is the lattice constant of the triangular Bravais lattice, expressed in terms of the nearest–neighbour carbon–carbon distance $a_{\mathrm{CC}} = 1.42~\text{\AA}$~\cite{STMAnleitung}.
 
-Within each primitive cell spanned by $\vec a_1$ and $\vec a_2$ lie two carbon atoms, labelled $A$ and $B$ in the figure.  
+Within each primitive cell spanned by $\vec a_1$ and $\vec a_2$ lie two carbon atoms, labelled $A$ and $B$ in the figure.
 In this coordinate system their positions are especially simple:
 \[
-\tau_A = (a_{\mathrm{CC}}, 0),
-\qquad
-\tau_B = (2a_{\mathrm{CC}}, 0),
+  \tau_A = (a_{\mathrm{CC}}, 0),
+  \qquad
+  \tau_B = (2a_{\mathrm{CC}}, 0),
 \]
-so that the two atoms in the basis are separated by exactly one nearest–neighbour bond length.  
-Replicating this primitive cell across the plane generates the familiar honeycomb arrangement of carbon atoms, shown by the purple bonds in the figure.  
+so that the two atoms in the basis are separated by exactly one nearest–neighbour bond length.
+Replicating this primitive cell across the plane generates the familiar honeycomb arrangement of carbon atoms, shown by the purple bonds in the figure.
 
-This real–space lattice structure directly influences STM contrast.  
+This real–space lattice structure directly influences STM contrast.
 Because the STM measures the local density of electronic states rather than the positions of the atomic nuclei, only atoms whose out–of–plane $\pi$ orbitals extend strongly into the vacuum contribute a large tunneling current.
 
-In graphite, which consists of graphene layers in AB (Bernal) stacking, this leads to a sublattice asymmetry: one of the two atoms in the basis sits above a carbon atom in the layer below and hybridizes more strongly, while the other sits above a hollow site and retains a larger $\pi$ amplitude at the surface.  
+In graphite, which consists of graphene layers in AB (Bernal) stacking, this leads to a sublattice asymmetry: one of the two atoms in the basis sits above a carbon atom in the layer below and hybridizes more strongly, while the other sits above a hollow site and retains a larger $\pi$ amplitude at the surface.
 Consequently, only every second atom appears bright in typical STM images of graphite, even though the underlying atomic lattice is perfectly hexagonal. This can be seen in Fig.~\ref{fig:graphite_stacking}.
 
 \vspace{1em}
 \begin{figure}[H]
-\centering
-\includegraphics[width=0.7\textwidth]{../resources/figures/Graphite_Stacking.png}
-\caption{
-AA and AB stacking in graphite.
-In AB stacking, half of the surface atoms lie above atoms in the layer below ($\alpha$ sites) while the others lie above hollow sites ($\beta$ sites), leading to different LDOS contributions in STM~\cite{birowska2011graphite}.
-}
-\label{fig:graphite_stacking}
+  \centering
+  \includegraphics[width=0.7\textwidth]{../resources/figures/Graphite_Stacking.png}
+  \caption{
+    AA and AB stacking in graphite.
+    In AB stacking, half of the surface atoms lie above atoms in the layer below ($\alpha$ sites) while the others lie above hollow sites ($\beta$ sites), leading to different LDOS contributions in STM~\cite{birowska2011graphite}.
+  }\label{fig:graphite_stacking}
 \end{figure}
 
 \subsubsection{Reciprocal-Space Structure and the Fourier Transform of STM Images}
@@ -413,35 +392,34 @@ These peaks arise because any periodic lattice has a corresponding reciprocal la
 
 \vspace{5em}
 \begin{figure}[H]
-    \centering
-    \includegraphics[width=1.0\textwidth]{../resources/figures/graphene_reciprocal.png}
-    \caption{
-        Real and reciprocal lattice of graphene.
-        The real lattice is generated by the primitive vectors $\vec a_1$ and $\vec a_2$.
-        The reciprocal lattice consists of points (green circles) obtained from the reciprocal vectors $\vec b_1$ and $\vec b_2$.
-        The six nearest reciprocal lattice points form the central hexagon, exactly the pattern that appears in the FFT of an STM topograph.
-        Adapted from~\cite{raj2019phonon}.
-    }
-    \label{fig:graphene_reciprocal}
+  \centering
+  \includegraphics[width=1.0\textwidth]{../resources/figures/graphene_reciprocal.png}
+  \caption{
+    Real and reciprocal lattice of graphene.
+    The real lattice is generated by the primitive vectors $\vec a_1$ and $\vec a_2$.
+    The reciprocal lattice consists of points (green circles) obtained from the reciprocal vectors $\vec b_1$ and $\vec b_2$.
+    The six nearest reciprocal lattice points form the central hexagon, exactly the pattern that appears in the FFT of an STM topograph.
+    Adapted from~\cite{raj2019phonon}.
+  }\label{fig:graphene_reciprocal}
 \end{figure}
 
 Throughout this report we use the real-space primitive vectors
 \[
-\vec a_1 = \left( \tfrac{3}{2}a_{\mathrm{CC}},\;\tfrac{\sqrt{3}}{2}a_{\mathrm{CC}} \right),
-\qquad
-\vec a_2 = \left( \tfrac{3}{2}a_{\mathrm{CC}},\;-\tfrac{\sqrt{3}}{2}a_{\mathrm{CC}} \right),
+  \vec a_1 = \left( \tfrac{3}{2}a_{\mathrm{CC}},\;\tfrac{\sqrt{3}}{2}a_{\mathrm{CC}} \right),
+  \qquad
+  \vec a_2 = \left( \tfrac{3}{2}a_{\mathrm{CC}},\;-\tfrac{\sqrt{3}}{2}a_{\mathrm{CC}} \right),
 \]
 which span the triangular Bravais lattice underlying graphene.
 The corresponding reciprocal vectors follow directly from inserting these expressions into the standard two-dimensional formulas
 \[
-\vec b_1 = 2\pi\,\frac{\hat z \times \vec a_2}{\vec a_1 \times \vec a_2},
-\qquad
-\vec b_2 = 2\pi\,\frac{\vec a_1 \times \hat z}{\vec a_1 \times \vec a_2}.
+  \vec b_1 = 2\pi\,\frac{\hat z \times \vec a_2}{\vec a_1 \times \vec a_2},
+  \qquad
+  \vec b_2 = 2\pi\,\frac{\vec a_1 \times \hat z}{\vec a_1 \times \vec a_2}.
 \]
 
 For graphene these reciprocal vectors have equal magnitude,
 \[
-|\vec b_1| = |\vec b_2| = \frac{4\pi}{\sqrt{3}\,a_{\mathrm{CC}}},
+  |\vec b_1| = |\vec b_2| = \frac{4\pi}{\sqrt{3}\,a_{\mathrm{CC}}},
 \]
 and form a hexagonal lattice rotated relative to the real-space one.
 Each reciprocal lattice point corresponds to a spatial frequency of the honeycomb lattice.
@@ -449,19 +427,18 @@ Each reciprocal lattice point corresponds to a spatial frequency of the honeycom
 When performing an FFT of an STM image, the bright peaks that appear correspond directly to these reciprocal lattice sites.
 In particular, the six peaks forming a hexagon in the FFT occur at the magnitude
 \[
-|\vec b_1| = |\vec b_2|.
+  |\vec b_1| = |\vec b_2|.
 \]
 
 Thus, the radius of the hexagon in the FFT is exactly the magnitude of the reciprocal lattice vector.
 Solving the above relation for the carbon–carbon bond length yields
 \begin{equation}
-a_{\mathrm{CC}} = \frac{4\pi}{\sqrt{3}\,|\vec b_1|}.
+  a_{\mathrm{CC}} = \frac{4\pi}{\sqrt{3}\,|\vec b_1|}.
 \end{equation}
 
 This expression provides a convenient way to extract the lattice spacing of graphite from experimental STM data.
 By measuring the radius of the hexagon in the FFT image — that is, the distance from the center to any of the six bright peaks — and plugging it into the above expression, one directly obtains the real-space carbon–carbon distance.
 In the analysis section we apply this method to our recorded images and compare the resulting value with the known literature value of $a_{\mathrm{CC}} = 1.42~\text{\AA}$.
-
 
 \subsection{Piezoelectric Positioning and Feedback Control}
 
@@ -471,17 +448,16 @@ In the tabletop STM used for this experiment, this is realized using a cylindric
 
 \vspace{1em}
 \begin{figure}[H]
-    \centering
-    \includegraphics[width=1.0\textwidth]{../resources/figures/piezo_tube.png}
-    \caption{
-        Principle of piezoelectric tube motion.
-        (a) Tube with four segmented outer electrodes and a continuous inner electrode.
-        (b) Equal voltage applied to all outer electrodes produces an extension along $z$.
-        (c) Reversing the voltage causes contraction along $z$.
-        (d) Applying opposite voltages to opposing outer electrodes bends the tube, resulting in lateral tip motion.
-        The lateral motion follows an arc, which limits the usable scan range~\cite{ganguli2016thesis}.
-    }
-    \label{fig:piezo_tube}
+  \centering
+  \includegraphics[width=1.0\textwidth]{../resources/figures/piezo_tube.png}
+  \caption{
+    Principle of piezoelectric tube motion.
+    (a) Tube with four segmented outer electrodes and a continuous inner electrode.
+    (b) Equal voltage applied to all outer electrodes produces an extension along $z$.
+    (c) Reversing the voltage causes contraction along $z$.
+    (d) Applying opposite voltages to opposing outer electrodes bends the tube, resulting in lateral tip motion.
+    The lateral motion follows an arc, which limits the usable scan range~\cite{ganguli2016thesis}.
+  }\label{fig:piezo_tube}
 \end{figure}
 
 The piezo tube is coated with a continuous electrode on its inner surface and four separate electrodes on its outer surface, arranged in opposing pairs corresponding to the $x$ and $y$ directions, as shown in Fig.~\ref{fig:piezo_tube}a.
@@ -507,7 +483,7 @@ Both effects lead to small distortions of the scan geometry, especially at large
 
 \subsubsection{Proportional and Integral Gain in the Feedback Loop}
 
-In constant--current mode, the STM relies on a feedback loop to keep the tunneling current at a fixed setpoint by continuously adjusting the tip height.
+In constant-current mode, the STM relies on a feedback loop to keep the tunneling current at a fixed setpoint by continuously adjusting the tip height.
 The response of this feedback loop is controlled primarily by the proportional (P) and integral (I) gain parameters.
 
 The proportional gain determines how strongly the controller reacts to an instantaneous deviation of the tunneling current from the setpoint.
@@ -521,14 +497,13 @@ This helps ensure accurate long-term tracking of the surface but can also slow d
 
 \vspace{1em}
 \begin{figure}[H]
-\centering
-\includegraphics[width=1.0\textwidth]{../resources/figures/feedback_gain.png}
-\caption{
-Schematic illustration of the effect of feedback gain on STM imaging.
-Low proportional gain leads to delayed tip response and loss of detail, while excessively high gain causes oscillations.
-An intermediate gain allows stable tracking of surface features. Adapted from~\cite{wikimedia_pid_varying_p}.
-}
-\label{fig:feedback_gain}
+  \centering
+  \includegraphics[width=1.0\textwidth]{../resources/figures/feedback_gain.png}
+  \caption{
+    Schematic illustration of the effect of feedback gain on STM imaging.
+    Low proportional gain leads to delayed tip response and loss of detail, while excessively high gain causes oscillations.
+    An intermediate gain allows stable tracking of surface features. Adapted from~\cite{wikimedia_pid_varying_p}.
+  }\label{fig:feedback_gain}
 \end{figure}
 
 The effect of different proportional gain settings is illustrated schematically in Fig.~\ref{fig:feedback_gain}.
@@ -538,8 +513,6 @@ An intermediate gain provides stable tracking while still resolving atomic-scale
 
 In this experiment the integral gain is kept fixed, while the proportional gain is adjusted to optimize image quality.
 The influence of the proportional gain on image stability and resolution is discussed further in the results section.
-
-
 
 % --- Experimental Setup ---
 \section{Experimental Setup}
@@ -554,10 +527,10 @@ A DC bias voltage is applied between the tip and the sample, defining the tunnel
 The resulting tunneling current, typically in the pA to nA range, is far too small to be processed directly.
 It is therefore fed into a converter stage, where the current is transformed into a proportional voltage signal in the mV range.
 
-Because the tunneling current depends exponentially on the tip--sample distance, this signal is further processed by a logarithmic amplifier, which linearizes the current–distance relationship.
+Because the tunneling current depends exponentially on the tip-sample distance, this signal is further processed by a logarithmic amplifier, which linearizes the current-distance relationship.
 
 The amplified signal is digitized and processed by the controller, which continuously compares the measured current to a user-defined setpoint.
-Any deviation generates a control signal that adjusts the voltage applied to the $z$ electrode of the piezoelectric tube, thereby regulating the tip–sample distance.
+Any deviation generates a control signal that adjusts the voltage applied to the $z$ electrode of the piezoelectric tube, thereby regulating the tip-sample distance.
 Since piezoelectric actuators require large driving voltages, the controller output is amplified to voltages of up to $\pm200~\mathrm{V}$ before being applied to the scanner.
 
 Lateral scanning is achieved independently of the feedback loop.
@@ -565,69 +538,61 @@ A scan generator produces time-dependent voltages for the $x$ and $y$ electrodes
 
 \vspace{1em}
 \begin{figure}[H]
-\centering
-\includegraphics[width=0.9\textwidth]{../resources/figures/STM_BlockDiagram.png}
-\caption{Block diagram of the STM setup, showing the feedback loop, piezo scanner, and current amplification~\cite{STMAnleitung}.}
-\label{fig:stm_blockdiagram}
+  \centering
+  \includegraphics[width=0.9\textwidth]{../resources/figures/STM_BlockDiagram.png}
+  \caption{Block diagram of the STM setup, showing the feedback loop, piezo scanner, and current amplification~\cite{STMAnleitung}.}\label{fig:stm_blockdiagram}
 \end{figure}
 
 Data acquisition, control, and image processing are handled using the Nanotec electronics in combination with the WSxM software package.
 
-
-
 % --- Procedure ---
 \section{Procedure}
 
-This section describes the measurement procedure as carried out according to the tasks (a)–(f) in the STM manual~\cite{STMAnleitung}.
+This section describes the measurement procedure as carried out according to the tasks (a)- (f) in the STM manual~\cite{STMAnleitung}.
 All steps are written in the order in which they are performed during the experiment.
 
 \subsection{(a) Tip Approach and Initial Parameters}
 
-The graphite sample and the metallic tip are mounted in the STM head following the laboratory instructions.  
-The tip is brought close to the surface using the coarse mechanical approach under visual control with the USB microscope.  
-The automated fine approach is then started in WSxM until a tunneling current is detected.  
-Once the tunneling current stabilizes, the feedback loop is activated and imaging mode begins.  
+The graphite sample and the metallic tip are mounted in the STM head following the laboratory instructions.
+The tip is brought close to the surface using the coarse mechanical approach under visual control with the USB microscope.
+The automated fine approach is then started in WSxM until a tunneling current is detected.
+Once the tunneling current stabilizes, the feedback loop is activated and imaging mode begins.
 The initial scan parameters (scan size, speed, setpoint current, bias voltage, and feedback gains) are set to the default values recommended in the manual.
 
 \subsection{(b) Feedback Optimization: Proportional and Integral Gain}
 
-A small and slow scan is used to study the behavior of the feedback loop.  
-The proportional gain $P$ is varied to observe how strongly the system responds to height deviations.  
-The integral gain $I$ is adjusted to correct slow drift while avoiding oscillations.  
-Different combinations of $P$ and $I$ are tested at various scan speeds to determine stable operating values.  
+A small and slow scan is used to study the behavior of the feedback loop.
+The proportional gain $P$ is varied to observe how strongly the system responds to height deviations.
+The integral gain $I$ is adjusted to correct slow drift while avoiding oscillations.
+Different combinations of $P$ and $I$ are tested at various scan speeds to determine stable operating values.
 The goal is to identify parameter ranges that maintain a stable tunneling current without overshoot or noise.
 
 \subsection{(c) Locating and Measuring Step Heights}
 
-Larger-area scans are performed to locate terraces, steps, and grooves on the graphite surface.  
-Suitable step edges are repeatedly scanned with moderate scan sizes to collect a series of step profiles.  
-At least twenty step heights are measured using WSxM’s line profile tool and plane-correction filters.  
-The measured step heights are plotted and compared with the graphite interlayer spacing of approximately \SI{3.35}{\angstrom}.  
+Larger-area scans are performed to locate terraces, steps, and grooves on the graphite surface.
+Suitable step edges are repeatedly scanned with moderate scan sizes to collect a series of step profiles.
+At least twenty step heights are measured using WSxM's line profile tool and plane-correction filters.
+The measured step heights are plotted and compared with the graphite interlayer spacing of approximately \SI{3.35}{\angstrom}.
 From this comparison the effective $z$-piezo calibration (nominally \SI{10}{nm/V}) is estimated, including its uncertainty.
 
 \subsection{(d) Achieving Atomic Resolution}
 
-Regions that appear atomically flat in large scans are gradually zoomed in by reducing scan size and scan speed.  
-The tunneling parameters are fine-tuned until atomic contrast becomes visible.  
+Regions that appear atomically flat in large scans are gradually zoomed in by reducing scan size and scan speed.
+The tunneling parameters are fine-tuned until atomic contrast becomes visible.
 Multiple atomic-resolution images are recorded with slightly different bias voltages and setpoint currents to ensure reproducibility.
 
 \subsection{(e) Quantitative Analysis of Atomic Images}
 
-Atomic-resolution images are analyzed using WSxM's line profile and measurement tools.  
-The apparent corrugation height between bright and dark lattice sites is extracted.  
-The lateral distance between neighboring maxima is measured along several high-symmetry directions.  
-These values are compared to the known nearest-neighbor distance  of approximately \SI{1.42}{\angstrom}.  
-The $x$/$y$ calibration factors of the piezo scanner are checked and, if necessary, adjusted.  
+The atomic-resolution images from the previous task are then analyzed using WSxM's line profile and distance measurement tools in the Representation menu of the software. The values of the lattice constant $a$ was determined from the average distance between lattice unit cells for both directions (\ang{60} and \ang{120}), extracted from the Z bright intensity peaks (apparent corrugation height) over the distance using the software; these values are then compared to the known nearest-neighbor distance of \SI{1.42}{\angstrom}.
+The $x/y$ calibration factors of the piezo scanner are, if necessary, adjusted to account for any measurement distortion.
 Angular relations between lattice directions are evaluated to identify possible distortions due to drift or scanner nonlinearity.
 
 \subsection{(f) Fourier Analysis}
 
-A two-dimensional Fast Fourier Transform (FFT) is applied to selected atomic-resolution images in WSxM.  
-The resulting reciprocal‐space pattern is used to determine lattice periodicities and symmetry.  
-FFT peak positions are compared with the real-space measurements to verify the consistency of the $x$/$y$ calibration.  
+A two-dimensional Fast Fourier Transform (FFT) is applied to selected atomic-resolution images in WSxM.
+The resulting reciprocal-space pattern is used to determine lattice periodicities and symmetry.
+FFT peak positions are compared with the real-space measurements to verify the consistency of the $x$/$y$ calibration.
 The FFT analysis also helps identify distortions such as shear, compression, or drift, which may affect the recorded images.
-
-
 
 % --- Results ---
 \section{Results}
@@ -637,21 +602,45 @@ The FFT analysis also helps identify distortions such as shear, compression, or 
 xxx
 
 \subsection{Quantitative Analysis of Atomic Images}
-Atomic resolution could not be achieved during the experiment. A set of bibliographical images taken by other groups in similar conditions with the same equipment were analyzed instead (Figure~\ref{fig:atomic_resolution}). For better precision the images extracted were processed using cross correlation in the software WSxM.
+Atomic resolution could not be achieved during the experiment. A set of bibliographical images taken in similar conditions with the same equipment were analyzed instead (Figure~\ref{fig:atomic_resolution}). For better precision the images extracted were processed using auto and cross correlation in the software WSxM, and the measurements were performed on the highest resolution image.
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.3\textwidth]{../resources/figures/Carbon_Bonding.png}
-    \caption{Temporary image lol}
-    \label{fig:atomic_resolution}
+The settings at which these images were taken are:
+\begin{itemize}
+  \item Topography Bias: \qty{500}{\mV}
+  \item Tunneling current ($I_{\text{set}}$): \qty{2}{\nA}
+  \item Size: \qty{4}{\nm}
+  \item Proportional Gain: 2.30
+  \item Integral Gain: 1.15
+  \item Scan Speed: \qty{2.035}{\Hz}
+\end{itemize}
+
+The piezo-calibration factors had an X and Y calibration of $C=47,2\unit{\angstrom\per\V}$ in both directions, and disabled linearity correction.
+
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.6\textwidth]{../resources/figures/atomic/atomic_resolution.jpg}
+  \caption{Auto-Correlation processed image of the LDOS of HOPG with atomic resolution. \\ The single 2D layer of the lattice is clearly visible.}\label{fig:atomic_resolution}
 \end{figure}
 
-The measured lattice constant $a$ corresponds to $a=\sqrt{3}a_{c-c}$, where $a_{c-c}$ is the nearest-neighbor distance of HOPG. The literature results of those measurements correspond to $a=2.46$\AA~and $a_{c-c}=1.42$\AA.
+As discussed in the Section~\ref{sec:atomic_constrast}, the measured lattice constant $a$ corresponds to $a=\sqrt{3}a_{\mathrm{CC}}$ (Equation~\ref{eq:lattice_constant}), where $a_{\mathrm{CC}}$ is the nearest-neighbor distance of HOPG.\@ The literature results of those measurements correspond to $a=2.46$\AA~and $a_{c-c}=1.42$\AA.
 
-Our results measured an average value of $a=2,30$\AA~in the \ang{120} direction, and $a=2,44$\AA~in the \ang{60} direction.
+Our results measured an average value of $a=2,30$\AA~in the \ang{120} direction, and $a=2,44$\AA~in the \ang{60} direction (Figure~\ref{fig:atomic_resolution_measurements}). This confirms that the \ang{60} measurement does achive near-perfect precision, with an \qty{0.8}{\%} error from the literature value; whereas the \ang{120} measurement (approximately parallel to the Y direction) has a substantial error of \qty{6.5}{\%}.
 
-If the values are different, that is the result of the thermal drift and piezo creep of the temperature at which the experiment was executed.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.45\textwidth]{../resources/figures/atomic/atomic_resolution_auto_120.jpg}
+  \includegraphics[width=0.45\textwidth]{../resources/figures/atomic/atomic_resolution_auto_60.jpg}
+  \caption{Cross-Correlation processed images of the LDOS of HOPG with atomic resolution. \\ The left image corresponds to the \ang{120} measurement, and the right to the \ang{60} measurement.}\label{fig:atomic_resolution_measurements}
+\end{figure}
 
+To account for the compression measurement in the Y direction, we suggest to set a different calibration based on this equation,
+
+\begin{equation}
+  C'_{y}=C_{y}\frac{a_{\text{t}}}{a_{\text{m}}}
+\end{equation}
+where $C_{y}$ is the piezo calibration in the Y direction of the measurement, $a_{\text{t}}$ is the theoretical lattice constant and $a_{\text{m}}$ is the measured lattice constant.
+
+This results on a new calibration value of $C'_{y}=50,5\pm0,1\unit{\angstrom\per\V}$.
 
 % --- Discussion ---
 \section{Discussion}
@@ -660,14 +649,15 @@ If the values are different, that is the result of the thermal drift and piezo c
 
 xxx
 
+\subsection{Atomic Resolution}
+This is the result of the thermal drift and piezo creep of the temperature at which the experiment was executed.
 
+that the actual piezoelectric response was asymmetric, likely due to thermal drift or uncorrected creep, which the software's default calibration did not account for.
 
 % --- Conclusion ---
 \section{Conclusion}
 
 xxx
-
-
 
 % --- Appendix ---
 \newpage
@@ -676,11 +666,9 @@ xxx
 Additional files:
 
 \begin{itemize}
-  \item \texttt{"STM\_Python.zip"}
-  \item \texttt{"STM\_LabReport.pdf"}
+  \item \texttt{'STM\_Python.zip'}
+  \item \texttt{'STM\_LabReport.pdf'}
 \end{itemize}
-
-
 
 % --- References ---
 \setstretch{1.0}
@@ -690,13 +678,9 @@ Additional files:
 AI-based writing and programming tools were used in a supporting role to refine the wording of this report and to assist in formatting Python and LaTeX code.
 All scientific analysis, data evaluation, and interpretation were carried out independently by the authors.
 
-
-
 % --- Lab Report ---
 
 \newpage
 \includepdf[pages=-, scale=0.9, pagecommand={\thispagestyle{empty}}]{../resources/STM_LabReport.pdf}
-
-
 
 \end{document}

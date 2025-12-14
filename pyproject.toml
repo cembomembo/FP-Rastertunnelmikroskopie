@@ -29,3 +29,8 @@ dev = [
 [tool.setuptools.packages.find]
 where = ["."]
 include = ["resources*", "Evaluation*", "Preparation*"]
+
+[tool.tex-fmt]
+wrap = false
+tabsize = 4
+tabchar = "space"
