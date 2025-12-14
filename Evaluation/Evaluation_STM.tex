@@ -602,7 +602,7 @@ The FFT analysis also helps identify distortions such as shear, compression, or 
 
 xxx
 
-\subsection{Quantitative Analysis of Atomic Images}
+\subsection{Quantitative Analysis of Atomic Images}\label{sec:results_atomic}
 Atomic resolution could not be achieved during the experiment. A set of bibliographical images taken in similar conditions with the same equipment were analyzed instead (Figure~\ref{fig:atomic_resolution}). For better precision the images extracted were processed using auto and cross correlation in the software WSxM, and the measurements were performed on the highest resolution image.
 
 The settings at which these images were taken are:
@@ -666,10 +666,12 @@ Regarding the X-axis calibration, the results at \ang{60} have near-perfect prec
 
 xxx
 
-\subsection{Atomic Resolution}
-This is the result of the thermal drift and piezo creep of the temperature at which the experiment was executed.
+\subsection{Distortion and Calibration in Atomic Resolution}
+The difference between the lattice constant measurements at \ang{60} and \ang{120} in Section~\ref{sec:results_atomic} shows a significant anisotropy between the fast-scan (X-axis) and slow-scan (Y-axis). This is characteristic of time-dependent instrumental instability, rather than static calibration error.
 
-that the actual piezoelectric response was asymmetric, likely due to thermal drift or uncorrected creep, which the software's default calibration did not account for.
+This distortion is primarily attributed to \textbf{thermal drift}. This thermal drift is the gradual move of the sample in relation to the measurement device, due to temperature fluctuations. It occurs due to the expansion/contraction of materials and electrical components, both of the sample and the measurement device. As the experiment was conducted under ambient atmospheric conditions, temperature fluctuations induce continuous differential expansion of the microscope assembly. Since the Y-axis operates as the slow-scan direction, the scan duration ($\approx$ 2 minutes) allows sufficient time for drift to accumulate, effectively compressing the image geometry.
+
+Secondary contributions from \textbf{piezoelectric creep} (delayed mechanical response) and \textbf{hysteresis}\cite{hysteresis} are most pronounced along the Y-axis. Metadata confirms that \textit{Non-linear correction} settings were disabled, mapping raw non-linearities directly to the topography and distorting the hexagonal lattice. The proposed calibration factor $C'_{y}$ compensates for these distortions. Restricting this correction to the Y-axis is justified by the lattice geometry: the \ang{95} measurement vector projects almost entirely onto the slow-scan axis ($\sin{95\unit{\degree}}\approx0.996$). Furthermore, auto-correlation processing analysis proved highly effective, confirming an accurate lattice constant of $\qty{2.46}{\angstrom}$.
 
 % --- Conclusion ---
 \section{Conclusion}
