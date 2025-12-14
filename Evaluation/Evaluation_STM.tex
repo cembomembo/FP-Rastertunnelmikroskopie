@@ -624,13 +624,20 @@ The piezo-calibration factors had an X and Y calibration of $C=47,2\unit{\angstr
 
 As discussed in the Section~\ref{sec:atomic_constrast}, the measured lattice constant $a$ corresponds to $a=\sqrt{3}a_{\mathrm{CC}}$ (Equation~\ref{eq:lattice_constant}), where $a_{\mathrm{CC}}$ is the nearest-neighbor distance of HOPG.\@ The literature results of those measurements correspond to $a=2.46$\AA~and $a_{c-c}=1.42$\AA.
 
-Our results measured an average value of $a=2,30$\AA~in the \ang{120} direction, and $a=2,44$\AA~in the \ang{60} direction (Figure~\ref{fig:atomic_resolution_measurements}). This confirms that the \ang{60} measurement does achive near-perfect precision, with an \qty{0.8}{\%} error from the literature value; whereas the \ang{120} measurement (approximately parallel to the Y direction) has a substantial error of \qty{6.5}{\%}.
+Our results measured an average value of $a=2,31\pm0,04$\AA~in the \ang{120} direction, and $a=2,46\pm0,03$\AA~in the \ang{60} direction (Figure~\ref{fig:atomic_resolution_measurements}). This confirms that the \ang{60} measurement does achive near-perfect precision; whereas the \ang{120} measurement (approximately parallel to the Y direction) has a substantial error of \qty{6.1}{\%}.
+
+The measurement error was calculated using Gaussian Error Propagation, which is defined as:
+
+\begin{equation}
+  \sigma_{a} = \frac{|\Delta L|}{N}
+\end{equation}
+where $N$ is the number of unit cells and $\Delta L$ is the distance measurement error. We considered a consevative stimate for $\Delta L$ of half a peak, or $\Delta L=0.5$ \AA.
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=0.45\textwidth]{../resources/figures/atomic/atomic_resolution_auto_120.jpg}
   \includegraphics[width=0.45\textwidth]{../resources/figures/atomic/atomic_resolution_auto_60.jpg}
-  \caption{Cross-Correlation processed images of the LDOS of HOPG with atomic resolution. \\ The left image corresponds to the \ang{120} measurement, and the right to the \ang{60} measurement.}\label{fig:atomic_resolution_measurements}
+  \caption{Cross-Correlation processed images of the LDOS of HOPG with atomic resolution.\\ The left image corresponds to the \ang{120} measurement, and the right to the \ang{60} measurement.}\label{fig:atomic_resolution_measurements}
 \end{figure}
 
 To account for the compression measurement in the Y direction, we suggest to set a different calibration based on this equation,
@@ -638,9 +645,18 @@ To account for the compression measurement in the Y direction, we suggest to set
 \begin{equation}
   C'_{y}=C_{y}\frac{a_{\text{t}}}{a_{\text{m}}}
 \end{equation}
-where $C_{y}$ is the piezo calibration in the Y direction of the measurement, $a_{\text{t}}$ is the theoretical lattice constant and $a_{\text{m}}$ is the measured lattice constant.
+where $C_{y}$ is the piezo calibration in the Y direction of the measurement, $a_{\text{t}}$ is the theoretical lattice constant, and $a_{\text{m}}$ is the measured lattice constant.
 
 This results on a new calibration value of $C'_{y}=50,5\pm0,1\unit{\angstrom\per\V}$.
+
+Regarding the X-axis calibration, the results at \ang{60} have near-perfect precision, and in those the effect of the Y calibration is small, but still notable, as it is dominated mostly by the X-calibration. This suggests that the X-calibration is likely expanding the image in the X direction, compensating the compression of the Y-axis. A new X-calibration value was not calculated as it was deemed to be not significant enough.
+
+\begin{figure}
+  \centering
+  \includegraphics[width=1\textwidth]{../resources/figures/atomic/atomic_resolution_120_plot.jpg}
+  \includegraphics[width=1\textwidth]{../resources/figures/atomic/atomic_resolution_60_plot.jpg}
+  \caption{Distance measurement for the \ang{120} sample (left) and the \ang{60} sample (right).\\ The \ang{120} measurement had a number of N=14 points and $L=32,34\pm0,5$\AA, while the \ang{60} measurement had N=16 points and $L=39,60\pm0,5$\AA.}\label{fig:atomic_resolution_plots}
+\end{figure}
 
 % --- Discussion ---
 \section{Discussion}
