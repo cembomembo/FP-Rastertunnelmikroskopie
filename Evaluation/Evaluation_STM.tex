@@ -648,7 +648,7 @@ To account for the compression measurement in the Y direction, we suggest to set
 \end{equation}
 where $C_{y}$ is the piezo calibration in the Y direction of the measurement, $a_{\text{t}}$ is the theoretical lattice constant, and $a_{\text{m}}$ is the measured lattice constant.
 
-This results on a new calibration value of $C'_{y}=50,5\pm0,1\unit{\angstrom\per\V}$.
+This results on a new calibration value of $C'_{y}=50,5\unit{\angstrom\per\V}$.
 
 Regarding the X-axis calibration, the results at \ang{60} have near-perfect precision, and in those the effect of the Y calibration is small, but still notable, as it is dominated mostly by the X-calibration. This suggests that the X-calibration is likely expanding the image in the X direction, compensating the compression of the Y-axis. A new X-calibration value was not calculated as it was deemed to be not significant enough.
 
@@ -671,7 +671,9 @@ The difference between the lattice constant measurements at \ang{60} and \ang{12
 
 This distortion is primarily attributed to \textbf{thermal drift}. This thermal drift is the gradual move of the sample in relation to the measurement device, due to temperature fluctuations. It occurs due to the expansion/contraction of materials and electrical components, both of the sample and the measurement device. As the experiment was conducted under ambient atmospheric conditions, temperature fluctuations induce continuous differential expansion of the microscope assembly. Since the Y-axis operates as the slow-scan direction, the scan duration ($\approx$ 2 minutes) allows sufficient time for drift to accumulate, effectively compressing the image geometry.
 
-Secondary contributions from \textbf{piezoelectric creep} (delayed mechanical response) and \textbf{hysteresis}\cite{hysteresis} are most pronounced along the Y-axis. Metadata confirms that \textit{Non-linear correction} settings were disabled, mapping raw non-linearities directly to the topography and distorting the hexagonal lattice. The proposed calibration factor $C'_{y}$ compensates for these distortions. Restricting this correction to the Y-axis is justified by the lattice geometry: the \ang{95} measurement vector projects almost entirely onto the slow-scan axis ($\sin{95\unit{\degree}}\approx0.996$). Furthermore, auto-correlation processing analysis proved highly effective, confirming an accurate lattice constant of $\qty{2.46}{\angstrom}$.
+Secondary contributions from \textbf{piezoelectric creep} (delayed mechanical response) and \textbf{hysteresis}\cite{hysteresis} are most pronounced along the Y-axis. Metadata confirms that \textit{Non-linear correction} settings were disabled, mapping raw non-linearities directly to the topography and distorting the hexagonal lattice. The proposed calibration factor $C'_{y}$ compensates for these distortions. Restricting this correction to the Y-axis is justified by the lattice geometry: the \ang{95} measurement vector projects almost entirely onto the slow-scan axis ($\sin{95\unit{\degree}}\approx0.996$).
+
+Furthermore, auto-correlation and cross-correlation processing analysis proved highly effective, confirming an accurate lattice constant of $\qty{2.46}{\angstrom}$ by yielding clearer images and measurements than the raw data (Figures~\ref{fig:atomic_resolution_measurements} and~\ref{fig:atomic_resolution_plots}).
 
 % --- Conclusion ---
 \section{Conclusion}
