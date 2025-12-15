@@ -654,31 +654,30 @@ This compromise allows a clearer comparison of feedback behavior at different ga
 The resulting images are discussed in the results section, where the effects of proportional and integral gain on image stability, sharpness, and suitability for higher scan rates and larger scan areas are analyzed.
 
 
+\subsection{Attempt to Achieve Atomic Resolution}
 
-%%%%%%%%%%%
+After exploring the feedback behavior, we attempt to obtain atomic-resolution STM images of HOPG.
+With the present tabletop setup this is challenging, since atomic contrast typically requires an extremely sharp and stable tip apex.
+Because our tips are prepared by mechanically cutting PtIr wire, achieving a single-atom termination is largely a matter of luck, and our tutor emphasized from the beginning that atomic resolution is unlikely.
 
+Starting from the previously scanned region, we reposition the scan window onto a large, visually flat terrace adjacent to the ridge.
+We then progressively reduce the scan size into the few-nanometer range and vary the tunneling parameters in an effort to enhance atomic contrast.
+In particular, we test different combinations of bias voltage and setpoint current, generally moving toward lower bias and higher current to reduce the tip--sample separation.
+An overview of representative scans and parameter choices is shown in Fig.~\ref{fig:atomic_attempts}.
 
+Despite repeated optimization attempts, no reproducible atomic lattice contrast is obtained, even after several trials with support from the tutor.
+We therefore discontinue the atomic-resolution task and, for the quantitative analysis steps (atomic corrugation height, lattice spacing, and FFT-based determination of reciprocal lattice vectors), use atomic-resolution reference data provided by the tutor from previous successful measurements.
 
-
-\subsection{(d) Achieving Atomic Resolution}
-
-Regions that appear atomically flat in large scans are gradually zoomed in by reducing scan size and scan speed.
-The tunneling parameters are fine-tuned until atomic contrast becomes visible.
-Multiple atomic-resolution images are recorded with slightly different bias voltages and setpoint currents to ensure reproducibility.
-
-\subsection{(e) Quantitative Analysis of Atomic Images}
-
-The atomic-resolution images from the previous task are then analyzed using WSxM's line profile and distance measurement tools in the Representation menu of the software.
-The values of the lattice constant $a$ was determined from the average distance between lattice unit cells for both directions (\ang{60} and \ang{120}), extracted from the Z bright intensity peaks (apparent corrugation height) over the distance using the software; these values are then compared to the known nearest-neighbor distance of \SI{1.42}{\angstrom}.
-
-The $x/y$ calibration factors of the piezo scanner are, if necessary, adjusted to account for any measurement distortion. The angular relations between lattice directions are then evaluated to identify possible distortions due to drift or scanner nonlinearity.
-
-\subsection{(f) Fourier Analysis}
-
-A two-dimensional Fast Fourier Transform (FFT) is applied to selected atomic-resolution images in WSxM.
-The resulting reciprocal-space pattern is used to determine lattice periodicities and symmetry.
-FFT peak positions are compared with the real-space measurements to verify the consistency of the $x$/$y$ calibration.
-The FFT analysis also helps identify distortions such as shear, compression, or drift, which may affect the recorded images.
+\vspace{1em}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.0\textwidth]{../resources/figures/atomic_attempts.png}
+  \caption{
+    Overview of representative scans recorded during the attempt to achieve atomic resolution.
+    The thumbnails illustrate the variation of parameters to improve contrast.
+    Figure compiled from our WSxM image browser.
+  }\label{fig:atomic_attempts}
+\end{figure}
 
 
 
