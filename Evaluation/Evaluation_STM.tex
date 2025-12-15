@@ -571,7 +571,7 @@ Data acquisition, control, and image processing are handled using the Nanotec el
 % --- Procedure ---
 \section{Procedure}
 
-\subsection{Initial Preparation, Tip Exchange, and Approach}
+\subsection{Initial Preparation and Approach}
 
 At the beginning of the experiment, the STM head is illuminated using the built-in lamp and observed through the USB camera.
 The tip is initially retracted to a safe distance from the sample, which can be judged from the visible gap and the reflection of the tip in the reflective graphite surface.
@@ -607,6 +607,51 @@ The final approach into the tunneling regime is then performed solely by extendi
 The elongation of the piezo at the operating point is monitored using the software interface and adjusted such that it remains approximately at half of its maximum range, ensuring sufficient headroom for stable feedback during scanning.
 
 
+\subsection{Imaging Surface Steps}
+
+After the initial preparation and successful tip approach, the first imaging task is carried out.
+Although the STM manual lists an initial exploration of the feedback parameters as part of the first task, this is postponed following the tutor’s recommendation.
+Instead, the experiment proceeds directly to imaging surface steps on the HOPG sample in order to determine the graphite interlayer spacing.
+
+Before starting the scans, the lateral and vertical offsets ($X$, $Y$, and $Z$ offset) are reset to zero.
+Throughout this task a proportional gain of $P = 0.15$ is used, with the integral gain set to half this value.
+The bias voltage is fixed at $V = \SI{1000}{mV}$ and the tunneling current setpoint at $I = \SI{1}{nA}$.
+All remaining parameters, such as scan speed, resolution, and gain settings, follow the default values suggested by the tutor and the STM manual.
+
+Topographic scans are then recorded to locate regions of the surface that exhibit clear step edges.
+Typical scan sizes of $20~\si{nm} \times 20~\si{nm}$ are used, with some images taken at
+$30~\si{nm} \times 30~\si{nm}$ to capture larger terraces.
+Areas showing at least two distinct height steps are selected for analysis.
+After each scan, the tip is moved diagonally to a nearby, previously unscanned region in order to probe independent surface areas.
+The \emph{Center Z} and \emph{Update} functions are applied after each scan to keep the $z$-piezo working point near the middle of its range.
+
+In total, twenty scans are recorded for this task.
+Each scan produces forward and backward images as well as simultaneous topography and current channels, resulting in four data files per scan.
+While not all images are suitable for quantitative analysis, the data set contains more than thirty clearly identifiable step edges.
+These step heights are later extracted and compared to the known graphite interlayer spacing of approximately \SI{3.35}{\angstrom}.
+
+
+\subsection{Variation of Proportional Gain}
+
+To investigate the influence of the feedback parameters on image quality, a dedicated test region with pronounced height variations is selected.
+In our case, a surface feature resembling a narrow ridge is identified, where the tip must descend into a trough and subsequently climb back to a similar height on the opposite side.
+Such a geometry provides a sensitive test of how well the feedback loop can track rapid height changes.
+
+The scan area is reduced to $3\,\text{nm} \times 3\,\text{nm}$ and centered on the ridge.
+An initial reference image is recorded using the same proportional gain as in the previous measurements, $P = 0.15$, which is already close to the lower end of the range recommended in the STM manual.
+Lower values (down to $P=0.10$) are in principle possible but are not explored during the measurement.
+Subsequently, the proportional gain is increased stepwise to $P = 0.30$, $0.60$, $0.90$, and finally $1.20$.
+
+Throughout this series, the integral gain $I$ is adjusted together with $P$ according to the standard operating condition used in this experiment, where $I$ is set to half the proportional value.
+Although the STM manual allows proportional gains up to $P = 1.5$, the image quality at $P = 1.2$ is already strongly degraded, so no higher values are tested.
+
+During this sequence it is observed that the ridge drifts noticeably relative to the scan frame.
+After each scan the scanner position is therefore adjusted to re-center the ridge within the image as closely as possible.
+The drift is sufficiently strong that it is difficult to probe exactly the same area in successive scans.
+
+To reduce the influence of drift and shorten the acquisition time per image, the scan speed is increased to $0.986$ lines/s and the resolution is reduced to $128 \times 128$ points for this series.
+This compromise allows a clearer comparison of feedback behavior at different gain settings while maintaining sufficient spatial resolution to resolve the ridge structure.
+The resulting images are discussed in the results section, where the effects of proportional and integral gain on image stability, sharpness, and suitability for higher scan rates and larger scan areas are analyzed.
 
 
 
@@ -614,22 +659,6 @@ The elongation of the piezo at the operating point is monitored using the softwa
 
 
 
-
-\subsection{(c) Locating and Measuring Step Heights}
-
-Larger-area scans are performed to locate terraces, steps, and grooves on the graphite surface.
-Suitable step edges are repeatedly scanned with moderate scan sizes to collect a series of step profiles.
-At least twenty step heights are measured using WSxM's line profile tool and plane-correction filters.
-The measured step heights are plotted and compared with the graphite interlayer spacing of approximately \SI{3.35}{\angstrom}.
-From this comparison the effective $z$-piezo calibration (nominally \SI{10}{nm/V}) is estimated, including its uncertainty.
-
-\subsection{(b) Feedback Optimization: Proportional and Integral Gain}
-
-A small and slow scan is used to study the behavior of the feedback loop.
-The proportional gain $P$ is varied to observe how strongly the system responds to height deviations.
-The integral gain $I$ is adjusted to correct slow drift while avoiding oscillations.
-Different combinations of $P$ and $I$ are tested at various scan speeds to determine stable operating values.
-The goal is to identify parameter ranges that maintain a stable tunneling current without overshoot or noise.
 
 \subsection{(d) Achieving Atomic Resolution}
 
@@ -656,12 +685,16 @@ The FFT analysis also helps identify distortions such as shear, compression, or 
 % --- Results ---
 \section{Results}
 
-\subsection{Step Heights / Distance between Levels}
+\subsection{Determination of the Interlayer Distance}
+
+% analyze vertical profile of 30+ steps and put them in a histogram (step height vs. number of times that height was measured). They should all be an integer multiple of 3.35 A
 
 xxx
 
 
-\subsection{Testing different P values}
+\subsection{Effect of Proportional Gain on Image Quality}
+
+% higher P > bad quality (show scans for different P values)
 
 xxx
 
