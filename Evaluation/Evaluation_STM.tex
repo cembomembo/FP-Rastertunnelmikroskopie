@@ -699,6 +699,7 @@ xxx
 
 
 \subsection{Quantitative Analysis of Atomic Images}\label{sec:results_atomic}
+
 Atomic resolution could not be achieved during the experiment. A set of bibliographical images taken in similar conditions with the same equipment were analyzed instead (Figure~\ref{fig:atomic_resolution}). For better precision the images extracted were processed using auto and cross correlation in the software WSxM, and the measurements were performed on the highest resolution image.
 
 The settings at which these images were taken are:
@@ -713,7 +714,7 @@ The settings at which these images were taken are:
 
 The piezo-calibration factors had an X and Y calibration of $C=47,2\unit{\angstrom\per\V}$ in both directions, and disabled linearity correction.
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \includegraphics[width=0.6\textwidth]{../resources/figures/atomic/atomic_resolution.jpg}
   \caption{Auto-Correlation processed image of the LDOS of HOPG with atomic resolution. \\ The single 2D layer of the lattice is clearly visible.}\label{fig:atomic_resolution}
@@ -724,10 +725,10 @@ As discussed in the Section~\ref{sec:atomic_constrast}, the measured lattice con
 Our results measured an average value of $a=2,31\pm0,04$\AA~in the \ang{120} direction, and $a=2,46\pm0,03$\AA~in the \ang{60} direction (Figure~\ref{fig:atomic_resolution_measurements}). This confirms that the \ang{60} measurement does achive near-perfect precision; whereas the \ang{120} measurement (approximately parallel to the Y direction) has a substantial error of \qty{6.1}{\%}.
 
 The measurement error was calculated using Gaussian Error Propagation, which is defined as:
-
 \begin{equation}
   \sigma_{a} = \frac{|\Delta L|}{N}
 \end{equation}
+
 where $N$ is the number of unit cells and $\Delta L$ is the distance measurement error. We considered a consevative stimate for $\Delta L$ of half a peak, or $\Delta L=0.5$ \AA.
 
 \begin{figure}[H]
@@ -738,17 +739,17 @@ where $N$ is the number of unit cells and $\Delta L$ is the distance measurement
 \end{figure}
 
 To account for the compression measurement in the Y direction, we suggest to set a different calibration based on this equation,
-
 \begin{equation}
   C'_{y}=C_{y}\frac{a_{\text{t}}}{a_{\text{m}}}
 \end{equation}
+
 where $C_{y}$ is the piezo calibration in the Y direction of the measurement, $a_{\text{t}}$ is the theoretical lattice constant, and $a_{\text{m}}$ is the measured lattice constant.
 
 This results on a new calibration value of $C'_{y}=50,5\unit{\angstrom\per\V}$.
 
 Regarding the X-axis calibration, the results at \ang{60} have near-perfect precision, and in those the effect of the Y calibration is small, but still notable, as it is dominated mostly by the X-calibration. This suggests that the X-calibration is likely expanding the image in the X direction, compensating the compression of the Y-axis. A new X-calibration value was not calculated as it was deemed to be not significant enough.
 
-\begin{figure}
+\begin{figure}[H]
   \centering
   \includegraphics[width=1\textwidth]{../resources/figures/atomic/atomic_resolution_120_plot.jpg}
   \includegraphics[width=1\textwidth]{../resources/figures/atomic/atomic_resolution_60_plot.jpg}
