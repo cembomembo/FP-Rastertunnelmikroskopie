@@ -53,9 +53,7 @@
 % --- Fonts ---
 \usepackage{lmodern}            % Computer Modern look across TeX distros
 
-
 \begin{document}
-
 
 % --- Title page ---
 \begin{titlepage}
@@ -93,8 +91,6 @@
   \end{center}
 \end{titlepage}
 
-
-
 % --- Table of contents ---
 \clearpage
 \renewcommand*\contentsname{\huge Contents}
@@ -104,8 +100,6 @@
   \clearpage
 }
 \pagenumbering{arabic}
-
-
 
 % --- Introduction ---
 \newpage
@@ -118,8 +112,6 @@ It operates by positioning a sharp metallic tip a few ångströms above the samp
 Because this current is extremely sensitive to the tip–sample distance, the STM can resolve atomic–scale height variations and visualize the topography and electronic structure of surfaces.
 In this experiment we use a tabletop STM operated under ambient conditions to record and analyze surface images of highly oriented pyrolytic graphite (HOPG).
 The aim is to become familiar with the operating principles of STM and to extract structural information from the acquired images.
-
-
 
 % --- Physical Principles ---
 \section{Physical Principles}
@@ -144,7 +136,6 @@ Because the probability depends exponentially on the separation, even tiny chang
   \includegraphics[width=0.73\textwidth]{../resources/figures/STM_Tunneling_Schematic.png}
   \caption{Schematic illustration of how tunneling becomes possible when the wavefunctions of the surface electrons $\psi_s$ and those of the STM tip $\psi_t$ overlap across the narrow gap~\cite{UW_AFM_STM_Workshop}.}\label{fig:stm_wavefunction_overlap}
 \end{figure}
-
 
 \subsection{Fermi Levels, Work Functions, and Bias Voltage}
 
@@ -186,7 +177,6 @@ In this sense the STM “probes’’ the part of the electronic structure that 
   }\label{fig:energy_band_diagrams}
 \end{figure}
 
-
 \subsection{Principle of STM Operation}
 
 Once the tip is brought close enough for tunneling to occur, a bias voltage is applied between the tip and the sample.
@@ -221,7 +211,6 @@ The vertical motion required to maintain the setpoint current is recorded and in
 Because the measurement in constant–current mode relies on maintaining a constant tunneling probability, the STM image essentially represents the height at which the electronic density accessible for tunneling matches the selected setpoint.
 This explains why STM images are strongly influenced by the electronic structure of the surface and not solely by its geometric topography.
 This connection becomes clearer when we look more closely at the expression for the tunneling current.
-
 
 \subsection{The Tunneling Current}
 
@@ -287,7 +276,6 @@ Because the LDOS of the surface directly influences the number of available stat
 
 Much of the qualitative understanding of these relationships was also conveyed during the laboratory discussion with our tutor, who explained the underlying concepts using the STM theory slides provided in the course~\cite{rai_stm_slides}.
 
-
 \subsection{Electronic Structure of Solids and Graphite}
 
 To understand which electrons contribute to the tunneling current, we need to consider how electrons behave in solids.
@@ -319,7 +307,6 @@ The amount of electron density above each atomic site depends on how the $p_z$ o
 This variation is described by the local density of states (LDOS), which determines how much tunneling current can flow at a given position.
 Regions of higher LDOS allow a stronger tunneling current, so the STM image reflects the electronic structure of the surface, leading to the characteristic atomic–resolution contrast observed in graphite.
 
-
 \subsection{Highly Oriented Pyrolytic Graphite (HOPG)}
 
 The sample material used in this experiment is \emph{highly oriented pyrolytic graphite} (HOPG).
@@ -330,7 +317,6 @@ A major practical advantage of HOPG is that it can be easily cleaved using adhes
 Cleaving exposes a fresh surface with atomically flat graphene terraces that are electrically conductive and stable under ambient conditions.
 This makes it ideally suited for STM measurements without the need for a vacuum.
 Because its lattice structure and electronic properties are well known, HOPG serves as a standard reference sample in STM~\cite{spmtips_hopg}.
-
 
 \subsection{Atomic Contrast and Lattice Geometry in Graphite}\label{sec:atomic_constrast}
 
@@ -398,7 +384,7 @@ Consequently, only every second atom appears bright in typical STM images of gra
   }\label{fig:graphite_stacking}
 \end{figure}
 
-\subsubsection{Reciprocal-Space Structure and the Fourier Transform of STM Images}
+\subsubsection{Reciprocal-Space Structure and the Fourier Transform of STM Images}\label{sec:fourier_theory}
 
 Atomic-resolution STM images of graphite contain not only real-space contrast but also clear periodic signatures in reciprocal space.
 Taking the two-dimensional Fourier transform (FFT) of such an image produces a pattern of six bright peaks arranged in a hexagon.
@@ -453,7 +439,6 @@ Solving the above relation for the carbon–carbon bond length yields
 This expression provides a convenient way to extract the lattice spacing of graphite from experimental STM data.
 By measuring the radius of the hexagon in the FFT image — that is, the distance from the center to any of the six bright peaks — and plugging it into the above expression, one directly obtains the real-space carbon–carbon distance.
 In the analysis section we apply this method to our recorded images and compare the resulting value with the known literature value of $a_{\mathrm{CC}} = 1.42~\text{\AA}$.
-
 
 \subsection{Piezoelectric Positioning and Feedback Control}
 
@@ -529,8 +514,6 @@ An intermediate gain provides stable tracking while still resolving atomic-scale
 In this experiment the integral gain is kept fixed, while the proportional gain is adjusted to optimize image quality.
 The influence of the proportional gain on image stability and resolution is discussed further in the results section.
 
-
-
 % --- Experimental Setup ---
 \section{Experimental Setup}
 
@@ -565,8 +548,6 @@ A scan generator produces time-dependent voltages for the $x$ and $y$ electrodes
 \end{figure}
 
 Data acquisition, control, and image processing are handled using the Nanotec electronics in combination with the WSxM software package.
-
-
 
 % --- Procedure ---
 \section{Procedure}
@@ -606,7 +587,6 @@ Once tunneling is detected, the piezoelectric scanner is fully retracted and the
 The final approach into the tunneling regime is then performed solely by extending the piezoelectric tube.
 The elongation of the piezo at the operating point is monitored using the software interface and adjusted such that it remains approximately at half of its maximum range, ensuring sufficient headroom for stable feedback during scanning.
 
-
 \subsection{Imaging Surface Steps}
 
 After the initial preparation and successful tip approach, the first imaging task is carried out.
@@ -630,7 +610,6 @@ Each scan produces forward and backward images as well as simultaneous topograph
 While not all images are suitable for quantitative analysis, the data set contains more than thirty clearly identifiable step edges.
 These step heights are later extracted and compared to the known graphite interlayer spacing of approximately \SI{3.35}{\angstrom}.
 
-
 \subsection{Variation of Proportional Gain}
 
 To investigate the influence of the feedback parameters on image quality, a dedicated test region with pronounced height variations is selected.
@@ -652,7 +631,6 @@ The drift is sufficiently strong that it is difficult to probe exactly the same 
 To reduce the influence of drift and shorten the acquisition time per image, the scan speed is increased to $0.986$ lines/s and the resolution is reduced to $128 \times 128$ points for this series.
 This compromise allows a clearer comparison of feedback behavior at different gain settings while maintaining sufficient spatial resolution to resolve the ridge structure.
 The resulting images are discussed in the results section, where the effects of proportional and integral gain on image stability, sharpness, and suitability for higher scan rates and larger scan areas are analyzed.
-
 
 \subsection{Attempt to Achieve Atomic Resolution}
 
@@ -679,8 +657,6 @@ We therefore discontinue the atomic-resolution task and, for the quantitative an
   }\label{fig:atomic_attempts}
 \end{figure}
 
-
-
 % --- Results ---
 \section{Results}
 
@@ -690,17 +666,20 @@ We therefore discontinue the atomic-resolution task and, for the quantitative an
 
 xxx
 
-
 \subsection{Effect of Proportional Gain on Image Quality}
 
 % higher P > bad quality (show scans for different P values)
 
+% javi: hey guys, do you know which data is the one of the parameter optimization?
 xxx
 
-
 \subsection{Quantitative Analysis of Atomic Images}\label{sec:results_atomic}
+<<<<<<< HEAD
 
 Atomic resolution could not be achieved during the experiment. A set of bibliographical images taken in similar conditions with the same equipment were analyzed instead (Figure~\ref{fig:atomic_resolution}). For better precision the images extracted were processed using auto and cross correlation in the software WSxM, and the measurements were performed on the highest resolution image.
+=======
+Since atomic resolution could not be achieved during the experiment, a set of bibliographical images taken in similar conditions with the same equipment were analyzed instead (Figure~\ref{fig:atomic_resolution}). For better precision the images extracted were processed using auto and cross correlation in the software WSxM, and the measurements were performed on the highest resolution image.
+>>>>>>> efb688fba8b5c1cac3d57f1205c7bac71d358063
 
 The settings at which these images were taken are:
 \begin{itemize}
@@ -735,7 +714,7 @@ where $N$ is the number of unit cells and $\Delta L$ is the distance measurement
   \centering
   \includegraphics[width=0.45\textwidth]{../resources/figures/atomic/atomic_resolution_auto_120.jpg}
   \includegraphics[width=0.45\textwidth]{../resources/figures/atomic/atomic_resolution_auto_60.jpg}
-  \caption{Cross-Correlation processed images of the LDOS of HOPG with atomic resolution.\\ The left image corresponds to the \ang{120} measurement, and the right to the \ang{60} measurement.}\label{fig:atomic_resolution_measurements}
+  \caption{Cross-Correlation processed images of the LDOS of HOPG with atomic resolution.\\The left image corresponds to the \ang{120} measurement, and the right to the \ang{60} measurement.}\label{fig:atomic_resolution_measurements}
 \end{figure}
 
 To account for the compression measurement in the Y direction, we suggest to set a different calibration based on this equation,
@@ -753,10 +732,16 @@ Regarding the X-axis calibration, the results at \ang{60} have near-perfect prec
   \centering
   \includegraphics[width=1\textwidth]{../resources/figures/atomic/atomic_resolution_120_plot.jpg}
   \includegraphics[width=1\textwidth]{../resources/figures/atomic/atomic_resolution_60_plot.jpg}
-  \caption{Distance measurement for the \ang{120} sample (left) and the \ang{60} sample (right).\\ The \ang{120} measurement had a number of N=14 points and $L=32,34\pm0,5$\AA, while the \ang{60} measurement had N=16 points and $L=39,60\pm0,5$\AA.}\label{fig:atomic_resolution_plots}
+  \caption{Distance measurement for the \ang{120} sample (left) and the \ang{60} sample (right).\\The \ang{120} measurement had a number of N=14 points and $L=32,34\pm0,5$\AA, while the \ang{60} measurement had N=16 points and $L=39,60\pm0,5$\AA.}\label{fig:atomic_resolution_plots}
 \end{figure}
 
+\subsection{Fourier Analysis of Atomic Images}\label{sec:results_fourier}
+A two dimensional Fourier transform was performed on the previously auto-corrected atomic image (Figure~\ref{fig:atomic_resolution}) using WSxM software. The result of this Fourier analysis is shown in Figure~\ref{fig:fourier_analysis}.
 
+\begin{figure}
+  \centering
+  \caption{2D Fourier transform of the auto-corrected atomic image.\\The crystal structure can be easily appreciated in the reciprocal space.}\label{fig:fourier_analysis}
+\end{figure}
 
 % --- Discussion ---
 \section{Discussion}
@@ -765,11 +750,9 @@ Regarding the X-axis calibration, the results at \ang{60} have near-perfect prec
 
 xxx
 
-
 \subsection{xxx}
 
 xxx
-
 
 \subsection{Distortion and Calibration in Atomic Resolution}
 The difference between the lattice constant measurements at \ang{60} and \ang{120} in Section~\ref{sec:results_atomic} shows a significant anisotropy between the fast-scan (X-axis) and slow-scan (Y-axis). This is characteristic of time-dependent instrumental instability, rather than static calibration error.
@@ -780,14 +763,15 @@ Secondary contributions from \textbf{piezoelectric creep} (delayed mechanical re
 
 Furthermore, auto-correlation and cross-correlation processing analysis proved highly effective, confirming an accurate lattice constant of $\qty{2.46}{\angstrom}$ by yielding clearer images and measurements than the raw data (Figures~\ref{fig:atomic_resolution_measurements} and~\ref{fig:atomic_resolution_plots}).
 
+\subsection{HOPG in the Reciprocal Space}
+As discussed in Section~\ref{sec:fourier_theory}, the real-space lattice of graphene has periodic electronic states across it. That periodicity can be easily visualized upon applying a fourier transformation; switching from the real space (dimensional space) to the reciprocal space (phase space).
 
+The image of the HOPG lattice in the reciprocal space (Figure~\ref{fig:fourier_analysis}) clearly shows the reciprocity of its electronic states and the reciprocal lattice: The pattern of six bright peaks arranged in an hexagon correspond to every periodic electronic state in the reciprocal lattice (Figure~\ref{fig:graphene_reciprocal}).
 
 % --- Conclusion ---
 \section{Conclusion}
 
 xxx
-
-
 
 % --- Appendix ---
 \newpage
@@ -800,8 +784,6 @@ Additional files:
   \item \texttt{'STM\_LabReport.pdf'}
 \end{itemize}
 
-
-
 % --- References ---
 \setstretch{1.0}
 \printbibliography[heading=bibintoc]
@@ -809,8 +791,6 @@ Additional files:
 \section*{Author's Note}
 AI-based writing and programming tools were used in a supporting role to refine the wording of this report and to assist in formatting Python and LaTeX code.
 All scientific analysis, data evaluation, and interpretation were carried out independently by the authors.
-
-
 
 % --- Lab Report ---
 
