@@ -664,7 +664,109 @@ We therefore discontinue the atomic-resolution task and, for the quantitative an
 
 % analyze vertical profile of 30+ steps and put them in a histogram (step height vs. number of times that height was measured). They should all be an integer multiple of 3.35 A
 
-xxx
+To determine the interlayer distance the raw forwards topological data was analyzed in the free open source software Gwyddion. In figure \ref{fig:rawftop} one such measurement can be seen. Here there are many steps or borders between layers. The topological nature becomes even clearer in figure \ref{fig:rawftop3d}. 
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.7\textwidth]{../resources/figures/stepheight/example_data.png}
+  \caption{
+    Forwards topoological measurement data used to determine interlayer distance
+  }
+  \label{fig:rawftop}
+\end{figure}
+
+What also becomes visible is that there are not only steps, but also the surfaces are bend, no surface is completely flat. Furthermore ther are different artifacts that exhibit a high local density of states, but these will be ignored for the step height analysis. 
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{../resources/figures/stepheight/3dtop.png}
+  \caption{
+    3D depiction of the topological data
+  }
+  \label{fig:rawftop3d}
+\end{figure}
+To deal with the problem of the bend surfaces the data is cropped to a small area in which the two surfaces next to one step are roughly flat. In figure \ref{fig:croppedstep} one such smaller area can be seen. In this case it is from the upper middle to right part of the original original data that can be seen in figure \ref{fig:rawftop}. (The small artifact in the upper layer can help with orientation.)
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{../resources/figures/stepheight/example_data_cropped_step.png}
+  \caption{
+    cropped section of the previous data (step in upper middle part)
+  }
+  \label{fig:croppedstep}
+\end{figure}
+
+The step height is then analized by taking various height profiles accross the step. These can be seen in figure \ref{fig:lineprofiles}.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{../resources/figures/stepheight/example_line_profile.png}
+  \caption{
+    height profile along multiple lines of the previous step
+  }
+  \label{fig:lineprofiles}
+\end{figure}
+
+Then four horizontal lines are inserted to determine the step height. Two lines to determine the height of the upper layer and two for the lower layer. From these two lines the average $\pm$ half the difference gives us a value for the height with an uncertainty. In this case:
+
+\begin{table}[H]
+  \centering
+  \begin{tabular}{lcccc}
+  line \#: & 1 & 2 & 3 & 4 \\
+   y-value in nm:& -0.02  & -0.14 & -0.66 & -0.86  \\
+  \end{tabular}
+\end{table}
+\begin{table}[H]
+  \centering
+  \begin{tabular}{lcc}
+    $\Rightarrow$ & y-upper in nm & y-lower in nm\\
+               & $-0.08 \: \pm 0.06$ & $-0.76 \: \pm 0.10$
+  \end{tabular}
+\end{table}
+
+Now the absolute value of the difference between those two values gives us the step height $h_S$:
+\begin{table}[H]
+  \centering
+  \begin{tabular}{lc}
+    $\Rightarrow$ & $ h_S = 0.68 \: \pm 0.16 \: nm$ 
+  \end{tabular}
+\end{table}
+
+This was done for a number of steps, the different values are plotted in figure \ref{fig:allstepheights}. Here all step heights are ordered by their heights. The example measurement that was used to explain the process is \# 23.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{../resources/figures/stepheight/stepheight_all_measurements_plot.png}
+  \caption{
+    plot of all step height measurements ordered by their height
+  }
+  \label{fig:allstepheights}
+\end{figure}
+
+To now compare the experimental values to the literature value for the interlayer distance of $3.35 \: \AA$, the scale in the following will be changed from nanometer to $\aa$ngström. And only the values up till the 40th measurement will be considered, as the error of the other measurements spans multiple layers. As can be seen in figure \ref{fig:smallwithlit} integer multiples of the literaturevalue, thus the expected interlayer difference is shown with blue dotted lines. \\
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{../resources/figures/stepheight/small_measurements_with_literature_value.png}
+  \caption{
+    Smaller measurements in Å, with multiples of literature value for interlayer distance of 3.35 Å in blue
+  }
+  \label{fig:smallwithlit}
+\end{figure}
+
+When this comparison is done it becomes clear that the measured step heights are not neatly allined with what is expected. However one can roughly see plateaus in the measurement data. Assuming that the calibration of the z-piezo of 10 nm/V is not completely correct, the measurement values can be multiplied by a factor that takes into account the systemetic error of a wrong calibration. In figure \ref{fig:recalibratedzpiezo} this was done with a factor of 1.7, which means that a correct calibration would have been 17 nm/V. This at does at least roughly aline some of the plateaus with the expected data. 
+
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{../resources/figures/stepheight/recalibratedzpiezo.png}
+  \caption{
+    Same as \ref{fig:smallwithlit} but with factor to considere wrongly calibrated z-piezo
+  }
+  \label{fig:recalibratedzpiezo}
+\end{figure}
+
+
 
 \subsection{Effect of Proportional Gain on Image Quality}
 
@@ -734,10 +836,12 @@ Regarding the X-axis calibration, the results at \ang{60} have near-perfect prec
 \subsection{Fourier Analysis of Atomic Images}\label{sec:results_fourier}
 A two dimensional Fourier transform was performed on the previously auto-corrected atomic image (Figure~\ref{fig:atomic_resolution}) using WSxM software. The result of this Fourier analysis is shown in Figure~\ref{fig:fourier_analysis}.
 
-\begin{figure}
+\begin{figure}[H]
   \centering
   \caption{2D Fourier transform of the auto-corrected atomic image.\\The crystal structure can be easily appreciated in the reciprocal space.}\label{fig:fourier_analysis}
 \end{figure}
+
+
 
 % --- Discussion ---
 \section{Discussion}
