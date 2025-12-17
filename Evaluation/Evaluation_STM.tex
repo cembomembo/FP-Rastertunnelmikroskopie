@@ -747,7 +747,7 @@ This was done for a number of steps, the different values are plotted in figure 
   \label{fig:allstepheights}
 \end{figure}
 
-To now compare the experimental values to the literature value for the interlayer distance of $3.35 \: \AA$, the scale in the following will be changed from nanometer to $\aa$ngström. And only the values up till the 40th measurement will be considered, as the error of the other measurements spans multiple layers. As can be seen in figure \ref{fig:smallwithlit} integer multiples of the literaturevalue, thus the expected interlayer difference is shown with blue dotted lines. \\
+To now compare the experimental values to the literature value for the interlayer distance of $3.35 \: \AA$, the scale in the following will be changed from nanometer to $\aa$ngström. And only the values up till the 40th measurement will be considered, as the error of the other measurements spans multiple layers. As can be seen in figure \ref{fig:smallwithlit} integer multiples of the literaturevalue, thus the expected interlayer difference is shown with blue dotted lines. When this comparison is done it becomes clear that the measured step heights are not neatly allined with what is expected. However one can roughly see plateaus in the measurement data.\\
 
 \begin{figure}[H]
   \centering
@@ -758,8 +758,7 @@ To now compare the experimental values to the literature value for the interlaye
   \label{fig:smallwithlit}
 \end{figure}
 
-When this comparison is done it becomes clear that the measured step heights are not neatly allined with what is expected. However one can roughly see plateaus in the measurement data. Assuming that the calibration of the z-piezo of 10 nm/V is not completely correct, the measurement values can be multiplied by a factor that takes into account the systemetic error of a wrong calibration. In figure \ref{fig:recalibratedzpiezo} this was done with a factor of 1.7, which means that a correct calibration would have been 17 nm/V. This at does at least roughly aline some of the plateaus with the expected data. 
-
+ Assuming that the calibration of the z-piezo of 10 nm/V is not completely correct, the measurement values can be multiplied by a factor that takes into account the systemetic error of a wrong calibration. In figure \ref{fig:recalibratedzpiezo} this was done with a factor of 1.6, which means that a correct calibration would have been 16 nm/V. This does at least roughly aline some of the plateaus with the expected data. 
 
 \begin{figure}[H]
   \centering
@@ -769,6 +768,18 @@ When this comparison is done it becomes clear that the measured step heights are
   }
   \label{fig:recalibratedzpiezo}
 \end{figure}
+
+For the alined plateaus this also allows to count the number of occurances. With measurements 1-12 being one layer steps, measurements 13-19 being two layer steps and measurements 27-31 being four layer steps. Measurement 34 could be a five layer step and measurements 35 and 36 could be six layer steps, also measurments 20-24 could be three layer steps. However there are many different factors that can influence the measured height, which makes a clear distinction difficult. If each measurement is allocated to the nearest step, a histogram can be created.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{../resources/figures/stepheight/hist.png}
+  \caption{
+    Same as \ref{fig:smallwithlit} Histogram of the number of the different measured step heights
+  }
+  \label{fig:stephist}
+\end{figure}
+
 
 
 
@@ -852,9 +863,11 @@ A two dimensional Fourier transform was performed on the previously auto-correct
 % --- Discussion ---
 \section{Discussion}
 
-\subsection{xxx}
+\subsection{Interlayer Distance}
 
-xxx
+The results of the interlayer distance do not match exactly with the theoretical expectation, but still some similarities could be seen. The first thing that can be noticed is that many of the measurements are are between the expected steps, even after considering the calibration of the z-piezo. This can have multiple reasons. As was discussed earlier and as becomes visible in figure \ref{fig:rawftop3d} the surfaces are far from smooth. There can be steps underneeth the top surface, which is likely the case with the vertical line in the center in the example topological data (fig. \ref{fig:rawftop}) that has been taken to explain the analysis process. Also it might be that measurement \# 0 is on such step. Moreover the measurement was taken at room temperature under normal atmospheric pressure with no vacuum, which also means that there are ambient molucules and contaminations that can influence the local density of states. Also even with no steps underneeth, layers can be bend making clear step heights less likely.
+Without recalibration of the z-piezo, the average step height for the first step is calculated to be $2.3 \: \pm \: 0.7$.
+From the histogram \ref{fig:stephist} a rough guess about the smoothnes of the graphite surface can be made, most step heights are below a height of 5 layers, but there are also steps in the data we mesured that are up to 25 layers high. Overall even 25 layers would correspond to a height of about 84 $\AA$ which is still microscopic. 
 
 \subsection{xxx}
 
