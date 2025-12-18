@@ -830,7 +830,7 @@ The measurement error was calculated using Gaussian Error Propagation, which is 
 
 where $N$ is the number of unit cells and $\Delta L$ is the distance measurement error. We considered a consevative stimate for $\Delta L$ of half a peak, or $\Delta L=0.5$ \AA.
 
-\begin{figure}[ht]
+\begin{figure}[h]
   \centering
   \includegraphics[width=0.45\textwidth]{../resources/figures/atomic/atomic_resolution_auto_120.jpg}
   \includegraphics[width=0.45\textwidth]{../resources/figures/atomic/atomic_resolution_auto_60.jpg}
@@ -848,15 +848,15 @@ This results on a new calibration value of $C'_{y}=50,5\unit{\angstrom\per\V}$.
 
 Regarding the X-axis calibration, the results at \ang{60} have near-perfect precision, and in those the effect of the Y calibration is small, but still notable, as it is dominated mostly by the X-calibration. This suggests that the X-calibration is likely expanding the image in the X direction, compensating the compression of the Y-axis. A new X-calibration value was not calculated as it was deemed to be not significant enough.
 
-\begin{figure}[ht]
+\begin{figure}[H]
   \centering
-  \includegraphics[width=0.9\textwidth]{../resources/figures/atomic/atomic_resolution_120_plot.jpg}
-  \includegraphics[width=0.9\textwidth]{../resources/figures/atomic/atomic_resolution_60_plot.jpg}
+  \includegraphics[width=0.75\textwidth]{../resources/figures/atomic/atomic_resolution_120_plot.jpg}
+  \includegraphics[width=0.75\textwidth]{../resources/figures/atomic/atomic_resolution_60_plot.jpg}
   \caption{Distance measurement for the \ang{120} sample (left) and the \ang{60} sample (right).\\The \ang{120} measurement had a number of N=14 (or N=28 for all peaks) points and $L=32,34\pm0,5$\AA, while the \ang{60} measurement had N=16 points (or N=32 for all peaks) and $L=39,60\pm0,5$\AA.}\label{fig:atomic_resolution_plots}
 \end{figure}
 
 \subsection{Fourier Analysis of Atomic Images}\label{sec:results_fourier}
-A two dimensional Fourier transform was performed on the previously auto-corrected atomic image (Figure~\ref{fig:atomic_resolution}) using WSxM software. The result of this Fourier analysis is shown in Figure~\ref{fig:fourier_analysis}. The measurement of the hexagon radius was determined to be $b=\unit{\angstrom}$ for the two verticaly aligned radius, and $b=\unit{\angstrom}$ for the horizontal radius.
+A two dimensional Fourier transform was performed on the previously auto-corrected atomic image (Figure~\ref{fig:atomic_resolution}) using WSxM software. The result of this Fourier analysis is shown in Figure~\ref{fig:fourier_analysis}. The measurement of the hexagon radius was determined to be $b=1.01\pm0.02~[\unit{1\per\angstrom}]$ for the two verticaly aligned radius, and $b=0.93\pm0.03~[\unit{1\per\angstrom}]$ for the horizontal radius. The error was calculated using again the same method as in the previous section, taking N=2 points for every measurement.
 
 \begin{figure}[ht]
   \centering
@@ -864,7 +864,7 @@ A two dimensional Fourier transform was performed on the previously auto-correct
   \caption{2D Fourier transform of the auto-corrected atomic image.\\The crystal structure can be easily appreciated in the reciprocal space.}\label{fig:fourier_analysis}
 \end{figure}
 
-As discussed in the theory the nearest-neighbor constant of HOPG can be determined from the hexagon radius of the FFT of the image (Equation~\ref{cc_length}). This results in a measurement of $a_{\mathrm{CC}} = \unit{\angstrom}$. The error was calculated using again the same method as in the previous section, taking N=2 points for every measurement.
+As discussed in the theory the nearest-neighbor constant of HOPG can be determined from the hexagon radius of the FFT of the image (Equation~\ref{cc_length}). This results in an average measurement of $a_{\mathrm{CC}}=0.72\pm0.02\unit{\angstrom}$. This is approximately equal to half its theoretical value.
 
 % --- Discussion ---
 \section{Discussion}
@@ -875,13 +875,19 @@ The results of the interlayer distance do not match exactly with the theoretical
 Without recalibration of the z-piezo, the average step height for the first step is calculated to be $2.3 \: \pm \: 0.7 \: \AA$ .
 From the histogram \ref{fig:stephist} a rough guess about the smoothnes of the graphite surface can be made, most step heights are below a height of 5 layers, but there are also steps in the data we mesured that are up to 25 layers high. Overall even 25 layers would correspond to a height of about 84 $\AA$ which is still microscopic.
 
-\subsection{xxx}
+\subsection{Achieving Atomic Resolution}
+There are many reasons why atomic resolution could not be achieved, as under the experiment conditions (normal conditions) the failure of the atomic resolution is expected and it becomes a statistical matter. Among the specific reasons, few stand out:
 
-xxx
+\begin{itemize}
+  \item Tip precision: Atomic resolution relies on the tip achieving one single atom from the tip in contact with the sample surface. Such conditions are rare, and are mostly found by chance when cutting and setting up a tip.
+  \item Tip condition: Due to the nature of the STM technique, the tip can `wear down' mid-scanning due to collision with rough edges and other similar events.
+  \item Drift: At such conditions the drift is very noticeable and it can smear the atomic features before the scanner can complete a single line, reducing the resolution.
+\end{itemize}
+
+\subsection{Calculation of the Lattice Constant and Nearest-neighbor Distance}
+Since both analysis (FFT and real space) resulted in half values, we attribute them to sub-lattice periodicity and $\alpha\text{-peaks}$ being also measured. The settings and conditions under which the data was taken, such as high bias, could have contributed to this phenomena. However, the ultimate nature of these odd results remains as an open question for us.
 
 \subsection{Distortion and Calibration in Atomic Resolution}
-We attribute the measured half values to sub-lattice periodicity and $\alpha\text{-peaks}$ being also measured. The settings and conditions under which the data was taken, such as high bias, could have contributed to this phenomena.
-
 The difference between the lattice constant measurements at \ang{60} and \ang{120} in Section~\ref{sec:results_atomic} shows a significant anisotropy between the fast-scan (X-axis) and slow-scan (Y-axis). This is characteristic of time-dependent instrumental instability, rather than static calibration error.
 
 This distortion is primarily attributed to \textbf{thermal drift}. This thermal drift is the gradual move of the sample in relation to the measurement device, due to temperature fluctuations. It occurs due to the expansion/contraction of materials and electrical components, both of the sample and the measurement device. As the experiment was conducted under ambient atmospheric conditions, temperature fluctuations induce continuous differential expansion of the microscope assembly. Since the Y-axis operates as the slow-scan direction, the scan duration ($\approx$ 2 minutes) allows sufficient time for drift to accumulate, effectively compressing the image geometry.
@@ -897,8 +903,17 @@ The image of the HOPG lattice in the reciprocal space (Figure~\ref{fig:fourier_a
 
 % --- Conclusion ---
 \section{Conclusion}
+In this experiment, we explored the operating principles of a Scanning Tunneling Microscope (STM) under ambient conditions to characterize the surface structure of Highly Oriented Pyrolytic Graphite (HOPG). The investigation focused on three primary objectives: determining the interlayer spacing, optimizing feedback parameters, and analyzing atomic-scale periodicity.
 
-xxx
+Topographic imaging of surface steps confirmed the layered structure of graphite. Statistical analysis of step heights revealed a clustering of values around integer multiples of the theoretical interlayer distance ($d \approx 3.35\,\text{\AA}$), although surface roughness and potential z-piezo calibration inaccuracies introduced significant variance.
+
+The investigation of feedback loop dynamics demonstrated the critical role of the proportional gain ($P$). Low gains ($P < 0.3$) resulted in delayed tip response and smoothed topographic features, while high gains ($P > 0.9$) introduced instability and feedback oscillations. An intermediate range ($0.3 < P < 0.6$) was identified as optimal for stable tracking of the surface corrugation.
+
+While attaining atomic resolution experimentally proved unfeasible due to tip instabilities and thermal drift, the quantitative analysis of bibliographical data recorded under identical conditions provided significant insights into the instrument's limitations. The atomic lattice analysis revealed a marked anisotropy: the lattice constant along the fast-scan axis ($2.44 \pm 0.03\,\text{\AA}$) aligned with the theoretical value of $2.46\,\text{\AA}$, whereas the slow-scan axis exhibited a compression of \qty{6.5}{\%} ($2.30 \pm 0.03\,\text{\AA}$). This distortion was identified as a direct consequence of thermal drift, acting along the slow-scan direction, compounded by the disabled linearity correction settings. To compensate for this, a specific calibration correction factor of $C'_{y} \approx 50.5\,\text{\AA}/\text{V}$ was calculated.
+
+The `half-value' measurements obtained during both real-space and Fourier (FFT) analysis still remain as an open question for us. In several instances, the calculated lattice constant and nearest-neighbor distance ($a_{CC} \approx 0.72\,\text{\AA}$) were exactly half of the expected theoretical values. While we attribute this phenomenon to sublattice periodicity—where the high-bias of ($500\,\text{mV}$) imaging resolved intermediate $\alpha$-peaks alongside $\beta$-peaks, the exact reason why these results appeared so consistently remains a mystery.
+
+Ultimately, the experiment shows that in ambient STM, the accuracy of structural measurements is limited less by the theoretical resolution of the instrument than by environmental stability and the dynamic response of the piezoelectric scanner.
 
 % --- Appendix ---
 \newpage
