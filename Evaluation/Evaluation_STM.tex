@@ -358,7 +358,7 @@ Their length,
 \end{equation}
 is the lattice constant of the triangular Bravais lattice, expressed in terms of the nearest–neighbour carbon–carbon distance $a_{\mathrm{CC}} = 1.42~\text{\AA}$~\cite{STMAnleitung}.
 
-Within each primitive cell spanned by $\vec a_1$ and $\vec a_2$ lie two carbon atoms, labelled $A$ and $B$ in the figure.
+Within each primitive cell spanned by $\vec a_1$ and $\vec a_2$ lie two carbon atoms, labelled $A$ and $B$ in Fig.~\ref{fig:graphene_lattice}.
 In this coordinate system their positions are especially simple:
 \[
   \tau_A = (a_{\mathrm{CC}}, 0),
@@ -366,7 +366,7 @@ In this coordinate system their positions are especially simple:
   \tau_B = (2a_{\mathrm{CC}}, 0),
 \]
 so that the two atoms in the basis are separated by exactly one nearest–neighbour bond length.
-Replicating this primitive cell across the plane generates the familiar honeycomb arrangement of carbon atoms, shown by the purple bonds in the figure.
+Replicating this primitive cell across the plane generates the familiar honeycomb arrangement of carbon atoms, shown by the purple bonds in Fig.~\ref{fig:graphene_lattice}.
 
 This real–space lattice structure directly influences STM contrast.
 Because the STM measures the local density of electronic states rather than the positions of the atomic nuclei, only atoms whose out–of–plane $\pi$ orbitals extend strongly into the vacuum contribute a large tunneling current.
@@ -432,15 +432,16 @@ Each reciprocal lattice point corresponds to a spatial frequency of the honeycom
 When performing an FFT of an STM image, the bright peaks that appear correspond directly to these reciprocal lattice sites.
 In particular, the six peaks forming a hexagon in the FFT occur at the magnitude
 \[
-  |\vec b_1| = |\vec b_2| = b.
+  |\vec b_1| = |\vec b_2| = b,
 \]
+with $b$ in \emph{angular} spatial frequency (radians per length), i.e.\ $b = 2\pi f$.
 
 Thus, the radius of the hexagon in the FFT is exactly the magnitude of the reciprocal lattice vector.
 Solving the above relation for the carbon–carbon bond length yields
 \begin{equation}
   a_{\mathrm{CC}} = \frac{4\pi}{3 \, b}.
+  \label{eq:cc_length}
 \end{equation}
-\label{cc_length}
 This expression provides a convenient way to extract the lattice spacing of graphite from experimental STM data.
 By measuring the radius of the hexagon in the FFT image — that is, the distance from the center to any of the six bright peaks — and plugging it into the above expression, one directly obtains the real-space carbon–carbon distance.
 In the analysis section we apply this method to our recorded images and compare the resulting value with the known literature value of $a_{\mathrm{CC}} = 1.42~\text{\AA}$.
@@ -855,16 +856,49 @@ Regarding the X-axis calibration, the results at \ang{60} have near-perfect prec
   \caption{Distance measurement for the \ang{120} sample (left) and the \ang{60} sample (right).\\The \ang{120} measurement had a number of N=14 (or N=28 for all peaks) points and $L=32,34\pm0,5$\AA, while the \ang{60} measurement had N=16 points (or N=32 for all peaks) and $L=39,60\pm0,5$\AA.}\label{fig:atomic_resolution_plots}
 \end{figure}
 
-\subsection{Fourier Analysis of Atomic Images}\label{sec:results_fourier}
-A two dimensional Fourier transform was performed on the previously auto-corrected atomic image (Figure~\ref{fig:atomic_resolution}) using WSxM software. The result of this Fourier analysis is shown in Figure~\ref{fig:fourier_analysis}. The measurement of the hexagon radius was determined to be $b=1.01\pm0.02~[\unit{1\per\angstrom}]$ for the two verticaly aligned radius, and $b=0.93\pm0.03~[\unit{1\per\angstrom}]$ for the horizontal radius. The error was calculated using again the same method as in the previous section, taking N=2 points for every measurement.
+%%%%%%%%
 
-\begin{figure}[ht]
+\subsection{Fourier Analysis of Atomic Images}
+\label{sec:results_fourier}
+
+A two-dimensional Fourier transform (FFT) was performed on the auto-correlation processed atomic image (Fig.~\ref{fig:atomic_resolution}) using WSxM.
+The resulting reciprocal-space pattern is shown in Fig.~\ref{fig:fourier_analysis}.
+The FFT exhibits a hexagon of six peaks corresponding to the first-order reciprocal lattice vectors.
+In our data these first-order peaks are relatively dim, while a second, brighter hexagon at larger radius is also visible.
+
+\vspace{1em}
+\begin{figure}[H]
   \centering
-  \includegraphics[width=0.5\linewidth]{../resources/figures/FFT.jpg}
-  \caption{2D Fourier transform of the auto-corrected atomic image.\\The crystal structure can be easily appreciated in the reciprocal space.}\label{fig:fourier_analysis}
+  \includegraphics[width=0.75\linewidth]{../resources/figures/FFT.jpg}
+  \caption{2D Fourier transform of the auto-correlation processed atomic image.
+  The first-order reciprocal lattice peaks form the smaller hexagon around the center.
+  Brighter second-order peaks appear at larger radius.}\label{fig:fourier_analysis}
 \end{figure}
 
-As discussed in the theory the nearest-neighbor constant of HOPG can be determined from the hexagon radius of the FFT of the image (Equation~\ref{cc_length}). This results in an average measurement of $a_{\mathrm{CC}}=0.72\pm0.02\unit{\angstrom}$. This is approximately equal to half its theoretical value.
+WSxM reports the FFT axes in cyclic spatial frequency $f$ (cycles per length), rather than angular spatial frequency $b$ (radians per length).
+These are related by $b = 2\pi f$.
+Using Eq.~\eqref{eq:cc_length},
+\begin{equation}
+  a_{\mathrm{CC}} = \frac{4\pi}{3b} = \frac{4\pi}{3(2\pi f)} = \frac{2}{3f}.
+  \label{eq:cc_length_cycles}
+\end{equation}
+
+To determine $f$ from Fig.~\ref{fig:fourier_analysis}, we measure peak-to-peak distances across the first-order hexagon and divide by two to obtain the corresponding center-to-peak radius.
+Specifically, we measure (i) the horizontal peak-to-peak distance (left to right) and (ii) the two diagonal peak-to-peak distances (bottom-left to top-right and bottom-right to top-left).
+This yields three independent estimates
+$f_1 = xxx \pm xxx \, \unit{1\per\nano\meter}$, 
+$f_2 = xxx \pm xxx \, \unit{1\per\nano\meter}$, and
+$f_3 = xxx \pm xxx \, \unit{1\per\nano\meter}$ for the first-order radius.
+We use their mean value $\bar f$ as our final frequency and propagate the measurement uncertainty into $a_{\mathrm{CC}}$ via Eq.~\eqref{eq:cc_length_cycles}.
+
+Using the measured value
+$\bar f = xxx \pm xxx \, \unit{1\per\nano\meter}$, we obtain
+\begin{equation}
+  a_{\mathrm{CC}} = \frac{2}{3\bar f}
+  = xxx \pm xxx \, \unit{\nano\meter}
+  = xxx \pm xxx \, \unit{\angstrom}.
+\end{equation}
+This result is compared to the literature value $a_{\mathrm{CC}} = 1.42\,\unit{\angstrom}$.
 
 % --- Discussion ---
 \section{Discussion}
